@@ -942,21 +942,12 @@ better result with much lower variance.
 
 </p>
 <p></p>
-<span class="anchor" id="fig:tt-env-light-comparison"></span><div class="card outerfigure"><div class="card-body figure"><p>
-
-
-</p>
-
-<div class="card-img-top" style="display:block; width: 100%; padding-top: 48.667%;  position:relative;">
-<div id="xa_Uniform_sampling49" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
-<script>
-Jeri.renderViewer(document.getElementById('xa_Uniform_sampling49'), {
-  title: '(a)_Uniform_sampling49', children: [
- { title: '(a) Uniform sampling', image: 'dragon-env-sample-uniform.exr' },  { title: '(b) Importance sampling', image: 'dragon-env-sample-non-compensated.exr' },  { title: '(c) Compensated importance sampling', image: 'dragon-env-sample-compensated.exr' }]});
-</script>
-<button data-toggle="tooltip" data-placement="left" class="btn yojeri" title="This image is interactive. Click and drag to pan and use the mouse-wheel to zoom. After clicking on the image to select it, type '?' to see a summary of keyboard controls."><i class="fa fa-snowflake fa-border"></i></button><p>
-
-</p>
+<span class="anchor" id="fig:tt-env-light-comparison"></span>
+<div class="card outerfigure">
+<div class="card-body figure">
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 48.667%;  position:relative;"><div id="xa_Uniform_sampling49" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 48.667%;  position:relative;"><div id="xa_Uniform_sampling49-1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 48.667%;  position:relative;"><div id="xa_Uniform_sampling49-2" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <figcaption class="caption">Figure 12.18: Dragon Model Illuminated by the Morning Skylight
 Environment Map. <span class="legend">
 All images were rendered with 32 samples per pixel.
@@ -969,14 +960,14 @@ has over 38,000 times lower MSE than (a), and (c) further improves MSE by a fact
 of 1.52.
 <em>(Dragon model courtesy of the Stanford Computer Graphics Laboratory.)</em>
 </span>
-</figcaption><p>
- 
-
-</p>
-</div></div><p>
-
-
-</p>
+</figcaption>
+</div>
+</div>
+<script>
+Jeri.renderViewer(document.getElementById('xa_Uniform_sampling49'), { title: '(a)_Uniform_sampling49', children: [{ title: '(a) Uniform sampling', image: 'dragon-env-sample-uniform.exr' }]})
+Jeri.renderViewer(document.getElementById('xa_Uniform_sampling49-1'), { title: '(a)_Uniform_sampling49-1', children: [{ title: '(b) Importance sampling', image: 'dragon-env-sample-non-compensated.exr'  }]})
+Jeri.renderViewer(document.getElementById('xa_Uniform_sampling49-2'), { title: '(a)_Uniform_sampling49-2', children: [{ title: '(c) Compensated importance sampling', image: 'dragon-env-sample-compensated.exr' }]});
+</script>
 <p>Most of the work to compute the PDF for a provided direction is handled by the
 <a href="../Sampling_Algorithms/Sampling_Multidimensional_Functions.html#PiecewiseConstant2D"><tt>PiecewiseConstant2D</tt></a> distribution.  Here as well, the PDF value it
 returns is divided by <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.487ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1071 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
