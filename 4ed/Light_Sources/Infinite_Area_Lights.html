@@ -93,17 +93,13 @@ striking.
 
 </p>
 <p></p>
-<span class="anchor" id="fig:tt-area-vs-morning"></span><div class="card outerfigure"><div class="card-body figure"><p>
-
-
-</p>
-
-<div class="card-img-top" style="display:block; width: 100%; padding-top: 34.062%;  position:relative;"><div id="xa_Area_lights47" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
-<script>
-Jeri.renderViewer(document.getElementById('xa_Area_lights47'), {
-  title: '(a)_Area_lights47', children: [
- { title: '(a) Area lights', image: 'sportscar-light-comparisons-area.png' },  { title: '(b) Midday skylight', image: 'sportscar-light-comparisons-env-sunflowers.png' },  { title: '(c) Sunset', image: 'sportscar-light-comparisons-env-fire.png' }]});
-</script>
+<span class="anchor" id="fig:tt-area-vs-morning"></span><div class="card outerfigure"><div class="card-body figure">
+<div>(a) Area lights:</div>
+<img src="sportscar-light-comparisons-area.png" alt="(a) Area lights" width="100%">
+<div>(b) Midday skylight:</div>
+<img src="sportscar-light-comparisons-env-sunflowers.png" alt="Girl in a jacket" width="100%">
+<div>(c) Sunset:</div>
+<img src="sportscar-light-comparisons-env-fire.png" alt="Girl in a jacket" width="100%">
 <figcaption class="caption">Figure 12.16: <span class="legend"> Car model (a)&nbsp;illuminated with a few area
 lights, (b)&nbsp;illuminated with midday skylight
 from an environment map, (c)&nbsp;using a sunset environment map.
@@ -521,17 +517,11 @@ Figure&nbsp;<a href="#fig:tt-area-vs-morning">12.16</a>.
 
 </p>
 <p></p>
-<span class="anchor" id="fig:tt-skylights"></span><div class="card outerfigure"><div class="card-body figure"><p>
-
-
-</p>
-
-<div class="card-img-top" style="display:block; width: 100%; padding-top: 102.344%;  position:relative;"><div id="xa_Midday48" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
-<script>
-Jeri.renderViewer(document.getElementById('xa_Midday48'), {
-  title: '(a)_Midday48', children: [
- { title: '(a) Midday', image: 'env-midday-sunflowers.png' },  { title: '(b) Sunset', image: 'env-sunset-fire.png' }]});
-</script>
+<span class="anchor" id="fig:tt-skylights"></span><div class="card outerfigure"><div class="card-body figure">
+<div>(a) Midday:</div>
+<img src="env-midday-sunflowers.png" alt="(a) Midday" width="100%">
+<div>(b) Sunset:</div>
+<img src="env-sunset-fire.png" alt="(b) Sunset" width="100%">
 <figcaption class="caption">Figure 12.17: Environment Maps Used for Illumination in
 Figure&nbsp;<a href="#fig:tt-area-vs-morning">12.16</a>.
 <span class="legend">
@@ -949,16 +939,15 @@ better result with much lower variance.
 
 </p>
 <p></p>
-<span class="anchor" id="fig:tt-env-light-comparison"></span><div class="card outerfigure"><div class="card-body figure"><p>
-
-
-</p>
-
+<span class="anchor" id="fig:tt-env-light-comparison"></span><div class="card outerfigure">
+<div class="card-body figure">
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 48.667%;  position:relative;"><div id="xa_Uniform_sampling49" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 48.667%;  position:relative;"><div id="xa_Uniform_sampling49_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 48.667%;  position:relative;"><div id="xa_Uniform_sampling49_2" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Uniform_sampling49'), {
-  title: '(a)_Uniform_sampling49', children: [
- { title: '(a) Uniform sampling', image: 'dragon-env-sample-uniform.exr' },  { title: '(b) Importance sampling', image: 'dragon-env-sample-non-compensated.exr' },  { title: '(c) Compensated importance sampling', image: 'dragon-env-sample-compensated.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_Uniform_sampling49'), {children: [{ title: '(a) Uniform sampling', image: 'dragon-env-sample-uniform.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_Uniform_sampling49_1'), {children: [{ title: '(b) Importance sampling', image: 'dragon-env-sample-non-compensated.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_Uniform_sampling49_2'), {children: [{ title: '(c) Compensated importance sampling', image: 'dragon-env-sample-compensated.exr' }]});
 </script>
 <figcaption class="caption">Figure 12.18: Dragon Model Illuminated by the Morning Skylight
 Environment Map. <span class="legend">
@@ -972,14 +961,15 @@ has over 38,000 times lower MSE than (a), and (c) further improves MSE by a fact
 of 1.52.
 <em>(Dragon model courtesy of the Stanford Computer Graphics Laboratory.)</em>
 </span>
-</figcaption><p>
- 
-
-</p>
-</div></div><p>
-
-
-</p>
+</figcaption>
+</div>
+</div>
+<script>
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Uniform_sampling49'), { title: '(a)_Uniform_sampling49', children: [{ title: '(a) Uniform sampling', image: 'dragon-env-sample-uniform.exr' }]})
+Jeri.renderViewer(document.getElementById('xa_Uniform_sampling49-1'), { title: '(a)_Uniform_sampling49-1', children: [{ title: '(b) Importance sampling', image: 'dragon-env-sample-non-compensated.exr'  }]})
+Jeri.renderViewer(document.getElementById('xa_Uniform_sampling49-2'), { title: '(a)_Uniform_sampling49-2', children: [{ title: '(c) Compensated importance sampling', image: 'dragon-env-sample-compensated.exr' }]});
+</script>
 <p>Most of the work to compute the PDF for a provided direction is handled by the
 <a href="../Sampling_Algorithms/Sampling_Multidimensional_Functions.html#PiecewiseConstant2D"><tt>PiecewiseConstant2D</tt></a> distribution.  Here as well, the PDF value it
 returns is divided by <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.487ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1071 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
@@ -1067,16 +1057,14 @@ visibility effects in light sampling can significantly reduce error.
 
 </p>
 <p> </p>
-<span class="anchor" id="fig:watercolor-sky-env-map"></span><div class="card outerfigure"><div class="card-body figure"><p>
-
-
-</p>
-
-<div class="card-img-top" style="display:block; width: 100%; padding-top: 77.500%;  position:relative;"><div id="xa_No_portal_sampling50" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<span class="anchor" id="fig:watercolor-sky-env-map"></span>
+<div class="card outerfigure"><div class="card-body figure">
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 50%;  position:relative;"><div id="xa_No_portal_sampling50" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 50%;  position:relative;"><div id="xa_No_portal_sampling50-1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_No_portal_sampling50'), {
-  title: '(a)_No_portal_sampling50', children: [
- { title: '(a) No portal sampling', image: 'watercolor-noportal.exr' },  { title: '(b) Portal sampling', image: 'watercolor-portal.exr' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_No_portal_sampling50'), {title: '(a)_No_portal_sampling50', children: [{ title: '(a) No portal sampling', image: 'watercolor-noportal.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_No_portal_sampling50-1'), {title: '(b) Portal sampling', children: [{ title: '(b) Portal sampling', image: 'watercolor-portal.exr' }]});
 </script>
 <figcaption class="caption">Figure 12.19: <em>Watercolor</em> Scene Illuminated by a Daytime Sky Environment Map. <span class="legend">
 This is a challenging scene to render since the direct lighting calculation
