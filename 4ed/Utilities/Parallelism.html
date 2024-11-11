@@ -471,7 +471,7 @@ For these purposes, we provide a small <tt>AtomicFloat</tt> class.
 <span class="anchor" id="fragment-AtomicFloatDefinition-0"></span><div class="fragmentname">&lt;&lt;AtomicFloat Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="AtomicFloat"></span>AtomicFloat {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-AtomicFloatPublicMethods-0">AtomicFloat Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2825" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2825"><i></i></a><div id="fragbit-2825" class="collapse"><div class="fragmentcode">       explicit AtomicFloat(float v = 0) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-AtomicFloatPublicMethods-0">AtomicFloat Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2825" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2825"><i></i></a><div id="fragbit-2825" class="collapse show"><div class="fragmentcode">       explicit AtomicFloat(float v = 0) {
            bits = <a href="../Shapes/Managing_Rounding_Error.html#FloatToBits" class="code">FloatToBits</a>(v);
        }
        operator float() const {
@@ -489,7 +489,7 @@ For these purposes, we provide a small <tt>AtomicFloat</tt> class.
        }
        std::string ToString() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-AtomicFloatPrivateMembers-0">AtomicFloat Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2826" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2826"><i></i></a><div id="fragbit-2826" class="collapse"><div class="fragmentcode">       std::atomic&lt;<a href="../Shapes/Managing_Rounding_Error.html#FloatBits" class="code">FloatBits</a>&gt; bits;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-AtomicFloatPrivateMembers-0">AtomicFloat Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2826" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2826"><i></i></a><div id="fragbit-2826" class="collapse show"><div class="fragmentcode">       std::atomic&lt;<a href="../Shapes/Managing_Rounding_Error.html#FloatBits" class="code">FloatBits</a>&gt; bits;
        </div></div>
 };</div><p>
 
@@ -760,7 +760,7 @@ even for fine-grained tasks.
 <span class="anchor" id="fragment-ThreadPoolDefinition-0"></span><div class="fragmentname">&lt;&lt;ThreadPool Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="ThreadPool"></span>ThreadPool {
   public:
-    &lt;&lt;<span class="fragmentname">ThreadPool Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2827" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2827"><i></i></a><div id="fragbit-2827" class="collapse"><div class="fragmentcode">       explicit ThreadPool(int nThreads);
+    &lt;&lt;<span class="fragmentname">ThreadPool Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2827" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2827"><i></i></a><div id="fragbit-2827" class="collapse show"><div class="fragmentcode">       explicit ThreadPool(int nThreads);
        ~ThreadPool();
        
        size_t size() const { return threads.size(); }
@@ -774,8 +774,8 @@ even for fine-grained tasks.
        void ForEachThread(std::function&lt;void(void)&gt; func);
        std::string ToString() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname">ThreadPool Private Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2828" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2828"><i></i></a><div id="fragbit-2828" class="collapse"><div class="fragmentcode">       void Worker();</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ThreadPoolPrivateMembers-0">ThreadPool Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2829" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2829"><i></i></a><div id="fragbit-2829" class="collapse"><div class="fragmentcode">       std::vector&lt;std::thread&gt; threads;
+    &lt;&lt;<span class="fragmentname">ThreadPool Private Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2828" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2828"><i></i></a><div id="fragbit-2828" class="collapse show"><div class="fragmentcode">       void Worker();</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ThreadPoolPrivateMembers-0">ThreadPool Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2829" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2829"><i></i></a><div id="fragbit-2829" class="collapse show"><div class="fragmentcode">       std::vector&lt;std::thread&gt; threads;
        mutable std::mutex mutex;
        bool shutdownThreads = false;
        bool disabled = false;
@@ -859,14 +859,14 @@ implementation.
 <span class="anchor" id="fragment-ParallelJobDefinition-0"></span><div class="fragmentname">&lt;&lt;ParallelJob Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="ParallelJob"></span>ParallelJob {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParallelJobPublicMethods-0">ParallelJob Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2830" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2830"><i></i></a><div id="fragbit-2830" class="collapse"><div class="fragmentcode">       virtual ~ParallelJob() { DCHECK(removed); }
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParallelJobPublicMethods-0">ParallelJob Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2830" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2830"><i></i></a><div id="fragbit-2830" class="collapse show"><div class="fragmentcode">       virtual ~ParallelJob() { DCHECK(removed); }
        virtual bool <a href="#ParallelJob::HaveWork" class="code">HaveWork</a>() const = 0;
        virtual void RunStep(std::unique_lock&lt;std::mutex&gt; *lock) = 0;
        bool Finished() const { return !<a href="#ParallelJob::HaveWork" class="code">HaveWork</a>() &amp;&amp; <a href="#ParallelJob::activeWorkers" class="code">activeWorkers</a> == 0; }
        virtual std::string ToString() const = 0;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParallelJobPublicMembers-0">ParallelJob Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2831" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2831"><i></i></a><div id="fragbit-2831" class="collapse"><div class="fragmentcode">       static ThreadPool *threadPool;</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParallelJobPublicMembers-0">ParallelJob Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2831" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2831"><i></i></a><div id="fragbit-2831" class="collapse show"><div class="fragmentcode">       static ThreadPool *threadPool;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParallelJobPrivateMembers-0">ParallelJob Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2832" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2832"><i></i></a><div id="fragbit-2832" class="collapse"><div class="fragmentcode">       friend class ThreadPool;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParallelJobPrivateMembers-0">ParallelJob Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2832" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2832"><i></i></a><div id="fragbit-2832" class="collapse show"><div class="fragmentcode">       friend class ThreadPool;
        int activeWorkers = 0;
        ParallelJob *prev = nullptr, *next = nullptr;
        </div></div>    
@@ -970,7 +970,7 @@ job-related setup, assured that work will not start until it releases the lock.
 <span class="anchor" id="fragment-ThreadPoolMethodDefinitions-2"></span><div class="fragmentname">&lt;&lt;ThreadPool Method Definitions&gt;&gt;+=&nbsp;<a href="#fragment-ThreadPoolMethodDefinitions-1"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="#fragment-ThreadPoolMethodDefinitions-3"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">std::unique_lock&lt;std::<a href="#ThreadPool::mutex" class="code">mutex</a>&gt; <span class="anchor" id="ThreadPool::AddToJobList"></span>ThreadPool::AddToJobList(ParallelJob *job) {
     std::unique_lock&lt;std::<a href="#ThreadPool::mutex" class="code">mutex</a>&gt; lock(<a href="#ThreadPool::mutex" class="code">mutex</a>);
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-AddmonojobtoheadofmonojobList-0">Add <tt>job</tt> to head of <tt>jobList</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2833" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2833"><i></i></a><div id="fragbit-2833" class="collapse"><div class="fragmentcode">       if (<a href="#ThreadPool::jobList" class="code">jobList</a>)
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-AddmonojobtoheadofmonojobList-0">Add <tt>job</tt> to head of <tt>jobList</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2833" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2833"><i></i></a><div id="fragbit-2833" class="collapse show"><div class="fragmentcode">       if (<a href="#ThreadPool::jobList" class="code">jobList</a>)
            <a href="#ThreadPool::jobList" class="code">jobList</a>-&gt;<a href="#ParallelJob::prev" class="code">prev</a> = job;
        job-&gt;<a href="#ParallelJob::next" class="code">next</a> = <a href="#ThreadPool::jobList" class="code">jobList</a>;
        <a href="#ThreadPool::jobList" class="code">jobList</a> = job;</div></div> 
@@ -1024,7 +1024,7 @@ of a <tt>ParallelJob</tt> that still has work left.
 <span class="anchor" id="fragment-ThreadPoolMethodDefinitions-3"></span><div class="fragmentname">&lt;&lt;ThreadPool Method Definitions&gt;&gt;+=&nbsp;<a href="#fragment-ThreadPoolMethodDefinitions-2"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="#fragment-ThreadPoolMethodDefinitions-4"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">void <span class="anchor" id="ThreadPool::WorkOrWait"></span>ThreadPool::WorkOrWait(std::unique_lock&lt;std::mutex&gt; *lock,
                             bool isEnqueuingThread) {
-    &lt;&lt;<span class="fragmentname">Return if this is a worker thread and the thread pool is disabled</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2834" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2834"><i></i></a><div id="fragbit-2834" class="collapse"><div class="fragmentcode">       if (!isEnqueuingThread &amp;&amp; disabled) {
+    &lt;&lt;<span class="fragmentname">Return if this is a worker thread and the thread pool is disabled</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2834" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2834"><i></i></a><div id="fragbit-2834" class="collapse show"><div class="fragmentcode">       if (!isEnqueuingThread &amp;&amp; disabled) {
            jobListCondition.wait(*lock);
            return;
        }</div></div>
@@ -1032,14 +1032,14 @@ of a <tt>ParallelJob</tt> that still has work left.
     while (job &amp;&amp; !job-&gt;<a href="#ParallelJob::HaveWork" class="code">HaveWork</a>())
         job = job-&gt;next;
     if (job) {
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-Executeworkformonojob-0">Execute work for <tt>job</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2835" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2835"><i></i></a><div id="fragbit-2835" class="collapse"><div class="fragmentcode">           job-&gt;<a href="#ParallelJob::activeWorkers" class="code">activeWorkers</a>++;
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-Executeworkformonojob-0">Execute work for <tt>job</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2835" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2835"><i></i></a><div id="fragbit-2835" class="collapse show"><div class="fragmentcode">           job-&gt;<a href="#ParallelJob::activeWorkers" class="code">activeWorkers</a>++;
            job-&gt;<a href="#ParallelJob::RunStep" class="code">RunStep</a>(lock);
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Handlepost-job-executiondetails-0">Handle post-job-execution details</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2836" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2836"><i></i></a><div id="fragbit-2836" class="collapse"><div class="fragmentcode">              lock-&gt;lock();
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Handlepost-job-executiondetails-0">Handle post-job-execution details</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2836" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2836"><i></i></a><div id="fragbit-2836" class="collapse show"><div class="fragmentcode">              lock-&gt;lock();
               job-&gt;<a href="#ParallelJob::activeWorkers" class="code">activeWorkers</a>--;
               if (job-&gt;<a href="#ParallelJob::Finished" class="code">Finished</a>())
                   <a href="#ThreadPool::jobListCondition" class="code">jobListCondition</a>.notify_all();</div></div></div></div>
     } else
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-Waitfornewworktoarriveorthejobtofinish-0">Wait for new work to arrive or the job to finish</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2837" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2837"><i></i></a><div id="fragbit-2837" class="collapse"><div class="fragmentcode">           <a href="#ThreadPool::jobListCondition" class="code">jobListCondition</a>.wait(*lock);</div></div>
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-Waitfornewworktoarriveorthejobtofinish-0">Wait for new work to arrive or the job to finish</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2837" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2837"><i></i></a><div id="fragbit-2837" class="collapse show"><div class="fragmentcode">           <a href="#ThreadPool::jobListCondition" class="code">jobListCondition</a>.wait(*lock);</div></div>
 }</div><p>
 
 
@@ -1055,7 +1055,7 @@ and its <tt>RunStep()</tt> method is called with the lock passed along.
 <span class="anchor" id="fragment-Executeworkformonojob-0"></span><div class="fragmentname">&lt;&lt;Execute work for <tt>job</tt>&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">job-&gt;<a href="#ParallelJob::activeWorkers" class="code">activeWorkers</a>++;
 job-&gt;<a href="#ParallelJob::RunStep" class="code">RunStep</a>(lock);
-&lt;&lt;<span class="fragmentname"><a href="#fragment-Handlepost-job-executiondetails-0">Handle post-job-execution details</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2838" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2838"><i></i></a><div id="fragbit-2838" class="collapse"><div class="fragmentcode">   lock-&gt;lock();
+&lt;&lt;<span class="fragmentname"><a href="#fragment-Handlepost-job-executiondetails-0">Handle post-job-execution details</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2838" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2838"><i></i></a><div id="fragbit-2838" class="collapse show"><div class="fragmentcode">   lock-&gt;lock();
    job-&gt;<a href="#ParallelJob::activeWorkers" class="code">activeWorkers</a>--;
    if (job-&gt;<a href="#ParallelJob::Finished" class="code">Finished</a>())
        <a href="#ThreadPool::jobListCondition" class="code">jobListCondition</a>.notify_all();</div></div></div><p>
@@ -1195,7 +1195,7 @@ use in the <a href="#ParallelFor"><tt>ParallelFor()</tt></a> functions.
 <span class="anchor" id="fragment-ParallelForLoop1DDefinition-0"></span><div class="fragmentname">&lt;&lt;ParallelForLoop1D Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="ParallelForLoop1D"></span>ParallelForLoop1D : public <a href="#ParallelJob" class="code">ParallelJob</a> {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParallelForLoop1DPublicMethods-0">ParallelForLoop1D Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2839" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2839"><i></i></a><div id="fragbit-2839" class="collapse"><div class="fragmentcode">       ParallelForLoop1D(int64_t startIndex, int64_t <a href="#ParallelForLoop1D::endIndex" class="code">endIndex</a>, int <a href="#ParallelForLoop1D::chunkSize" class="code">chunkSize</a>,
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParallelForLoop1DPublicMethods-0">ParallelForLoop1D Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2839" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2839"><i></i></a><div id="fragbit-2839" class="collapse show"><div class="fragmentcode">       ParallelForLoop1D(int64_t startIndex, int64_t <a href="#ParallelForLoop1D::endIndex" class="code">endIndex</a>, int <a href="#ParallelForLoop1D::chunkSize" class="code">chunkSize</a>,
                          std::function&lt;void(int64_t, int64_t)&gt; <a href="#ParallelForLoop1D::func" class="code">func</a>)
            : <a href="#ParallelForLoop1D::func" class="code">func</a>(std::move(<a href="#ParallelForLoop1D::func" class="code">func</a>)), <a href="#ParallelForLoop1D::nextIndex" class="code">nextIndex</a>(startIndex), <a href="#ParallelForLoop1D::endIndex" class="code">endIndex</a>(<a href="#ParallelForLoop1D::endIndex" class="code">endIndex</a>),
              <a href="#ParallelForLoop1D::chunkSize" class="code">chunkSize</a>(<a href="#ParallelForLoop1D::chunkSize" class="code">chunkSize</a>) {}
@@ -1207,7 +1207,7 @@ use in the <a href="#ParallelFor"><tt>ParallelFor()</tt></a> functions.
                                <a href="#ParallelForLoop1D::nextIndex" class="code">nextIndex</a>, <a href="#ParallelForLoop1D::endIndex" class="code">endIndex</a>, <a href="#ParallelForLoop1D::chunkSize" class="code">chunkSize</a>);
        }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParallelForLoop1DPrivateMembers-0">ParallelForLoop1D Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2840" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2840"><i></i></a><div id="fragbit-2840" class="collapse"><div class="fragmentcode">       std::function&lt;void(int64_t, int64_t)&gt; func;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParallelForLoop1DPrivateMembers-0">ParallelForLoop1D Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2840" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2840"><i></i></a><div id="fragbit-2840" class="collapse show"><div class="fragmentcode">       std::function&lt;void(int64_t, int64_t)&gt; func;
        int64_t nextIndex, endIndex;
        int chunkSize;</div></div>
 };</div><p>
@@ -1268,12 +1268,12 @@ iterations.
 <p></p>
 <span class="anchor" id="fragment-ParallelForLoop1DMethodDefinitions-0"></span><div class="fragmentname">&lt;&lt;ParallelForLoop1D Method Definitions&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">void <span class="anchor" id="ParallelForLoop1D::RunStep"></span>ParallelForLoop1D::RunStep(std::unique_lock&lt;std::mutex&gt; *lock) {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Determinetherangeofloopiterationstoruninthisstep-0">Determine the range of loop iterations to run in this step</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2841" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2841"><i></i></a><div id="fragbit-2841" class="collapse"><div class="fragmentcode">       int64_t indexStart = <a href="#ParallelForLoop1D::nextIndex" class="code">nextIndex</a>;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Determinetherangeofloopiterationstoruninthisstep-0">Determine the range of loop iterations to run in this step</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2841" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2841"><i></i></a><div id="fragbit-2841" class="collapse show"><div class="fragmentcode">       int64_t indexStart = <a href="#ParallelForLoop1D::nextIndex" class="code">nextIndex</a>;
        int64_t indexEnd = std::min(indexStart + <a href="#ParallelForLoop1D::chunkSize" class="code">chunkSize</a>, <a href="#ParallelForLoop1D::endIndex" class="code">endIndex</a>);
        <a href="#ParallelForLoop1D::nextIndex" class="code">nextIndex</a> = indexEnd;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Removejobfromlistifallworkhasbeenstarted-0">Remove job from list if all work has been started</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2842" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2842"><i></i></a><div id="fragbit-2842" class="collapse"><div class="fragmentcode">       if (!<a href="#ParallelForLoop1D::HaveWork" class="code">HaveWork</a>())
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Removejobfromlistifallworkhasbeenstarted-0">Remove job from list if all work has been started</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2842" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2842"><i></i></a><div id="fragbit-2842" class="collapse show"><div class="fragmentcode">       if (!<a href="#ParallelForLoop1D::HaveWork" class="code">HaveWork</a>())
            threadPool-&gt;<a href="#ThreadPool::RemoveFromJobList" class="code">RemoveFromJobList</a>(this);</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ReleaselockandexecuteloopiterationsinmonoindexStartindexEnd-0">Release lock and execute loop iterations in <tt>[indexStart, indexEnd)</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2843" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2843"><i></i></a><div id="fragbit-2843" class="collapse"><div class="fragmentcode">       lock-&gt;unlock();
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ReleaselockandexecuteloopiterationsinmonoindexStartindexEnd-0">Release lock and execute loop iterations in <tt>[indexStart, indexEnd)</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2843" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2843"><i></i></a><div id="fragbit-2843" class="collapse show"><div class="fragmentcode">       lock-&gt;unlock();
        <a href="#ParallelForLoop1D::func" class="code">func</a>(indexStart, indexEnd);</div></div>
 }</div><p>
 
@@ -1335,12 +1335,12 @@ complete.
 <div class="fragmentcode">void <span class="anchor" id="ParallelFor"></span>ParallelFor(int64_t start, int64_t end,
                  std::function&lt;void(int64_t, int64_t)&gt; func) {
     if (start == end) return;
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computechunksizeforparallelloop-0">Compute chunk size for parallel loop</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2844" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2844"><i></i></a><div id="fragbit-2844" class="collapse"><div class="fragmentcode">       int64_t chunkSize =
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computechunksizeforparallelloop-0">Compute chunk size for parallel loop</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2844" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2844"><i></i></a><div id="fragbit-2844" class="collapse show"><div class="fragmentcode">       int64_t chunkSize =
            std::max&lt;int64_t&gt;(1, (end - start) / (8 * RunningThreads()));</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-CreateandenqueuemonoParallelForLoop1Dforthisloop-0">Create and enqueue <tt>ParallelForLoop1D</tt> for this loop</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2845" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2845"><i></i></a><div id="fragbit-2845" class="collapse"><div class="fragmentcode">       ParallelForLoop1D loop(start, end, chunkSize, std::move(func));
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-CreateandenqueuemonoParallelForLoop1Dforthisloop-0">Create and enqueue <tt>ParallelForLoop1D</tt> for this loop</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2845" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2845"><i></i></a><div id="fragbit-2845" class="collapse show"><div class="fragmentcode">       ParallelForLoop1D loop(start, end, chunkSize, std::move(func));
        std::unique_lock&lt;std::mutex&gt; lock =
            ParallelJob::<a href="#ParallelJob::threadPool" class="code">threadPool</a>-&gt;<a href="#ThreadPool::AddToJobList" class="code">AddToJobList</a>(&amp;loop);</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Helpoutwithparallelloopiterationsinthecurrentthread-0">Help out with parallel loop iterations in the current thread</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2846" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2846"><i></i></a><div id="fragbit-2846" class="collapse"><div class="fragmentcode">       while (!loop.<a href="#ParallelJob::Finished" class="code">Finished</a>())
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Helpoutwithparallelloopiterationsinthecurrentthread-0">Help out with parallel loop iterations in the current thread</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2846" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2846"><i></i></a><div id="fragbit-2846" class="collapse show"><div class="fragmentcode">       while (!loop.<a href="#ParallelJob::Finished" class="code">Finished</a>())
            ParallelJob::threadPool-&gt;<a href="#ThreadPool::WorkOrWait" class="code">WorkOrWait</a>(&amp;lock, true);</div></div>
 }</div><p>
 
@@ -1493,13 +1493,13 @@ is templated on the return type of the function it manages.
 <div class="fragmentcode">template &lt;typename T&gt;
 class <span class="anchor" id="AsyncJob"></span>AsyncJob : public <a href="#ParallelJob" class="code">ParallelJob</a> {
 public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-AsyncJobPublicMethods-0">AsyncJob Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2847" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2847"><i></i></a><div id="fragbit-2847" class="collapse"><div class="fragmentcode">       AsyncJob(std::function&lt;T(void)&gt; w) : func(std::move(w)) {}
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-AsyncJobPublicMethods-0">AsyncJob Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2847" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2847"><i></i></a><div id="fragbit-2847" class="collapse show"><div class="fragmentcode">       AsyncJob(std::function&lt;T(void)&gt; w) : func(std::move(w)) {}
        bool HaveWork() const { return !<a href="#AsyncJob::started" class="code">started</a>; }
        void RunStep(std::unique_lock&lt;std::<a href="#AsyncJob::mutex" class="code">mutex</a>&gt; *lock) {
            <a href="#ParallelJob::threadPool" class="code">threadPool</a>-&gt;<a href="#ThreadPool::RemoveFromJobList" class="code">RemoveFromJobList</a>(this);
            <a href="#AsyncJob::started" class="code">started</a> = true;
            lock-&gt;unlock();
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Executeasynchronousworkandnotifywaitingthreadsofitscompletion-0">Execute asynchronous work and notify waiting threads of its completion</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2848" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2848"><i></i></a><div id="fragbit-2848" class="collapse"><div class="fragmentcode">              T r = <a href="#AsyncJob::func" class="code">func</a>();
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Executeasynchronousworkandnotifywaitingthreadsofitscompletion-0">Execute asynchronous work and notify waiting threads of its completion</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2848" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2848"><i></i></a><div id="fragbit-2848" class="collapse show"><div class="fragmentcode">              T r = <a href="#AsyncJob::func" class="code">func</a>();
               std::unique_lock&lt;std::<a href="#AsyncJob::mutex" class="code">mutex</a>&gt; ul(<a href="#AsyncJob::mutex" class="code">mutex</a>);
               <a href="#AsyncJob::result" class="code">result</a> = r;
               <a href="#AsyncJob::cv" class="code">cv</a>.notify_all();</div></div>
@@ -1540,7 +1540,7 @@ public:
        }
        std::string ToString() const { return StringPrintf("[ AsyncJob <a href="#AsyncJob::started" class="code">started</a>: %s ]", <a href="#AsyncJob::started" class="code">started</a>); }</div></div>
 private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-AsyncJobPrivateMembers-0">AsyncJob Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2849" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2849"><i></i></a><div id="fragbit-2849" class="collapse"><div class="fragmentcode">       std::function&lt;T(void)&gt; func;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-AsyncJobPrivateMembers-0">AsyncJob Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2849" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2849"><i></i></a><div id="fragbit-2849" class="collapse show"><div class="fragmentcode">       std::function&lt;T(void)&gt; func;
        bool started = false;
        pstd::optional&lt;T&gt; result;
        mutable std::mutex mutex;
@@ -1588,7 +1588,7 @@ consider it when they iterate through the list.
     <a href="#ParallelJob::threadPool" class="code">threadPool</a>-&gt;<a href="#ThreadPool::RemoveFromJobList" class="code">RemoveFromJobList</a>(this);
     <a href="#AsyncJob::started" class="code">started</a> = true;
     lock-&gt;unlock();
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Executeasynchronousworkandnotifywaitingthreadsofitscompletion-0">Execute asynchronous work and notify waiting threads of its completion</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2850" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2850"><i></i></a><div id="fragbit-2850" class="collapse"><div class="fragmentcode">       T r = <a href="#AsyncJob::func" class="code">func</a>();
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Executeasynchronousworkandnotifywaitingthreadsofitscompletion-0">Execute asynchronous work and notify waiting threads of its completion</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2850" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2850"><i></i></a><div id="fragbit-2850" class="collapse show"><div class="fragmentcode">       T r = <a href="#AsyncJob::func" class="code">func</a>();
        std::unique_lock&lt;std::<a href="#AsyncJob::mutex" class="code">mutex</a>&gt; ul(<a href="#AsyncJob::mutex" class="code">mutex</a>);
        <a href="#AsyncJob::result" class="code">result</a> = r;
        <a href="#AsyncJob::cv" class="code">cv</a>.notify_all();</div></div>
@@ -1703,10 +1703,10 @@ function&rsquo;s argument values.
 <span class="anchor" id="fragment-AsynchronousTaskLaunchFunctionDefinitions-0"></span><div class="fragmentname">&lt;&lt;Asynchronous Task Launch Function Definitions&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">template &lt;typename F, typename... Args&gt;
 auto <span class="anchor" id="RunAsync"></span>RunAsync(F func, Args &amp;&amp;...args) {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-CreatemonoAsyncJobformonofuncandmonoargs-0">Create <tt>AsyncJob</tt> for <tt>func</tt> and <tt>args</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2851" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2851"><i></i></a><div id="fragbit-2851" class="collapse"><div class="fragmentcode">       auto fvoid = std::bind(func, std::forward&lt;Args&gt;(args)...);
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-CreatemonoAsyncJobformonofuncandmonoargs-0">Create <tt>AsyncJob</tt> for <tt>func</tt> and <tt>args</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2851" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2851"><i></i></a><div id="fragbit-2851" class="collapse show"><div class="fragmentcode">       auto fvoid = std::bind(func, std::forward&lt;Args&gt;(args)...);
        using R = typename std::invoke_result_t&lt;F, Args...&gt;;
        AsyncJob&lt;R&gt; *job = new AsyncJob&lt;R&gt;(std::move(fvoid));</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Enqueuemonojoborrunitimmediately-0">Enqueue <tt>job</tt> or run it immediately</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2852" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2852"><i></i></a><div id="fragbit-2852" class="collapse"><div class="fragmentcode">       std::unique_lock&lt;std::mutex&gt; lock;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Enqueuemonojoborrunitimmediately-0">Enqueue <tt>job</tt> or run it immediately</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2852" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2852"><i></i></a><div id="fragbit-2852" class="collapse show"><div class="fragmentcode">       std::unique_lock&lt;std::mutex&gt; lock;
        if (<a href="#RunningThreads" class="code">RunningThreads</a>() == 1)
            job-&gt;<a href="#AsyncJob::DoWork" class="code">DoWork</a>();
        else
@@ -1792,7 +1792,7 @@ managed object type <tt>T</tt> on demand as threads require them.
 <div class="fragmentcode">template &lt;typename T&gt;
 class <span class="anchor" id="ThreadLocal"></span>ThreadLocal {
 public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ThreadLocalPublicMethods-0">ThreadLocal Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2853" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2853"><i></i></a><div id="fragbit-2853" class="collapse"><div class="fragmentcode">       <a href="#ThreadLocal" class="code">ThreadLocal</a>()
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ThreadLocalPublicMethods-0">ThreadLocal Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2853" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2853"><i></i></a><div id="fragbit-2853" class="collapse show"><div class="fragmentcode">       <a href="#ThreadLocal" class="code">ThreadLocal</a>()
            : hashTable(4 * <a href="#RunningThreads" class="code">RunningThreads</a>()), create([]() { return T(); }) {}
        <a href="#ThreadLocal" class="code">ThreadLocal</a>(std::function&lt;T(void)&gt; &amp;&amp;c)
            : hashTable(4 * <a href="#RunningThreads" class="code">RunningThreads</a>()), create(c) {}
@@ -1800,7 +1800,7 @@ public:
        template &lt;typename F&gt;
        void ForAll(F &amp;&amp;func);</div></div>
 private:
-    &lt;&lt;<span class="fragmentname">ThreadLocal Private Members</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2854" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2854"><i></i></a><div id="fragbit-2854" class="collapse"><div class="fragmentcode">       struct Entry {
+    &lt;&lt;<span class="fragmentname">ThreadLocal Private Members</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2854" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2854"><i></i></a><div id="fragbit-2854" class="collapse show"><div class="fragmentcode">       struct Entry {
            std::thread::id tid;
            T value;
        };

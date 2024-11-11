@@ -260,7 +260,7 @@ implementation is in the file <a href="https://github.com/mmp/pbrt-v4/tree/maste
 <span class="anchor" id="fragment-PhaseFunctionDefinition-0"></span><div class="fragmentname">&lt;&lt;PhaseFunction Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="PhaseFunction"></span>PhaseFunction : public <a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>&lt;<a href="#HGPhaseFunction" class="code">HGPhaseFunction</a>&gt; {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-PhaseFunctionInterface-0">PhaseFunction Interface</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1559" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1559"><i></i></a><div id="fragbit-1559" class="collapse"><div class="fragmentcode">       using <a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>::<a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-PhaseFunctionInterface-0">PhaseFunction Interface</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1559" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1559"><i></i></a><div id="fragbit-1559" class="collapse show"><div class="fragmentcode">       using <a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>::<a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>;
        
        std::string ToString() const;
        Float p(<a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wo, <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wi) const;
@@ -1075,7 +1075,7 @@ the context of the <a href="#PhaseFunction"><tt>PhaseFunction</tt></a> interface
 <span class="anchor" id="fragment-HGPhaseFunctionDefinition-0"></span><div class="fragmentname">&lt;&lt;HGPhaseFunction Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="HGPhaseFunction"></span>HGPhaseFunction {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-HGPhaseFunctionPublicMethods-0">HGPhaseFunction Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1560" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1560"><i></i></a><div id="fragbit-1560" class="collapse"><div class="fragmentcode">       HGPhaseFunction(Float g) : g(g) {}
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-HGPhaseFunctionPublicMethods-0">HGPhaseFunction Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1560" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1560"><i></i></a><div id="fragbit-1560" class="collapse show"><div class="fragmentcode">       HGPhaseFunction(Float g) : g(g) {}
        Float <a href="#HGPhaseFunction::p" class="code">p</a>(<a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wo, <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wi) const {
            return <a href="#HenyeyGreenstein" class="code">HenyeyGreenstein</a>(<a href="../Geometry_and_Transformations/Vectors.html#Dot" class="code">Dot</a>(wo, wi), g);
        }
@@ -1089,7 +1089,7 @@ the context of the <a href="#PhaseFunction"><tt>PhaseFunction</tt></a> interface
        
        std::string ToString() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-HGPhaseFunctionPrivateMembers-0">HGPhaseFunction Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1561" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1561"><i></i></a><div id="fragbit-1561" class="collapse"><div class="fragmentcode">       Float g;</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-HGPhaseFunctionPrivateMembers-0">HGPhaseFunction Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1561" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1561"><i></i></a><div id="fragbit-1561" class="collapse show"><div class="fragmentcode">       Float g;</div></div>
 };</div><p>
 
 
@@ -1158,13 +1158,13 @@ phase function&rsquo;s value for the sampled direction.
  <use xlink:href="#E1-LATINMODERNMAIN-73" x="945" y="0"></use>
  <use xlink:href="#E1-LATINMODERNNORMAL-1D703" x="1506" y="0"></use>
 </g>
-</svg> for Henyey&ndash;Greenstein sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1562" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1562"><i></i></a><div id="fragbit-1562" class="collapse"><div class="fragmentcode">       Float cosTheta;
+</svg> for Henyey&ndash;Greenstein sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1562" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1562"><i></i></a><div id="fragbit-1562" class="collapse show"><div class="fragmentcode">       Float cosTheta;
        if (std::abs(g) &lt; 1e-3f)
            cosTheta = 1 - 2 * u[0];
        else
            cosTheta = -1 / (2 * g) *
                       (1 + <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(g) - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>((1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(g)) / (1 + g - 2 * g * u[0])));</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputedirectionmonowiforHenyey--Greensteinsample-0">Compute direction <tt>wi</tt> for Henyey&ndash;Greenstein sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1563" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1563"><i></i></a><div id="fragbit-1563" class="collapse"><div class="fragmentcode">       Float sinTheta = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(cosTheta));
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputedirectionmonowiforHenyey--Greensteinsample-0">Compute direction <tt>wi</tt> for Henyey&ndash;Greenstein sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1563" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1563"><i></i></a><div id="fragbit-1563" class="collapse show"><div class="fragmentcode">       Float sinTheta = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(cosTheta));
        Float phi = 2 * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a> * u[1];
        <a href="../Geometry_and_Transformations/Applying_Transformations.html#Frame" class="code">Frame</a> wFrame = <a href="../Geometry_and_Transformations/Applying_Transformations.html#Frame" class="code">Frame</a>::<a href="../Geometry_and_Transformations/Applying_Transformations.html#Frame::FromZ" class="code">FromZ</a>(wo);
        <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wi = wFrame.<a href="../Geometry_and_Transformations/Applying_Transformations.html#Frame::FromLocal" class="code">FromLocal</a>(<a href="../Geometry_and_Transformations/Spherical_Geometry.html#SphericalDirection" class="code">SphericalDirection</a>(sinTheta, cosTheta, phi));</div></div>

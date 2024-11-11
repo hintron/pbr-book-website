@@ -384,7 +384,7 @@ Chapter&nbsp;<a href="../Textures_and_Materials.html#chap:materials">10</a> for 
           <a href="../Reflection_Models/Dielectric_BSDF.html#DielectricBxDF" class="code">DielectricBxDF</a>, <a href="../Reflection_Models/Dielectric_BSDF.html#ThinDielectricBxDF" class="code">ThinDielectricBxDF</a>, <a href="../Reflection_Models/Scattering_from_Hair.html#HairBxDF" class="code">HairBxDF</a>, <a href="../Reflection_Models/Measured_BSDFs.html#MeasuredBxDF" class="code">MeasuredBxDF</a>,
           <a href="../Reflection_Models/Conductor_BRDF.html#ConductorBxDF" class="code">ConductorBxDF</a>, NormalizedFresnelBxDF&gt; {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-BxDFInterface-0">BxDF Interface</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1221" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1221"><i></i></a><div id="fragbit-1221" class="collapse"><div class="fragmentcode">       <a href="#BxDFFlags" class="code">BxDFFlags</a> Flags() const;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-BxDFInterface-0">BxDF Interface</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1221" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1221"><i></i></a><div id="fragbit-1221" class="collapse show"><div class="fragmentcode">       <a href="#BxDFFlags" class="code">BxDFFlags</a> Flags() const;
        using <a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>::<a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>;
        
        std::string ToString() const;
@@ -431,7 +431,7 @@ treated as glossy reflection in this list.
     <span class="anchor" id="BxDFFlags::Diffuse"></span>Diffuse = 1 &lt;&lt; 2,
     <span class="anchor" id="BxDFFlags::Glossy"></span>Glossy = 1 &lt;&lt; 3,
     <span class="anchor" id="BxDFFlags::Specular"></span>Specular = 1 &lt;&lt; 4,
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-CompositemonoBxDFFlagsdefinitions-0">Composite <tt>BxDFFlags</tt> definitions</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1222" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1222"><i></i></a><div id="fragbit-1222" class="collapse"><div class="fragmentcode">       DiffuseReflection = <a href="#BxDFFlags::Diffuse" class="code">Diffuse</a> | <a href="#BxDFFlags::Reflection" class="code">Reflection</a>,
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-CompositemonoBxDFFlagsdefinitions-0">Composite <tt>BxDFFlags</tt> definitions</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1222" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1222"><i></i></a><div id="fragbit-1222" class="collapse show"><div class="fragmentcode">       DiffuseReflection = <a href="#BxDFFlags::Diffuse" class="code">Diffuse</a> | <a href="#BxDFFlags::Reflection" class="code">Reflection</a>,
        DiffuseTransmission = <a href="#BxDFFlags::Diffuse" class="code">Diffuse</a> | <a href="#BxDFFlags::Transmission" class="code">Transmission</a>,
        GlossyReflection = <a href="#BxDFFlags::Glossy" class="code">Glossy</a> | <a href="#BxDFFlags::Reflection" class="code">Reflection</a>,
        GlossyTransmission = <a href="#BxDFFlags::Glossy" class="code">Glossy</a> | <a href="#BxDFFlags::Transmission" class="code">Transmission</a>,
@@ -679,7 +679,7 @@ chapter, it can be left set to its default <tt>false</tt> value.
 <p></p>
 <span class="anchor" id="fragment-BSDFSampleDefinition-0"></span><div class="fragmentname">&lt;&lt;BSDFSample Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">struct <span class="anchor" id="BSDFSample"></span>BSDFSample {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-BSDFSamplePublicMethods-0">BSDFSample Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1223" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1223"><i></i></a><div id="fragbit-1223" class="collapse"><div class="fragmentcode">       <a href="#BSDFSample" class="code">BSDFSample</a>(<a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> f, <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wi, Float pdf, <a href="#BxDFFlags" class="code">BxDFFlags</a> flags,
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-BSDFSamplePublicMethods-0">BSDFSample Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1223" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1223"><i></i></a><div id="fragbit-1223" class="collapse show"><div class="fragmentcode">       <a href="#BSDFSample" class="code">BSDFSample</a>(<a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> f, <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wi, Float pdf, <a href="#BxDFFlags" class="code">BxDFFlags</a> flags,
                   Float eta = 1, bool pdfIsProportional = false)
            : f(f), wi(wi), pdf(pdf), flags(flags), eta(eta),
              pdfIsProportional(pdfIsProportional) {}
@@ -803,7 +803,7 @@ have control over sampling and the quality of the returned estimate.
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-64" x="556" y="0"></use>
 </g>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1224" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1224"><i></i></a><div id="fragbit-1224" class="collapse"><div class="fragmentcode">           pstd::optional&lt;<a href="#BSDFSample" class="code">BSDFSample</a>&gt; bs = <a href="#BxDF::Sample_f" class="code">Sample_f</a>(wo, uc[i], u2[i]);
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1224" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1224"><i></i></a><div id="fragbit-1224" class="collapse show"><div class="fragmentcode">           pstd::optional&lt;<a href="#BSDFSample" class="code">BSDFSample</a>&gt; bs = <a href="#BxDF::Sample_f" class="code">Sample_f</a>(wo, uc[i], u2[i]);
            if (bs)
                r += bs-&gt;<a href="#BSDFSample::f" class="code">f</a> * <a href="../Geometry_and_Transformations/Spherical_Geometry.html#AbsCosTheta" class="code">AbsCosTheta</a>(bs-&gt;<a href="#BSDFSample::wi" class="code">wi</a>) / bs-&gt;<a href="#BSDFSample::pdf" class="code">pdf</a>;</div></div>
     }
@@ -949,7 +949,7 @@ in uniform sample values&mdash;in this case, five dimensions&rsquo; worth of the
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-68" x="556" y="0"></use>
 </g>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1225" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1225"><i></i></a><div id="fragbit-1225" class="collapse"><div class="fragmentcode">           <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wo = <a href="../Sampling_Algorithms/Sampling_Multidimensional_Functions.html#SampleUniformHemisphere" class="code">SampleUniformHemisphere</a>(u1[i]);
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1225" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1225"><i></i></a><div id="fragbit-1225" class="collapse show"><div class="fragmentcode">           <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wo = <a href="../Sampling_Algorithms/Sampling_Multidimensional_Functions.html#SampleUniformHemisphere" class="code">SampleUniformHemisphere</a>(u1[i]);
            if (wo.z == 0)
                continue;
            Float pdfo = <a href="../Sampling_Algorithms/Sampling_Multidimensional_Functions.html#UniformHemispherePDF" class="code">UniformHemispherePDF</a>();
@@ -1540,7 +1540,7 @@ around a <a href="#BxDF"><tt>BxDF</tt></a> that handles this transformation.
 <span class="anchor" id="fragment-BSDFDefinition-0"></span><div class="fragmentname">&lt;&lt;BSDF Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="BSDF"></span>BSDF {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-BSDFPublicMethods-0">BSDF Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1226" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1226"><i></i></a><div id="fragbit-1226" class="collapse"><div class="fragmentcode">       <a href="#BSDF" class="code">BSDF</a>() = default;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-BSDFPublicMethods-0">BSDF Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1226" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1226"><i></i></a><div id="fragbit-1226" class="collapse show"><div class="fragmentcode">       <a href="#BSDF" class="code">BSDF</a>() = default;
        <a href="#BSDF" class="code">BSDF</a>(<a href="../Geometry_and_Transformations/Normals.html#Normal3f" class="code">Normal3f</a> ns, <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> dpdus, <a href="#BxDF" class="code">BxDF</a> <a href="#BSDF::bxdf" class="code">bxdf</a>)
            : <a href="#BSDF::bxdf" class="code">bxdf</a>(<a href="#BSDF::bxdf" class="code">bxdf</a>),
              <a href="#BSDF::shadingFrame" class="code">shadingFrame</a>(<a href="../Geometry_and_Transformations/Applying_Transformations.html#Frame" class="code">Frame</a>::FromXZ(<a href="../Geometry_and_Transformations/Vectors.html#Normalize" class="code">Normalize</a>(dpdus), <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a>(ns))) {}
@@ -1570,7 +1570,7 @@ around a <a href="#BxDF"><tt>BxDF</tt></a> that handles this transformation.
                <a href="#BxDFReflTransFlags::All" class="code">BxDFReflTransFlags</a> sampleFlags = <a href="#BxDFReflTransFlags::All" class="code">BxDFReflTransFlags</a>::All) const {
            <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wo = <a href="#BSDF::RenderToLocal" class="code">RenderToLocal</a>(woRender);
            if (wo.z == 0 ||!(<a href="#BSDF::bxdf" class="code">bxdf</a>.<a href="#BxDF::Flags" class="code">Flags</a>() &amp; sampleFlags)) return {};
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-SamplemonobxdfandreturnmonoBSDFSample-0">Sample <tt>bxdf</tt> and return <tt>BSDFSample</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1227" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1227"><i></i></a><div id="fragbit-1227" class="collapse"><div class="fragmentcode">              pstd::optional&lt;<a href="#BSDFSample" class="code">BSDFSample</a>&gt; bs = bxdf.<a href="#BxDF::Sample_f" class="code">Sample_f</a>(wo, u, u2, mode, sampleFlags);
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-SamplemonobxdfandreturnmonoBSDFSample-0">Sample <tt>bxdf</tt> and return <tt>BSDFSample</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1227" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1227"><i></i></a><div id="fragbit-1227" class="collapse show"><div class="fragmentcode">              pstd::optional&lt;<a href="#BSDFSample" class="code">BSDFSample</a>&gt; bs = bxdf.<a href="#BxDF::Sample_f" class="code">Sample_f</a>(wo, u, u2, mode, sampleFlags);
               if (!bs || !bs-&gt;<a href="#BSDFSample::f" class="code">f</a> || bs-&gt;<a href="#BSDFSample::pdf" class="code">pdf</a> == 0 || bs-&gt;<a href="#BSDFSample::wi" class="code">wi</a>.z == 0)
                   return {};
               bs-&gt;<a href="#BSDFSample::wi" class="code">wi</a> = <a href="#BSDF::LocalToRender" class="code">LocalToRender</a>(bs-&gt;<a href="#BSDFSample::wi" class="code">wi</a>);
@@ -1629,7 +1629,7 @@ around a <a href="#BxDF"><tt>BxDF</tt></a> that handles this transformation.
        }
        void <a href="../Light_Transport_I_Surface_Reflection/A_Better_Path_Tracer.html#BxDF::Regularize" class="code">Regularize</a>() { <a href="#BSDF::bxdf" class="code">bxdf</a>.<a href="../Light_Transport_I_Surface_Reflection/A_Better_Path_Tracer.html#BxDF::Regularize" class="code">Regularize</a>(); }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-BSDFPrivateMembers-0">BSDF Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1228" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1228"><i></i></a><div id="fragbit-1228" class="collapse"><div class="fragmentcode">       <a href="#BxDF" class="code">BxDF</a> bxdf;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-BSDFPrivateMembers-0">BSDF Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1228" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1228"><i></i></a><div id="fragbit-1228" class="collapse show"><div class="fragmentcode">       <a href="#BxDF" class="code">BxDF</a> bxdf;
        <a href="../Geometry_and_Transformations/Applying_Transformations.html#Frame" class="code">Frame</a> shadingFrame;</div></div>
 };</div><p>
 
@@ -1825,7 +1825,7 @@ coordinate system.
         <a href="#BxDFReflTransFlags::All" class="code">BxDFReflTransFlags</a> sampleFlags = <a href="#BxDFReflTransFlags::All" class="code">BxDFReflTransFlags</a>::All) const {
     <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wo = <a href="#BSDF::RenderToLocal" class="code">RenderToLocal</a>(woRender);
     if (wo.z == 0 ||!(<a href="#BSDF::bxdf" class="code">bxdf</a>.<a href="#BxDF::Flags" class="code">Flags</a>() &amp; sampleFlags)) return {};
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-SamplemonobxdfandreturnmonoBSDFSample-0">Sample <tt>bxdf</tt> and return <tt>BSDFSample</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1229" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1229"><i></i></a><div id="fragbit-1229" class="collapse"><div class="fragmentcode">       pstd::optional&lt;<a href="#BSDFSample" class="code">BSDFSample</a>&gt; bs = bxdf.<a href="#BxDF::Sample_f" class="code">Sample_f</a>(wo, u, u2, mode, sampleFlags);
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-SamplemonobxdfandreturnmonoBSDFSample-0">Sample <tt>bxdf</tt> and return <tt>BSDFSample</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1229" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1229"><i></i></a><div id="fragbit-1229" class="collapse show"><div class="fragmentcode">       pstd::optional&lt;<a href="#BSDFSample" class="code">BSDFSample</a>&gt; bs = bxdf.<a href="#BxDF::Sample_f" class="code">Sample_f</a>(wo, u, u2, mode, sampleFlags);
        if (!bs || !bs-&gt;<a href="#BSDFSample::f" class="code">f</a> || bs-&gt;<a href="#BSDFSample::pdf" class="code">pdf</a> == 0 || bs-&gt;<a href="#BSDFSample::wi" class="code">wi</a>.z == 0)
            return {};
        bs-&gt;<a href="#BSDFSample::wi" class="code">wi</a> = <a href="#BSDF::LocalToRender" class="code">LocalToRender</a>(bs-&gt;<a href="#BSDFSample::wi" class="code">wi</a>);

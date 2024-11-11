@@ -652,12 +652,12 @@ generated.
 <span class="anchor" id="fragment-SamplingInlineFunctions-2"></span><div class="fragmentname">&lt;&lt;Sampling Inline Functions&gt;&gt;+=&nbsp;<a href="Improving_Efficiency.html#fragment-SamplingInlineFunctions-1"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="#fragment-SamplingInlineFunctions-3"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">int <span class="anchor" id="SampleDiscrete"></span>SampleDiscrete(pstd::span&lt;const Float&gt; weights, Float u, Float *pmf,
                    Float *uRemapped) {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Handleemptymonoweightsfordiscretesampling-0">Handle empty <tt>weights</tt> for discrete sampling</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-66" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-66"><i></i></a><div id="fragbit-66" class="collapse"><div class="fragmentcode">       if (weights.empty()) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Handleemptymonoweightsfordiscretesampling-0">Handle empty <tt>weights</tt> for discrete sampling</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-66" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-66"><i></i></a><div id="fragbit-66" class="collapse show"><div class="fragmentcode">       if (weights.empty()) {
            if (pmf)
                *pmf = 0;
            return -1;
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computesumofmonoweights-0">Compute sum of <tt>weights</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-67" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-67"><i></i></a><div id="fragbit-67" class="collapse"><div class="fragmentcode">       Float sumWeights = 0;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computesumofmonoweights-0">Compute sum of <tt>weights</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-67" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-67"><i></i></a><div id="fragbit-67" class="collapse show"><div class="fragmentcode">       Float sumWeights = 0;
        for (Float w : weights)
            sumWeights += w;</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Computerescaledusample-0">Compute rescaled <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.231ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 960.6 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
@@ -670,7 +670,7 @@ generated.
  <use xlink:href="#E1-LATINMODERNNORMAL-1D462" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="809" y="513"></use>
 </g>
-</svg> sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-68" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-68"><i></i></a><div id="fragbit-68" class="collapse"><div class="fragmentcode">       Float up = u * sumWeights;
+</svg> sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-68" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-68"><i></i></a><div id="fragbit-68" class="collapse show"><div class="fragmentcode">       Float up = u * sumWeights;
        if (up == sumWeights)
            up = <a href="../Shapes/Managing_Rounding_Error.html#NextFloatDown" class="code">NextFloatDown</a>(up);</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Findoffsetinmonoweightscorrespondingtou-0">Find offset in <tt>weights</tt> corresponding to <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.231ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 960.6 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
@@ -683,12 +683,12 @@ generated.
  <use xlink:href="#E1-LATINMODERNNORMAL-1D462" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="809" y="513"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-69" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-69"><i></i></a><div id="fragbit-69" class="collapse"><div class="fragmentcode">       int offset = 0;
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-69" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-69"><i></i></a><div id="fragbit-69" class="collapse show"><div class="fragmentcode">       int offset = 0;
        Float sum = 0;
        while (sum + weights[offset] &lt;= up)
            sum += weights[offset++];
        </div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputePMFandremappedmonouvalueifnecessary-0">Compute PMF and remapped <tt>u</tt> value, if necessary</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-70" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-70"><i></i></a><div id="fragbit-70" class="collapse"><div class="fragmentcode">       if (pmf)
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputePMFandremappedmonouvalueifnecessary-0">Compute PMF and remapped <tt>u</tt> value, if necessary</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-70" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-70"><i></i></a><div id="fragbit-70" class="collapse show"><div class="fragmentcode">       if (pmf)
            *pmf = weights[offset] / sumWeights;
        if (uRemapped)
            *uRemapped = std::min((up - sum) / weights[offset], <a href="../Sampling_and_Reconstruction/Sampling_Interface.html#OneMinusEpsilon" class="code">OneMinusEpsilon</a>);</div></div>

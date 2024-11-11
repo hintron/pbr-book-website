@@ -122,7 +122,7 @@ on and return values of the child type, as we will see shortly.
 <div class="fragmentcode">template &lt;template &lt;typename&gt; class Child, typename T&gt;
 class <span class="anchor" id="Tuple2"></span>Tuple2 {
   public:
-    &lt;&lt;<span class="fragmentname">Tuple2 Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-73" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-73"><i></i></a><div id="fragbit-73" class="collapse"><div class="fragmentcode">       static const int nDimensions = 2;
+    &lt;&lt;<span class="fragmentname">Tuple2 Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-73" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-73"><i></i></a><div id="fragbit-73" class="collapse show"><div class="fragmentcode">       static const int nDimensions = 2;
        
        Tuple2() = default;
        PBRT_CPU_GPU
@@ -221,7 +221,7 @@ class <span class="anchor" id="Tuple2"></span>Tuple2 {
        }
        
        std::string ToString() const { return internal::ToString2(x, y); }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Tuple2PublicMembers-0">Tuple2 Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-74" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-74"><i></i></a><div id="fragbit-74" class="collapse"><div class="fragmentcode">       T x{}, y{};</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Tuple2PublicMembers-0">Tuple2 Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-74" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-74"><i></i></a><div id="fragbit-74" class="collapse show"><div class="fragmentcode">       T x{}, y{};</div></div>
 };</div><p>
 
 
@@ -250,7 +250,7 @@ fewer coordinate.
 <div class="fragmentcode">template &lt;template &lt;typename&gt; class Child, typename T&gt;
 class <span class="anchor" id="Tuple3"></span>Tuple3 {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Tuple3PublicMethods-0">Tuple3 Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-75" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-75"><i></i></a><div id="fragbit-75" class="collapse"><div class="fragmentcode">       Tuple3(T x, T y, T z) : x(x), y(y), z(z) { <a href="../Utilities/User_Interaction.html#DCHECK" class="code">DCHECK</a>(!HasNaN()); }
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Tuple3PublicMethods-0">Tuple3 Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-75" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-75"><i></i></a><div id="fragbit-75" class="collapse show"><div class="fragmentcode">       Tuple3(T x, T y, T z) : x(x), y(y), z(z) { <a href="../Utilities/User_Interaction.html#DCHECK" class="code">DCHECK</a>(!HasNaN()); }
        bool HasNaN() const { return <a href="../Shapes/Managing_Rounding_Error.html#IsNaN" class="code">IsNaN</a>(x) || <a href="../Shapes/Managing_Rounding_Error.html#IsNaN" class="code">IsNaN</a>(y) || <a href="../Shapes/Managing_Rounding_Error.html#IsNaN" class="code">IsNaN</a>(z); }
        T operator[](int i) const {
            if (i == 0) return x;
@@ -348,7 +348,7 @@ class <span class="anchor" id="Tuple3"></span>Tuple3 {
        Child&lt;T&gt; operator-() const { return {-x, -y, -z}; }
        
        std::string ToString() const { return internal::ToString3(x, y, z); }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Tuple3PublicMembers-0">Tuple3 Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-76" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-76"><i></i></a><div id="fragbit-76" class="collapse"><div class="fragmentcode">       T x{}, y{}, z{};</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Tuple3PublicMembers-0">Tuple3 Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-76" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-76"><i></i></a><div id="fragbit-76" class="collapse show"><div class="fragmentcode">       T x{}, y{}, z{};</div></div>
 };</div><p>
 
 

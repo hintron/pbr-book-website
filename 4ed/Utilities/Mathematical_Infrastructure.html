@@ -982,7 +982,7 @@ representation.
 </g>
 </g>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2718" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2718"><i></i></a><div id="fragbit-2718" class="collapse"><div class="fragmentcode">       float xp = x * 1.442695041f;</div></div>
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2718" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2718"><i></i></a><div id="fragbit-2718" class="collapse show"><div class="fragmentcode">       float xp = x * 1.442695041f;</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Findintegerandfractionalcomponentsofx-0">Find integer and fractional components of <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.231ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 960.6 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">x prime</title>
 <defs aria-hidden="true">
@@ -993,7 +993,7 @@ representation.
  <use xlink:href="#E1-LATINMODERNNORMAL-1D465" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="809" y="513"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2719" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2719"><i></i></a><div id="fragbit-2719" class="collapse"><div class="fragmentcode">       float fxp = pstd::floor(xp), f = xp - fxp;
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2719" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2719"><i></i></a><div id="fragbit-2719" class="collapse show"><div class="fragmentcode">       float fxp = pstd::floor(xp), f = xp - fxp;
        int i = (int)fxp;</div></div> 
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Evaluatepolynomialapproximationof2f-0">Evaluate polynomial approximation of <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.302ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 991.2 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">2 Superscript f</title>
@@ -1005,7 +1005,7 @@ representation.
  <use xlink:href="#E1-LATINMODERNMAIN-32" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNNORMAL-1D453" x="707" y="557"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2720" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2720"><i></i></a><div id="fragbit-2720" class="collapse"><div class="fragmentcode">       float twoToF = <a href="#EvaluatePolynomial" class="code">EvaluatePolynomial</a>(f, 1.f, 0.695556856f,
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2720" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2720"><i></i></a><div id="fragbit-2720" class="collapse show"><div class="fragmentcode">       float twoToF = <a href="#EvaluatePolynomial" class="code">EvaluatePolynomial</a>(f, 1.f, 0.695556856f,
                                          0.226173572f, 0.0781455737f);</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Scale2fby2iandreturnfinalresult-0">Scale <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.302ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 991.2 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">2 Superscript f</title>
@@ -1027,7 +1027,7 @@ representation.
  <use xlink:href="#E1-LATINMODERNMAIN-32" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNNORMAL-1D456" x="707" y="557"></use>
 </g>
-</svg> and return final result</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2721" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2721"><i></i></a><div id="fragbit-2721" class="collapse"><div class="fragmentcode">       int exponent = <a href="../Shapes/Managing_Rounding_Error.html#Exponent" class="code">Exponent</a>(twoToF) + i;
+</svg> and return final result</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2721" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2721"><i></i></a><div id="fragbit-2721" class="collapse show"><div class="fragmentcode">       int exponent = <a href="../Shapes/Managing_Rounding_Error.html#Exponent" class="code">Exponent</a>(twoToF) + i;
        if (exponent &lt; -126) return 0;
        if (exponent &gt; 127) return <a href="../Shapes/Managing_Rounding_Error.html#Infinity" class="code">Infinity</a>;
        uint32_t bits = <a href="../Shapes/Managing_Rounding_Error.html#FloatToBits" class="code">FloatToBits</a>(twoToF);
@@ -1817,7 +1817,7 @@ size_t <span class="anchor" id="FindInterval"></span>FindInterval(size_t sz, con
     using ssize_t = std::make_signed_t&lt;size_t&gt;;
     ssize_t size = (ssize_t)sz - 2, first = 1;
     while (size &gt; 0) {
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-Evaluatepredicateatmidpointandupdatemonofirstandmonosize-0">Evaluate predicate at midpoint and update <tt>first</tt> and <tt>size</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2722" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2722"><i></i></a><div id="fragbit-2722" class="collapse"><div class="fragmentcode">           size_t half = (size_t)size &gt;&gt; 1, middle = first + half;
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-Evaluatepredicateatmidpointandupdatemonofirstandmonosize-0">Evaluate predicate at midpoint and update <tt>first</tt> and <tt>size</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2722" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2722"><i></i></a><div id="fragbit-2722" class="collapse show"><div class="fragmentcode">           size_t half = (size_t)size &gt;&gt; 1, middle = first + half;
            bool predResult = pred(middle);
            first = predResult ? middle + 1 : first;
            size = predResult ? size - (half + 1) : half;</div></div>
@@ -2598,7 +2598,7 @@ EFT-based computations.
 <span class="anchor" id="fragment-CompensatedFloatDefinition-0"></span><div class="fragmentname">&lt;&lt;CompensatedFloat Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">struct <span class="anchor" id="CompensatedFloat"></span>CompensatedFloat {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-CompensatedFloatPublicMethods-0">CompensatedFloat Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2723" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2723"><i></i></a><div id="fragbit-2723" class="collapse"><div class="fragmentcode">       CompensatedFloat(Float v, Float err = 0) : v(v), err(err) {}
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-CompensatedFloatPublicMethods-0">CompensatedFloat Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2723" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2723"><i></i></a><div id="fragbit-2723" class="collapse show"><div class="fragmentcode">       CompensatedFloat(Float v, Float err = 0) : v(v), err(err) {}
        explicit operator float() const { return v + err; }
        explicit operator double() const { return double(v) + double(err); }
        </div></div>
@@ -2938,7 +2938,7 @@ in the <tt>CompensatedSum</tt> class.
 <div class="fragmentcode">template &lt;typename Float&gt;
 class <span class="anchor" id="CompensatedSum"></span>CompensatedSum {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-CompensatedSumPublicMethods-0">CompensatedSum Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2724" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2724"><i></i></a><div id="fragbit-2724" class="collapse"><div class="fragmentcode">       CompensatedSum() = default;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-CompensatedSumPublicMethods-0">CompensatedSum Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2724" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2724"><i></i></a><div id="fragbit-2724" class="collapse show"><div class="fragmentcode">       CompensatedSum() = default;
        PBRT_CPU_GPU
        explicit CompensatedSum(Float v) : sum(v) {}
        
@@ -3062,16 +3062,16 @@ found.
  <use xlink:href="#E1-LATINMODERNMAIN-3D" x="807" y="0"></use>
  <use xlink:href="#E1-LATINMODERNMAIN-30" x="1863" y="0"></use>
 </g>
-</svg> for quadratic solution</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2725" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2725"><i></i></a><div id="fragbit-2725" class="collapse"><div class="fragmentcode">       if (a == 0) {
+</svg> for quadratic solution</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2725" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2725"><i></i></a><div id="fragbit-2725" class="collapse show"><div class="fragmentcode">       if (a == 0) {
            if (b == 0) return false;
            *t0 = *t1 = -c / b;
            return true;
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Findquadraticdiscriminant-0">Find quadratic discriminant</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2726" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2726"><i></i></a><div id="fragbit-2726" class="collapse"><div class="fragmentcode">       float discrim = <a href="#DifferenceOfProducts" class="code">DifferenceOfProducts</a>(b, b, 4 * a, c);
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Findquadraticdiscriminant-0">Find quadratic discriminant</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2726" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2726"><i></i></a><div id="fragbit-2726" class="collapse show"><div class="fragmentcode">       float discrim = <a href="#DifferenceOfProducts" class="code">DifferenceOfProducts</a>(b, b, 4 * a, c);
        if (discrim &lt; 0)
            return false;
        float rootDiscrim = std::sqrt(discrim);</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computequadraticmonotvalues-0">Compute quadratic <tt>t</tt> values</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2727" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2727"><i></i></a><div id="fragbit-2727" class="collapse"><div class="fragmentcode">       float q = -0.5f * (b + pstd::copysign(rootDiscrim, b));
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computequadraticmonotvalues-0">Compute quadratic <tt>t</tt> values</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2727" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2727"><i></i></a><div id="fragbit-2727" class="collapse show"><div class="fragmentcode">       float q = -0.5f * (b + pstd::copysign(rootDiscrim, b));
        *t0 = q / a;
        *t1 = c / q;
        if (*t0 &gt; *t1)
@@ -3568,22 +3568,22 @@ the root, and <tt>fEps</tt> specifies how close to zero is sufficient for
 <div class="fragmentcode">template &lt;typename Func&gt;
 Float <span class="anchor" id="NewtonBisection"></span>NewtonBisection(Float x0, Float x1, Func f, Float xEps = 1e-6f,
                       Float fEps = 1e-6f) {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Checkfunctionendpointsforroots-0">Check function endpoints for roots</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2728" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2728"><i></i></a><div id="fragbit-2728" class="collapse"><div class="fragmentcode">       Float fx0 = f(x0).first, fx1 = f(x1).first;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Checkfunctionendpointsforroots-0">Check function endpoints for roots</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2728" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2728"><i></i></a><div id="fragbit-2728" class="collapse show"><div class="fragmentcode">       Float fx0 = f(x0).first, fx1 = f(x1).first;
        if (std::abs(fx0) &lt; fEps) return x0;
        if (std::abs(fx1) &lt; fEps) return x1;
        bool startIsNegative = fx0 &lt; 0;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Setinitialmidpointusinglinearapproximationofmonof-0">Set initial midpoint using linear approximation of <tt>f</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2729" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2729"><i></i></a><div id="fragbit-2729" class="collapse"><div class="fragmentcode">       Float xMid = x0 + (x1 - x0) * -fx0 / (fx1 - fx0);</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Setinitialmidpointusinglinearapproximationofmonof-0">Set initial midpoint using linear approximation of <tt>f</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2729" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2729"><i></i></a><div id="fragbit-2729" class="collapse show"><div class="fragmentcode">       Float xMid = x0 + (x1 - x0) * -fx0 / (fx1 - fx0);</div></div>
     while (true) {
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-FallbacktobisectionifmonoxMidisoutofbounds-0">Fall back to bisection if <tt>xMid</tt> is out of bounds</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2730" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2730"><i></i></a><div id="fragbit-2730" class="collapse"><div class="fragmentcode">           if (!(x0 &lt; xMid &amp;&amp; xMid &lt; x1))
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-FallbacktobisectionifmonoxMidisoutofbounds-0">Fall back to bisection if <tt>xMid</tt> is out of bounds</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2730" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2730"><i></i></a><div id="fragbit-2730" class="collapse show"><div class="fragmentcode">           if (!(x0 &lt; xMid &amp;&amp; xMid &lt; x1))
                xMid = (x0 + x1) / 2;</div></div>
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-Evaluatefunctionandnarrowbracketrangemonox0x1-0">Evaluate function and narrow bracket range <tt>[x0, x1]</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2731" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2731"><i></i></a><div id="fragbit-2731" class="collapse"><div class="fragmentcode">           std::pair&lt;Float, Float&gt; fxMid = f(xMid);
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-Evaluatefunctionandnarrowbracketrangemonox0x1-0">Evaluate function and narrow bracket range <tt>[x0, x1]</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2731" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2731"><i></i></a><div id="fragbit-2731" class="collapse show"><div class="fragmentcode">           std::pair&lt;Float, Float&gt; fxMid = f(xMid);
            if (startIsNegative == (fxMid.first &lt; 0))
                x0 = xMid;
            else
                x1 = xMid;</div></div>
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-Stoptheiterationifconverged-0">Stop the iteration if converged</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2732" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2732"><i></i></a><div id="fragbit-2732" class="collapse"><div class="fragmentcode">           if ((x1 - x0) &lt; xEps || std::abs(fxMid.first) &lt; fEps)
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-Stoptheiterationifconverged-0">Stop the iteration if converged</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2732" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2732"><i></i></a><div id="fragbit-2732" class="collapse show"><div class="fragmentcode">           if ((x1 - x0) &lt; xEps || std::abs(fxMid.first) &lt; fEps)
                return xMid;</div></div>
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-PerformaNewtonstep-0">Perform a Newton step</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2733" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2733"><i></i></a><div id="fragbit-2733" class="collapse"><div class="fragmentcode">           xMid -= fxMid.first / fxMid.second;</div></div>
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-PerformaNewtonstep-0">Perform a Newton step</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2733" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2733"><i></i></a><div id="fragbit-2733" class="collapse show"><div class="fragmentcode">           xMid -= fxMid.first / fxMid.second;</div></div>
     }
 }</div><p>
 
@@ -3931,7 +3931,7 @@ single-precision <a href="../Introduction/pbrt_System_Overview.html#Float"><tt>F
 <div class="fragmentcode">template &lt;typename Float = Float&gt;
 class <span class="anchor" id="VarianceEstimator"></span>VarianceEstimator {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-VarianceEstimatorPublicMethods-0">VarianceEstimator Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2734" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2734"><i></i></a><div id="fragbit-2734" class="collapse"><div class="fragmentcode">       void Add(Float x) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-VarianceEstimatorPublicMethods-0">VarianceEstimator Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2734" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2734"><i></i></a><div id="fragbit-2734" class="collapse show"><div class="fragmentcode">       void Add(Float x) {
            ++<a href="#VarianceEstimator::n" class="code">n</a>;
            Float delta = x - <a href="#VarianceEstimator::mean" class="code">mean</a>;
            <a href="#VarianceEstimator::mean" class="code">mean</a> += delta / <a href="#VarianceEstimator::n" class="code">n</a>;
@@ -3951,7 +3951,7 @@ class <span class="anchor" id="VarianceEstimator"></span>VarianceEstimator {
            <a href="#VarianceEstimator::n" class="code">n</a> += ve.<a href="#VarianceEstimator::n" class="code">n</a>;
        }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-VarianceEstimatorPrivateMembers-0">VarianceEstimator Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2735" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2735"><i></i></a><div id="fragbit-2735" class="collapse"><div class="fragmentcode">       Float mean = 0, S = 0;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-VarianceEstimatorPrivateMembers-0">VarianceEstimator Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2735" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2735"><i></i></a><div id="fragbit-2735" class="collapse show"><div class="fragmentcode">       Float mean = 0, S = 0;
        int64_t n = 0;</div></div>
 };</div><p>
 
@@ -4598,7 +4598,7 @@ with dimensionality set at compile time via the template parameter
 <div class="fragmentcode">template &lt;int N&gt;
 class <span class="anchor" id="SquareMatrix"></span>SquareMatrix {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-SquareMatrixPublicMethods-0">SquareMatrix Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2736" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2736"><i></i></a><div id="fragbit-2736" class="collapse"><div class="fragmentcode">       static SquareMatrix Zero() {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-SquareMatrixPublicMethods-0">SquareMatrix Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2736" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2736"><i></i></a><div id="fragbit-2736" class="collapse show"><div class="fragmentcode">       static SquareMatrix Zero() {
            SquareMatrix <a href="#SquareMatrix::m" class="code">m</a>;
            for (int i = 0; i &lt; N; ++i)
                for (int j = 0; j &lt; N; ++j)
@@ -5282,7 +5282,7 @@ to save the verbosity and slight obscurity of the templated variants.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D462" x="0" y="0"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2737" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2737"><i></i></a><div id="fragbit-2737" class="collapse"><div class="fragmentcode">           if (<a href="../Geometry_and_Transformations/Vectors.html#LengthSquared" class="code">LengthSquared</a>(cp2[1] - cp2[0]) &gt; 0)
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2737" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2737"><i></i></a><div id="fragbit-2737" class="collapse show"><div class="fragmentcode">           if (<a href="../Geometry_and_Transformations/Vectors.html#LengthSquared" class="code">LengthSquared</a>(cp2[1] - cp2[0]) &gt; 0)
                *deriv = 3 * (cp2[1] - cp2[0]);
            else
                *deriv = cp[3] - cp[0];</div></div>
@@ -5900,7 +5900,7 @@ here but will describe the interfaces provided.
 <span class="anchor" id="fragment-RNGDefinition-0"></span><div class="fragmentname">&lt;&lt;RNG Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="RNG"></span>RNG {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-RNGPublicMethods-0">RNG Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2738" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2738"><i></i></a><div id="fragbit-2738" class="collapse"><div class="fragmentcode">       <a href="#RNG" class="code">RNG</a>() : state(PCG32_DEFAULT_STATE), inc(PCG32_DEFAULT_STREAM) {}
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-RNGPublicMethods-0">RNG Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2738" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2738"><i></i></a><div id="fragbit-2738" class="collapse show"><div class="fragmentcode">       <a href="#RNG" class="code">RNG</a>() : state(PCG32_DEFAULT_STATE), inc(PCG32_DEFAULT_STREAM) {}
        <a href="#RNG" class="code">RNG</a>(uint64_t seqIndex, uint64_t offset) { <a href="#RNG::SetSequence" class="code">SetSequence</a>(seqIndex, offset); }
        <a href="#RNG" class="code">RNG</a>(uint64_t seqIndex) { <a href="#RNG::SetSequence" class="code">SetSequence</a>(seqIndex); }
        void <a href="#RNG::SetSequence" class="code">SetSequence</a>(uint64_t sequenceIndex, uint64_t offset);
@@ -5921,7 +5921,7 @@ here but will describe the interfaces provided.
        void Advance(int64_t idelta);
        std::string ToString() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname">RNG Private Members</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2739" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2739"><i></i></a><div id="fragbit-2739" class="collapse"><div class="fragmentcode">       uint64_t state, inc;</div></div>
+    &lt;&lt;<span class="fragmentname">RNG Private Members</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2739" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2739"><i></i></a><div id="fragbit-2739" class="collapse show"><div class="fragmentcode">       uint64_t state, inc;</div></div>
 };</div><p>
 
 
@@ -6851,7 +6851,7 @@ floating-point computations over to be interval-based.
 <span class="anchor" id="fragment-IntervalDefinition-0"></span><div class="fragmentname">&lt;&lt;Interval Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="Interval"></span>Interval {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-IntervalPublicMethods-0">Interval Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2740" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2740"><i></i></a><div id="fragbit-2740" class="collapse"><div class="fragmentcode">       explicit Interval(Float v) : <a href="#Interval::low" class="code">low</a>(v), <a href="#Interval::high" class="code">high</a>(v) {}
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-IntervalPublicMethods-0">Interval Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2740" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2740"><i></i></a><div id="fragbit-2740" class="collapse show"><div class="fragmentcode">       explicit Interval(Float v) : <a href="#Interval::low" class="code">low</a>(v), <a href="#Interval::high" class="code">high</a>(v) {}
        Interval(Float <a href="#Interval::low" class="code">low</a>, Float <a href="#Interval::high" class="code">high</a>)
            : <a href="#Interval::low" class="code">low</a>(std::min(<a href="#Interval::low" class="code">low</a>, <a href="#Interval::high" class="code">high</a>)), <a href="#Interval::high" class="code">high</a>(std::max(<a href="#Interval::low" class="code">low</a>, <a href="#Interval::high" class="code">high</a>)) {}
        static Interval FromValueAndError(Float v, Float err) {
@@ -6942,7 +6942,7 @@ floating-point computations over to be interval-based.
        static const Interval Pi;
        #endif</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-IntervalPrivateMembers-0">Interval Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2741" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2741"><i></i></a><div id="fragbit-2741" class="collapse"><div class="fragmentcode">       Float low, high;</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-IntervalPrivateMembers-0">Interval Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2741" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2741"><i></i></a><div id="fragbit-2741" class="collapse show"><div class="fragmentcode">       Float low, high;</div></div>
 };</div><p>
 
 
@@ -7268,7 +7268,7 @@ underlying <a href="../Geometry_and_Transformations/n-Tuple_Base_Classes.html#Tu
 <span class="anchor" id="fragment-Vector3fiDefinition-0"></span><div class="fragmentname">&lt;&lt;Vector3fi Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="Vector3fi"></span>Vector3fi : public Vector3&lt;Interval&gt; {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Vector3fiPublicMethods-0">Vector3fi Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2742" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2742"><i></i></a><div id="fragbit-2742" class="collapse"><div class="fragmentcode">       using Vector3&lt;Interval&gt;::x;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Vector3fiPublicMethods-0">Vector3fi Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2742" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2742"><i></i></a><div id="fragbit-2742" class="collapse show"><div class="fragmentcode">       using Vector3&lt;Interval&gt;::x;
        using Vector3&lt;Interval&gt;::y;
        using Vector3&lt;Interval&gt;::z;
        using Vector3&lt;Interval&gt;::HasNaN;

@@ -2012,7 +2012,7 @@ successfully.
 <div class="fragmentcode">bool <span class="anchor" id="Refract"></span>Refract(<a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wi, <a href="../Geometry_and_Transformations/Normals.html#Normal3f" class="code">Normal3f</a> n, Float eta, Float *etap,
              <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> *wt) {
     Float cosTheta_i = <a href="../Geometry_and_Transformations/Vectors.html#Dot" class="code">Dot</a>(n, wi);
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-PotentiallyflipinterfaceorientationforSnellslaw-0">Potentially flip interface orientation for Snell&rsquo;s law</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1233" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1233"><i></i></a><div id="fragbit-1233" class="collapse"><div class="fragmentcode">       if (cosTheta_i &lt; 0) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-PotentiallyflipinterfaceorientationforSnellslaw-0">Potentially flip interface orientation for Snell&rsquo;s law</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1233" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1233"><i></i></a><div id="fragbit-1233" class="collapse show"><div class="fragmentcode">       if (cosTheta_i &lt; 0) {
            eta = 1 / eta;
            cosTheta_i = -cosTheta_i;
            n = -n;
@@ -2035,13 +2035,13 @@ successfully.
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-74" x="663" y="-213"></use>
 </g>
 </g>
-</svg> using Snell&rsquo;s law</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1234" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1234"><i></i></a><div id="fragbit-1234" class="collapse"><div class="fragmentcode">       Float sin2Theta_i = std::max&lt;Float&gt;(0, 1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(cosTheta_i));
+</svg> using Snell&rsquo;s law</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1234" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1234"><i></i></a><div id="fragbit-1234" class="collapse show"><div class="fragmentcode">       Float sin2Theta_i = std::max&lt;Float&gt;(0, 1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(cosTheta_i));
        Float sin2Theta_t = sin2Theta_i / <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta);
-       &lt;&lt;<span class="fragmentname"><a href="#fragment-Handletotalinternalreflectioncase-0">Handle total internal reflection case</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1235" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1235"><i></i></a><div id="fragbit-1235" class="collapse"><div class="fragmentcode">          if (sin2Theta_t &gt;= 1)
+       &lt;&lt;<span class="fragmentname"><a href="#fragment-Handletotalinternalreflectioncase-0">Handle total internal reflection case</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1235" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1235"><i></i></a><div id="fragbit-1235" class="collapse show"><div class="fragmentcode">          if (sin2Theta_t &gt;= 1)
               return false;</div></div>
        Float cosTheta_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - sin2Theta_t);</div></div>
     *wt = -wi / eta + (cosTheta_i / eta - cosTheta_t) * <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a>(n);
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ProviderelativeIORalongraytocaller-0">Provide relative IOR along ray to caller</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1236" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1236"><i></i></a><div id="fragbit-1236" class="collapse"><div class="fragmentcode">       if (etap)
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ProviderelativeIORalongraytocaller-0">Provide relative IOR along ray to caller</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1236" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1236"><i></i></a><div id="fragbit-1236" class="collapse show"><div class="fragmentcode">       if (etap)
            *etap = eta;</div></div>
     return true;
 }</div><p>
@@ -2344,7 +2344,7 @@ Equation&nbsp;(<a href="#eq:snells-law-relative">9.3</a>) and the identity
 </svg> using Snell&rsquo;s law&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">Float sin2Theta_i = std::max&lt;Float&gt;(0, 1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(cosTheta_i));
 Float sin2Theta_t = sin2Theta_i / <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta);
-&lt;&lt;<span class="fragmentname"><a href="#fragment-Handletotalinternalreflectioncase-0">Handle total internal reflection case</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1237" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1237"><i></i></a><div id="fragbit-1237" class="collapse"><div class="fragmentcode">   if (sin2Theta_t &gt;= 1)
+&lt;&lt;<span class="fragmentname"><a href="#fragment-Handletotalinternalreflectioncase-0">Handle total internal reflection case</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1237" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1237"><i></i></a><div id="fragbit-1237" class="collapse show"><div class="fragmentcode">   if (sin2Theta_t &gt;= 1)
        return false;</div></div>
 Float cosTheta_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - sin2Theta_t);</div><p>
 
@@ -3124,7 +3124,7 @@ of a dielectric interface given its relative IOR <svg xmlns:xlink="http://www.w3
 <span class="anchor" id="fragment-FresnelInlineFunctions-0"></span><div class="fragmentname">&lt;&lt;Fresnel Inline Functions&gt;&gt;=&nbsp;<a href="#fragment-FresnelInlineFunctions-1"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">Float <span class="anchor" id="FrDielectric"></span>FrDielectric(Float cosTheta_i, Float eta) {
     cosTheta_i = <a href="../Utilities/Mathematical_Infrastructure.html#Clamp" class="code">Clamp</a>(cosTheta_i, -1, 1);
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-PotentiallyflipinterfaceorientationforFresnelequations-0">Potentially flip interface orientation for Fresnel equations</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1238" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1238"><i></i></a><div id="fragbit-1238" class="collapse"><div class="fragmentcode">       if (cosTheta_i &lt; 0) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-PotentiallyflipinterfaceorientationforFresnelequations-0">Potentially flip interface orientation for Fresnel equations</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1238" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1238"><i></i></a><div id="fragbit-1238" class="collapse show"><div class="fragmentcode">       if (cosTheta_i &lt; 0) {
            eta = 1 / eta;
            cosTheta_i = -cosTheta_i;
        }</div></div>
@@ -3146,7 +3146,7 @@ of a dielectric interface given its relative IOR <svg xmlns:xlink="http://www.w3
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-74" x="663" y="-213"></use>
 </g>
 </g>
-</svg> for Fresnel equations using Snell&rsquo;s law</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1239" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1239"><i></i></a><div id="fragbit-1239" class="collapse"><div class="fragmentcode">       Float sin2Theta_i = 1 - Sqr(cosTheta_i);
+</svg> for Fresnel equations using Snell&rsquo;s law</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1239" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1239"><i></i></a><div id="fragbit-1239" class="collapse show"><div class="fragmentcode">       Float sin2Theta_i = 1 - Sqr(cosTheta_i);
        Float sin2Theta_t = sin2Theta_i / Sqr(eta);
        if (sin2Theta_t &gt;= 1)
            return 1.f;
@@ -3664,7 +3664,7 @@ the incident direction and a relative index of refraction
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-74" x="663" y="-213"></use>
 </g>
 </g>
-</svg> for Fresnel equations using Snell&rsquo;s law</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1240" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1240"><i></i></a><div id="fragbit-1240" class="collapse"><div class="fragmentcode">       Float sin2Theta_i = 1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(cosTheta_i);
+</svg> for Fresnel equations using Snell&rsquo;s law</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1240" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1240"><i></i></a><div id="fragbit-1240" class="collapse show"><div class="fragmentcode">       Float sin2Theta_i = 1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(cosTheta_i);
        Complex sin2Theta_t = sin2Theta_i / <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta);
        Complex cosTheta_t = pstd::sqrt(1 - sin2Theta_t);</div></div>
     Complex r_parl = (eta * cosTheta_i - cosTheta_t) /

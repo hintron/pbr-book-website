@@ -88,7 +88,7 @@ samplers.
 <span class="anchor" id="fragment-IndependentSamplerDefinition-0"></span><div class="fragmentname">&lt;&lt;IndependentSampler Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="IndependentSampler"></span>IndependentSampler {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-IndependentSamplerPublicMethods-0">IndependentSampler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1134" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1134"><i></i></a><div id="fragbit-1134" class="collapse"><div class="fragmentcode">       IndependentSampler(int <a href="#IndependentSampler::samplesPerPixel" class="code">samplesPerPixel</a>, int seed = 0)
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-IndependentSamplerPublicMethods-0">IndependentSampler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1134" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1134"><i></i></a><div id="fragbit-1134" class="collapse show"><div class="fragmentcode">       IndependentSampler(int <a href="#IndependentSampler::samplesPerPixel" class="code">samplesPerPixel</a>, int seed = 0)
            : <a href="#IndependentSampler::samplesPerPixel" class="code">samplesPerPixel</a>(<a href="#IndependentSampler::samplesPerPixel" class="code">samplesPerPixel</a>), seed(seed) {}
        static IndependentSampler *Create(const ParameterDictionary &amp;parameters,
                                     const FileLoc *loc, Allocator alloc);
@@ -105,7 +105,7 @@ samplers.
        <a href="../Sampling_and_Reconstruction/Sampling_Interface.html#Sampler" class="code">Sampler</a> Clone(Allocator alloc);
        std::string ToString() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-IndependentSamplerPrivateMembers-0">IndependentSampler Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1135" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1135"><i></i></a><div id="fragbit-1135" class="collapse"><div class="fragmentcode">       int samplesPerPixel, seed;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-IndependentSamplerPrivateMembers-0">IndependentSampler Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1135" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1135"><i></i></a><div id="fragbit-1135" class="collapse show"><div class="fragmentcode">       int samplesPerPixel, seed;
        <a href="../Utilities/Mathematical_Infrastructure.html#RNG" class="code">RNG</a> rng;</div></div>
 };</div><p>
 

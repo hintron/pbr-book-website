@@ -1622,7 +1622,7 @@ parameterized by six values:
 <span class="anchor" id="fragment-HairBxDFDefinition-0"></span><div class="fragmentname">&lt;&lt;HairBxDF Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="HairBxDF"></span>HairBxDF {
   public:
-    &lt;&lt;<span class="fragmentname">HairBxDF Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1361" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1361"><i></i></a><div id="fragbit-1361" class="collapse"><div class="fragmentcode">       HairBxDF() = default;
+    &lt;&lt;<span class="fragmentname">HairBxDF Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1361" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1361"><i></i></a><div id="fragbit-1361" class="collapse show"><div class="fragmentcode">       HairBxDF() = default;
        PBRT_CPU_GPU
        HairBxDF(Float h, Float eta, const <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> &amp;sigma_a, Float beta_m,
                 Float beta_n, Float alpha);
@@ -1651,8 +1651,8 @@ parameterized by six values:
        static <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> SigmaAFromReflectance(const <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> &amp;c, Float beta_n,
                                                     const <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledWavelengths" class="code">SampledWavelengths</a> &amp;lambda);</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-HairBxDFConstants-0">HairBxDF Constants</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1362" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1362"><i></i></a><div id="fragbit-1362" class="collapse"><div class="fragmentcode">       static constexpr int pMax = 3;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-HairBxDFPrivateMethods-0">HairBxDF Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1363" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1363"><i></i></a><div id="fragbit-1363" class="collapse"><div class="fragmentcode">       Float Mp(Float cosTheta_i, Float cosTheta_o, Float sinTheta_i,
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-HairBxDFConstants-0">HairBxDF Constants</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1362" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1362"><i></i></a><div id="fragbit-1362" class="collapse show"><div class="fragmentcode">       static constexpr int pMax = 3;</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-HairBxDFPrivateMethods-0">HairBxDF Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1363" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1363"><i></i></a><div id="fragbit-1363" class="collapse show"><div class="fragmentcode">       Float Mp(Float cosTheta_i, Float cosTheta_o, Float sinTheta_i,
                 Float sinTheta_o, Float v) {
            Float a = cosTheta_i * cosTheta_o / v, b = sinTheta_i * sinTheta_o / v;
            Float mp = (v &lt;= .1) ?
@@ -1676,7 +1676,7 @@ parameterized by six values:
  <use xlink:href="#E1-LATINMODERNMAIN-3D" x="781" y="0"></use>
  <use xlink:href="#E1-LATINMODERNMAIN-30" x="1837" y="0"></use>
 </g>
-</svg> attenuation at initial cylinder intersection</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1364" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1364"><i></i></a><div id="fragbit-1364" class="collapse"><div class="fragmentcode">              Float cosGamma_o = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(h));
+</svg> attenuation at initial cylinder intersection</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1364" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1364"><i></i></a><div id="fragbit-1364" class="collapse show"><div class="fragmentcode">              Float cosGamma_o = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(h));
               Float cosTheta = cosTheta_o * cosGamma_o;
               Float f = <a href="../Reflection_Models/Specular_Reflection_and_Transmission.html#FrDielectric" class="code">FrDielectric</a>(cosTheta, eta);
               ap[0] = <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a>(f);</div></div>
@@ -1692,7 +1692,7 @@ parameterized by six values:
  <use xlink:href="#E1-LATINMODERNMAIN-3D" x="781" y="0"></use>
  <use xlink:href="#E1-LATINMODERNMAIN-31" x="1837" y="0"></use>
 </g>
-</svg> attenuation term</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1365" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1365"><i></i></a><div id="fragbit-1365" class="collapse"><div class="fragmentcode">              ap[1] = <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(1 - f) * T;</div></div>
+</svg> attenuation term</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1365" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1365"><i></i></a><div id="fragbit-1365" class="collapse show"><div class="fragmentcode">              ap[1] = <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(1 - f) * T;</div></div>
            &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputeattenuationtermsuptopmonopMax-0">Compute attenuation terms up to <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.223ex" height="2.509ex" style="vertical-align: -0.838ex; margin-left: -0.073ex;" viewBox="-31.5 -719.6 3971.1 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">p equals monospace p monospace upper M monospace a monospace x</title>
 <defs aria-hidden="true">
@@ -1713,9 +1713,9 @@ parameterized by six values:
  <use xlink:href="#E1-LATINMODERNMONOSPACE-1D6A1" x="1576" y="0"></use>
 </g>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1366" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1366"><i></i></a><div id="fragbit-1366" class="collapse"><div class="fragmentcode">              for (int p = 2; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p)
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1366" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1366"><i></i></a><div id="fragbit-1366" class="collapse show"><div class="fragmentcode">              for (int p = 2; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p)
                   ap[p] = ap[p - 1] * T * f;</div></div>
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeattenuationtermaccountingforremainingordersofscattering-0">Compute attenuation term accounting for remaining orders of scattering</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1367" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1367"><i></i></a><div id="fragbit-1367" class="collapse"><div class="fragmentcode">              if (1 - T * f)
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeattenuationtermaccountingforremainingordersofscattering-0">Compute attenuation term accounting for remaining orders of scattering</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1367" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1367"><i></i></a><div id="fragbit-1367" class="collapse show"><div class="fragmentcode">              if (1 - T * f)
                   ap[<a href="#HairBxDF::pMax" class="code">pMax</a>] = ap[<a href="#HairBxDF::pMax" class="code">pMax</a> - 1] * f * T / (1 - T * f);</div></div>
            return ap;
        }
@@ -1741,12 +1741,12 @@ parameterized by six values:
  <use xlink:href="#E1-LATINMODERNNORMAL-1D70B" x="2072" y="0"></use>
  <use xlink:href="#E1-LATINMODERNMAIN-5D" x="2643" y="0"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1368" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1368"><i></i></a><div id="fragbit-1368" class="collapse"><div class="fragmentcode">              while (dphi &gt; <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>) dphi -= 2 * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>;
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1368" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1368"><i></i></a><div id="fragbit-1368" class="collapse show"><div class="fragmentcode">              while (dphi &gt; <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>) dphi -= 2 * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>;
               while (dphi &lt; -<a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>) dphi += 2 * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>;</div></div>
            return <a href="../Utilities/Mathematical_Infrastructure.html#TrimmedLogistic" class="code">TrimmedLogistic</a>(dphi, s, -<a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>, <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>);
        }
        pstd::array&lt;Float, <a href="#HairBxDF::pMax" class="code">pMax</a> + 1&gt; ApPDF(Float cosTheta_o) const;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-HairBxDFPrivateMembers-0">HairBxDF Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1369" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1369"><i></i></a><div id="fragbit-1369" class="collapse"><div class="fragmentcode">       Float h, eta;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-HairBxDFPrivateMembers-0">HairBxDF Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1369" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1369"><i></i></a><div id="fragbit-1369" class="collapse show"><div class="fragmentcode">       Float h, eta;
        <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> sigma_a;
        Float beta_m, beta_n;
        Float v[<a href="#HairBxDF::pMax" class="code">pMax</a> + 1];
@@ -1784,11 +1784,11 @@ Float <span class="anchor" id="HairBxDF::beta_m"></span>beta_m, <span class="anc
 <span class="anchor" id="fragment-HairBxDFMethodDefinitions-0"></span><div class="fragmentname">&lt;&lt;HairBxDF Method Definitions&gt;&gt;=&nbsp;<a href="#fragment-HairBxDFMethodDefinitions-1"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode"><a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> <span class="anchor" id="HairBxDF::f"></span>HairBxDF::f(<a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wo, <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wi,
                             <a href="../Reflection_Models/Dielectric_BSDF.html#TransportMode" class="code">TransportMode</a> mode) const {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computehaircoordinatesystemtermsrelatedtomonowo-0">Compute hair coordinate system terms related to <tt>wo</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1370" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1370"><i></i></a><div id="fragbit-1370" class="collapse"><div class="fragmentcode">       Float sinTheta_o = wo.x;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computehaircoordinatesystemtermsrelatedtomonowo-0">Compute hair coordinate system terms related to <tt>wo</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1370" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1370"><i></i></a><div id="fragbit-1370" class="collapse show"><div class="fragmentcode">       Float sinTheta_o = wo.x;
        Float cosTheta_o = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_o));
        Float phi_o = std::atan2(wo.z, wo.y);
        Float gamma_o = <a href="../Utilities/Mathematical_Infrastructure.html#SafeASin" class="code">SafeASin</a>(h);</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computehaircoordinatesystemtermsrelatedtomonowi-0">Compute hair coordinate system terms related to <tt>wi</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1371" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1371"><i></i></a><div id="fragbit-1371" class="collapse"><div class="fragmentcode">       Float sinTheta_i = wi.x;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computehaircoordinatesystemtermsrelatedtomonowi-0">Compute hair coordinate system terms related to <tt>wi</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1371" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1371"><i></i></a><div id="fragbit-1371" class="collapse show"><div class="fragmentcode">       Float sinTheta_i = wi.x;
        Float cosTheta_i = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_i));
        Float phi_i = std::atan2(wi.z, wi.y);</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Computecosthetatforrefractedray-0">Compute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.848ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 2517.8 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
@@ -1809,7 +1809,7 @@ Float <span class="anchor" id="HairBxDF::beta_m"></span>beta_m, <span class="anc
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-74" x="663" y="-213"></use>
 </g>
 </g>
-</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1372" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1372"><i></i></a><div id="fragbit-1372" class="collapse"><div class="fragmentcode">       Float sinTheta_t = sinTheta_o / eta;
+</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1372" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1372"><i></i></a><div id="fragbit-1372" class="collapse show"><div class="fragmentcode">       Float sinTheta_t = sinTheta_o / eta;
        Float cosTheta_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_t));</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Computegammatforrefractedray-0">Compute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.076ex" height="2.176ex" style="vertical-align: -0.838ex;" viewBox="0 -576.1 893.9 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">gamma Subscript normal t</title>
@@ -1821,12 +1821,12 @@ Float <span class="anchor" id="HairBxDF::beta_m"></span>beta_m, <span class="anc
  <use xlink:href="#E1-LATINMODERNNORMAL-1D6FE" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-74" x="733" y="-213"></use>
 </g>
-</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1373" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1373"><i></i></a><div id="fragbit-1373" class="collapse"><div class="fragmentcode">       Float etap = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(<a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta) - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_o)) / cosTheta_o;
+</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1373" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1373"><i></i></a><div id="fragbit-1373" class="collapse show"><div class="fragmentcode">       Float etap = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(<a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta) - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_o)) / cosTheta_o;
        Float sinGamma_t = h / etap;
        Float cosGamma_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinGamma_t));
        Float gamma_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeASin" class="code">SafeASin</a>(sinGamma_t);</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputethetransmittancemonoTofasinglepaththroughthecylinder-0">Compute the transmittance <tt>T</tt> of a single path through the cylinder</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1374" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1374"><i></i></a><div id="fragbit-1374" class="collapse"><div class="fragmentcode">       <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> T = <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum::Exp" class="code">Exp</a>(-sigma_a * (2 * cosGamma_t / cosTheta_t));</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-EvaluatehairBSDF-0">Evaluate hair BSDF</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1375" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1375"><i></i></a><div id="fragbit-1375" class="collapse"><div class="fragmentcode">       Float phi = phi_i - phi_o;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputethetransmittancemonoTofasinglepaththroughthecylinder-0">Compute the transmittance <tt>T</tt> of a single path through the cylinder</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1374" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1374"><i></i></a><div id="fragbit-1374" class="collapse show"><div class="fragmentcode">       <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> T = <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum::Exp" class="code">Exp</a>(-sigma_a * (2 * cosGamma_t / cosTheta_t));</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-EvaluatehairBSDF-0">Evaluate hair BSDF</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1375" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1375"><i></i></a><div id="fragbit-1375" class="collapse show"><div class="fragmentcode">       Float phi = phi_i - phi_o;
        pstd::array&lt;<a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a>, <a href="#HairBxDF::pMax" class="code">pMax</a> + 1&gt; ap = <a href="#HairBxDF::Ap" class="code">Ap</a>(cosTheta_o, <a href="#HairBxDF::eta" class="code">eta</a>, <a href="#HairBxDF::h" class="code">h</a>, T);
        <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> fsum(0.);
        for (int p = 0; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p) {
@@ -1865,7 +1865,7 @@ Float <span class="anchor" id="HairBxDF::beta_m"></span>beta_m, <span class="anc
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> terms accounting for scales</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1376" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1376"><i></i></a><div id="fragbit-1376" class="collapse"><div class="fragmentcode">              Float sinThetap_o, cosThetap_o;
+</svg> terms accounting for scales</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1376" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1376"><i></i></a><div id="fragbit-1376" class="collapse show"><div class="fragmentcode">              Float sinThetap_o, cosThetap_o;
               if (p == 0) {
                   sinThetap_o = sinTheta_o * <a href="#HairBxDF::cos2kAlpha" class="code">cos2kAlpha</a>[1] - cosTheta_o * <a href="#HairBxDF::sin2kAlpha" class="code">sin2kAlpha</a>[1];
                   cosThetap_o = cosTheta_o * <a href="#HairBxDF::cos2kAlpha" class="code">cos2kAlpha</a>[1] + sinTheta_o * <a href="#HairBxDF::sin2kAlpha" class="code">sin2kAlpha</a>[1];
@@ -1878,7 +1878,7 @@ Float <span class="anchor" id="HairBxDF::beta_m"></span>beta_m, <span class="anc
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D45D" x="0" y="0"></use>
 </g>
-</svg> values for hair scale tilt</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1377" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1377"><i></i></a><div id="fragbit-1377" class="collapse"><div class="fragmentcode">                 else if (p == 1) {
+</svg> values for hair scale tilt</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1377" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1377"><i></i></a><div id="fragbit-1377" class="collapse show"><div class="fragmentcode">                 else if (p == 1) {
                      sinThetap_o = sinTheta_o * cos2kAlpha[0] + cosTheta_o * sin2kAlpha[0];
                      cosThetap_o = cosTheta_o * cos2kAlpha[0] - sinTheta_o * sin2kAlpha[0];
                  } else if (p == 2) {
@@ -1905,11 +1905,11 @@ Float <span class="anchor" id="HairBxDF::beta_m"></span>beta_m, <span class="anc
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1378" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1378"><i></i></a><div id="fragbit-1378" class="collapse"><div class="fragmentcode">                 cosThetap_o = std::abs(cosThetap_o);</div></div></div></div>
+</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1378" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1378"><i></i></a><div id="fragbit-1378" class="collapse show"><div class="fragmentcode">                 cosThetap_o = std::abs(cosThetap_o);</div></div></div></div>
            fsum += <a href="#HairBxDF::Mp" class="code">Mp</a>(cosTheta_i, cosThetap_o, sinTheta_i, sinThetap_o, <a href="#HairBxDF::v" class="code">v</a>[p]) *
                    ap[p] * <a href="#HairBxDF::Np" class="code">Np</a>(phi, p, s, gamma_o, gamma_t);
        }
-       &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputecontributionofremainingtermsaftermonopMax-0">Compute contribution of remaining terms after <tt>pMax</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1379" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1379"><i></i></a><div id="fragbit-1379" class="collapse"><div class="fragmentcode">          fsum += <a href="#HairBxDF::Mp" class="code">Mp</a>(cosTheta_i, cosTheta_o, sinTheta_i, sinTheta_o, v[pMax]) *
+       &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputecontributionofremainingtermsaftermonopMax-0">Compute contribution of remaining terms after <tt>pMax</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1379" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1379"><i></i></a><div id="fragbit-1379" class="collapse show"><div class="fragmentcode">          fsum += <a href="#HairBxDF::Mp" class="code">Mp</a>(cosTheta_i, cosTheta_o, sinTheta_i, sinTheta_o, v[pMax]) *
                   ap[pMax] / (2 * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>);</div></div>
        if (<a href="../Geometry_and_Transformations/Spherical_Geometry.html#AbsCosTheta" class="code">AbsCosTheta</a>(wi) &gt; 0)
            fsum /= <a href="../Geometry_and_Transformations/Spherical_Geometry.html#AbsCosTheta" class="code">AbsCosTheta</a>(wi);
@@ -3916,7 +3916,7 @@ the sum of attenuations for all the higher-order scattering terms.
  <use xlink:href="#E1-LATINMODERNMAIN-3D" x="781" y="0"></use>
  <use xlink:href="#E1-LATINMODERNMAIN-30" x="1837" y="0"></use>
 </g>
-</svg> attenuation at initial cylinder intersection</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1380" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1380"><i></i></a><div id="fragbit-1380" class="collapse"><div class="fragmentcode">       Float cosGamma_o = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(h));
+</svg> attenuation at initial cylinder intersection</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1380" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1380"><i></i></a><div id="fragbit-1380" class="collapse show"><div class="fragmentcode">       Float cosGamma_o = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(h));
        Float cosTheta = cosTheta_o * cosGamma_o;
        Float f = <a href="../Reflection_Models/Specular_Reflection_and_Transmission.html#FrDielectric" class="code">FrDielectric</a>(cosTheta, eta);
        ap[0] = <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a>(f);</div></div>
@@ -3932,7 +3932,7 @@ the sum of attenuations for all the higher-order scattering terms.
  <use xlink:href="#E1-LATINMODERNMAIN-3D" x="781" y="0"></use>
  <use xlink:href="#E1-LATINMODERNMAIN-31" x="1837" y="0"></use>
 </g>
-</svg> attenuation term</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1381" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1381"><i></i></a><div id="fragbit-1381" class="collapse"><div class="fragmentcode">       ap[1] = <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(1 - f) * T;</div></div>
+</svg> attenuation term</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1381" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1381"><i></i></a><div id="fragbit-1381" class="collapse show"><div class="fragmentcode">       ap[1] = <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(1 - f) * T;</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputeattenuationtermsuptopmonopMax-0">Compute attenuation terms up to <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.223ex" height="2.509ex" style="vertical-align: -0.838ex; margin-left: -0.073ex;" viewBox="-31.5 -719.6 3971.1 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">p equals monospace p monospace upper M monospace a monospace x</title>
 <defs aria-hidden="true">
@@ -3953,9 +3953,9 @@ the sum of attenuations for all the higher-order scattering terms.
  <use xlink:href="#E1-LATINMODERNMONOSPACE-1D6A1" x="1576" y="0"></use>
 </g>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1382" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1382"><i></i></a><div id="fragbit-1382" class="collapse"><div class="fragmentcode">       for (int p = 2; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p)
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1382" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1382"><i></i></a><div id="fragbit-1382" class="collapse show"><div class="fragmentcode">       for (int p = 2; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p)
            ap[p] = ap[p - 1] * T * f;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeattenuationtermaccountingforremainingordersofscattering-0">Compute attenuation term accounting for remaining orders of scattering</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1383" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1383"><i></i></a><div id="fragbit-1383" class="collapse"><div class="fragmentcode">       if (1 - T * f)
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeattenuationtermaccountingforremainingordersofscattering-0">Compute attenuation term accounting for remaining orders of scattering</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1383" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1383"><i></i></a><div id="fragbit-1383" class="collapse show"><div class="fragmentcode">       if (1 - T * f)
            ap[<a href="#HairBxDF::pMax" class="code">pMax</a>] = ap[<a href="#HairBxDF::pMax" class="code">pMax</a> - 1] * f * T / (1 - T * f);</div></div>
     return ap;
 }</div><p>
@@ -5138,7 +5138,7 @@ azimuthal distribution with that angle.
  <use xlink:href="#E1-LATINMODERNNORMAL-1D70B" x="2072" y="0"></use>
  <use xlink:href="#E1-LATINMODERNMAIN-5D" x="2643" y="0"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1384" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1384"><i></i></a><div id="fragbit-1384" class="collapse"><div class="fragmentcode">       while (dphi &gt; <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>) dphi -= 2 * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>;
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1384" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1384"><i></i></a><div id="fragbit-1384" class="collapse show"><div class="fragmentcode">       while (dphi &gt; <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>) dphi -= 2 * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>;
        while (dphi &lt; -<a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>) dphi += 2 * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>;</div></div>
     return <a href="../Utilities/Mathematical_Infrastructure.html#TrimmedLogistic" class="code">TrimmedLogistic</a>(dphi, s, -<a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>, <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>);
 }</div><p>
@@ -6018,7 +6018,7 @@ for (int p = 0; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p) {
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> terms accounting for scales</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1385" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1385"><i></i></a><div id="fragbit-1385" class="collapse"><div class="fragmentcode">       Float sinThetap_o, cosThetap_o;
+</svg> terms accounting for scales</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1385" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1385"><i></i></a><div id="fragbit-1385" class="collapse show"><div class="fragmentcode">       Float sinThetap_o, cosThetap_o;
        if (p == 0) {
            sinThetap_o = sinTheta_o * <a href="#HairBxDF::cos2kAlpha" class="code">cos2kAlpha</a>[1] - cosTheta_o * <a href="#HairBxDF::sin2kAlpha" class="code">sin2kAlpha</a>[1];
            cosThetap_o = cosTheta_o * <a href="#HairBxDF::cos2kAlpha" class="code">cos2kAlpha</a>[1] + sinTheta_o * <a href="#HairBxDF::sin2kAlpha" class="code">sin2kAlpha</a>[1];
@@ -6031,7 +6031,7 @@ for (int p = 0; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p) {
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D45D" x="0" y="0"></use>
 </g>
-</svg> values for hair scale tilt</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1386" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1386"><i></i></a><div id="fragbit-1386" class="collapse"><div class="fragmentcode">          else if (p == 1) {
+</svg> values for hair scale tilt</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1386" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1386"><i></i></a><div id="fragbit-1386" class="collapse show"><div class="fragmentcode">          else if (p == 1) {
               sinThetap_o = sinTheta_o * cos2kAlpha[0] + cosTheta_o * sin2kAlpha[0];
               cosThetap_o = cosTheta_o * cos2kAlpha[0] - sinTheta_o * sin2kAlpha[0];
           } else if (p == 2) {
@@ -6058,11 +6058,11 @@ for (int p = 0; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p) {
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1387" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1387"><i></i></a><div id="fragbit-1387" class="collapse"><div class="fragmentcode">          cosThetap_o = std::abs(cosThetap_o);</div></div></div></div>
+</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1387" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1387"><i></i></a><div id="fragbit-1387" class="collapse show"><div class="fragmentcode">          cosThetap_o = std::abs(cosThetap_o);</div></div></div></div>
     fsum += <a href="#HairBxDF::Mp" class="code">Mp</a>(cosTheta_i, cosThetap_o, sinTheta_i, sinThetap_o, <a href="#HairBxDF::v" class="code">v</a>[p]) *
             ap[p] * <a href="#HairBxDF::Np" class="code">Np</a>(phi, p, s, gamma_o, gamma_t);
 }
-&lt;&lt;<span class="fragmentname"><a href="#fragment-ComputecontributionofremainingtermsaftermonopMax-0">Compute contribution of remaining terms after <tt>pMax</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1388" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1388"><i></i></a><div id="fragbit-1388" class="collapse"><div class="fragmentcode">   fsum += <a href="#HairBxDF::Mp" class="code">Mp</a>(cosTheta_i, cosTheta_o, sinTheta_i, sinTheta_o, v[pMax]) *
+&lt;&lt;<span class="fragmentname"><a href="#fragment-ComputecontributionofremainingtermsaftermonopMax-0">Compute contribution of remaining terms after <tt>pMax</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1388" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1388"><i></i></a><div id="fragbit-1388" class="collapse show"><div class="fragmentcode">   fsum += <a href="#HairBxDF::Mp" class="code">Mp</a>(cosTheta_i, cosTheta_o, sinTheta_i, sinTheta_o, v[pMax]) *
            ap[pMax] / (2 * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>);</div></div>
 if (<a href="../Geometry_and_Transformations/Spherical_Geometry.html#AbsCosTheta" class="code">AbsCosTheta</a>(wi) &gt; 0)
     fsum /= <a href="../Geometry_and_Transformations/Spherical_Geometry.html#AbsCosTheta" class="code">AbsCosTheta</a>(wi);
@@ -6205,7 +6205,7 @@ if (p == 0) {
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D45D" x="0" y="0"></use>
 </g>
-</svg> values for hair scale tilt</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1389" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1389"><i></i></a><div id="fragbit-1389" class="collapse"><div class="fragmentcode">   else if (p == 1) {
+</svg> values for hair scale tilt</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1389" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1389"><i></i></a><div id="fragbit-1389" class="collapse show"><div class="fragmentcode">   else if (p == 1) {
        sinThetap_o = sinTheta_o * cos2kAlpha[0] + cosTheta_o * sin2kAlpha[0];
        cosThetap_o = cosTheta_o * cos2kAlpha[0] - sinTheta_o * sin2kAlpha[0];
    } else if (p == 2) {
@@ -6232,7 +6232,7 @@ if (p == 0) {
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1390" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1390"><i></i></a><div id="fragbit-1390" class="collapse"><div class="fragmentcode">   cosThetap_o = std::abs(cosThetap_o);</div></div></div><p>
+</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1390" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1390"><i></i></a><div id="fragbit-1390" class="collapse show"><div class="fragmentcode">   cosThetap_o = std::abs(cosThetap_o);</div></div></div><p>
 
 
 </p>
@@ -6780,7 +6780,7 @@ its contribution relative to all the <svg xmlns:xlink="http://www.w3.org/1999/xl
  <use xlink:href="#E1-LATINMODERNNORMAL-1D434" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNNORMAL-1D45D" x="1061" y="-213"></use>
 </g>
-</svg> values for <tt>cosTheta_o</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1391" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1391"><i></i></a><div id="fragbit-1391" class="collapse"><div class="fragmentcode">       Float sinTheta_o = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(cosTheta_o));
+</svg> values for <tt>cosTheta_o</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1391" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1391"><i></i></a><div id="fragbit-1391" class="collapse show"><div class="fragmentcode">       Float sinTheta_o = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(cosTheta_o));
        &lt;&lt;<span class="fragmentname"><a href="#fragment-Computecosthetatforrefractedray-0">Compute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.848ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 2517.8 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">cosine theta Subscript normal t</title>
 <defs aria-hidden="true">
@@ -6799,7 +6799,7 @@ its contribution relative to all the <svg xmlns:xlink="http://www.w3.org/1999/xl
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-74" x="663" y="-213"></use>
 </g>
 </g>
-</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1392" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1392"><i></i></a><div id="fragbit-1392" class="collapse"><div class="fragmentcode">          Float sinTheta_t = sinTheta_o / eta;
+</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1392" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1392"><i></i></a><div id="fragbit-1392" class="collapse show"><div class="fragmentcode">          Float sinTheta_t = sinTheta_o / eta;
           Float cosTheta_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_t));</div></div>
        &lt;&lt;<span class="fragmentname"><a href="#fragment-Computegammatforrefractedray-0">Compute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.076ex" height="2.176ex" style="vertical-align: -0.838ex;" viewBox="0 -576.1 893.9 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">gamma Subscript normal t</title>
@@ -6811,11 +6811,11 @@ its contribution relative to all the <svg xmlns:xlink="http://www.w3.org/1999/xl
  <use xlink:href="#E1-LATINMODERNNORMAL-1D6FE" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-74" x="733" y="-213"></use>
 </g>
-</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1393" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1393"><i></i></a><div id="fragbit-1393" class="collapse"><div class="fragmentcode">          Float etap = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(<a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta) - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_o)) / cosTheta_o;
+</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1393" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1393"><i></i></a><div id="fragbit-1393" class="collapse show"><div class="fragmentcode">          Float etap = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(<a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta) - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_o)) / cosTheta_o;
           Float sinGamma_t = h / etap;
           Float cosGamma_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinGamma_t));
           Float gamma_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeASin" class="code">SafeASin</a>(sinGamma_t);</div></div>
-       &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputethetransmittancemonoTofasinglepaththroughthecylinder-0">Compute the transmittance <tt>T</tt> of a single path through the cylinder</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1394" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1394"><i></i></a><div id="fragbit-1394" class="collapse"><div class="fragmentcode">          <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> T = <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum::Exp" class="code">Exp</a>(-sigma_a * (2 * cosGamma_t / cosTheta_t));</div></div>
+       &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputethetransmittancemonoTofasinglepaththroughthecylinder-0">Compute the transmittance <tt>T</tt> of a single path through the cylinder</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1394" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1394"><i></i></a><div id="fragbit-1394" class="collapse show"><div class="fragmentcode">          <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> T = <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum::Exp" class="code">Exp</a>(-sigma_a * (2 * cosGamma_t / cosTheta_t));</div></div>
        pstd::array&lt;<a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a>, <a href="#HairBxDF::pMax" class="code">pMax</a> + 1&gt; ap = <a href="#HairBxDF::Ap" class="code">Ap</a>(cosTheta_o, eta, h, T);</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputeA_pPDFfromindividualA_pterms-0">Compute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.802ex" height="2.843ex" style="vertical-align: -1.005ex;" viewBox="0 -791.3 1206.5 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">upper A Subscript p</title>
@@ -6837,7 +6837,7 @@ its contribution relative to all the <svg xmlns:xlink="http://www.w3.org/1999/xl
  <use xlink:href="#E1-LATINMODERNNORMAL-1D434" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNNORMAL-1D45D" x="1061" y="-213"></use>
 </g>
-</svg> terms</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1395" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1395"><i></i></a><div id="fragbit-1395" class="collapse"><div class="fragmentcode">       pstd::array&lt;Float, <a href="#HairBxDF::pMax" class="code">pMax</a> + 1&gt; apPDF;
+</svg> terms</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1395" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1395"><i></i></a><div id="fragbit-1395" class="collapse show"><div class="fragmentcode">       pstd::array&lt;Float, <a href="#HairBxDF::pMax" class="code">pMax</a> + 1&gt; apPDF;
        Float sumY = 0;
        for (const <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> &amp;as : ap)
            sumY += as.<a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum::Average" class="code">Average</a>();
@@ -6894,7 +6894,7 @@ to make this task easier.
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-74" x="663" y="-213"></use>
 </g>
 </g>
-</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1396" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1396"><i></i></a><div id="fragbit-1396" class="collapse"><div class="fragmentcode">   Float sinTheta_t = sinTheta_o / eta;
+</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1396" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1396"><i></i></a><div id="fragbit-1396" class="collapse show"><div class="fragmentcode">   Float sinTheta_t = sinTheta_o / eta;
    Float cosTheta_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_t));</div></div>
 &lt;&lt;<span class="fragmentname"><a href="#fragment-Computegammatforrefractedray-0">Compute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.076ex" height="2.176ex" style="vertical-align: -0.838ex;" viewBox="0 -576.1 893.9 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">gamma Subscript normal t</title>
@@ -6906,11 +6906,11 @@ to make this task easier.
  <use xlink:href="#E1-LATINMODERNNORMAL-1D6FE" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-74" x="733" y="-213"></use>
 </g>
-</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1397" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1397"><i></i></a><div id="fragbit-1397" class="collapse"><div class="fragmentcode">   Float etap = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(<a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta) - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_o)) / cosTheta_o;
+</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1397" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1397"><i></i></a><div id="fragbit-1397" class="collapse show"><div class="fragmentcode">   Float etap = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(<a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta) - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_o)) / cosTheta_o;
    Float sinGamma_t = h / etap;
    Float cosGamma_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinGamma_t));
    Float gamma_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeASin" class="code">SafeASin</a>(sinGamma_t);</div></div>
-&lt;&lt;<span class="fragmentname"><a href="#fragment-ComputethetransmittancemonoTofasinglepaththroughthecylinder-0">Compute the transmittance <tt>T</tt> of a single path through the cylinder</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1398" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1398"><i></i></a><div id="fragbit-1398" class="collapse"><div class="fragmentcode">   <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> T = <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum::Exp" class="code">Exp</a>(-sigma_a * (2 * cosGamma_t / cosTheta_t));</div></div>
+&lt;&lt;<span class="fragmentname"><a href="#fragment-ComputethetransmittancemonoTofasinglepaththroughthecylinder-0">Compute the transmittance <tt>T</tt> of a single path through the cylinder</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1398" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1398"><i></i></a><div id="fragbit-1398" class="collapse show"><div class="fragmentcode">   <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> T = <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum::Exp" class="code">Exp</a>(-sigma_a * (2 * cosGamma_t / cosTheta_t));</div></div>
 pstd::array&lt;<a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a>, <a href="#HairBxDF::pMax" class="code">pMax</a> + 1&gt; ap = <a href="#HairBxDF::Ap" class="code">Ap</a>(cosTheta_o, eta, h, T);</div><p>
 
 
@@ -6970,7 +6970,7 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
 <div class="fragmentcode">pstd::optional&lt;<a href="../Reflection_Models/BSDF_Representation.html#BSDFSample" class="code">BSDFSample</a>&gt;
 <span class="anchor" id="HairBxDF::Sample_f"></span>HairBxDF::Sample_f(<a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wo, Float uc, <a href="../Geometry_and_Transformations/Points.html#Point2f" class="code">Point2f</a> u, <a href="../Reflection_Models/Dielectric_BSDF.html#TransportMode" class="code">TransportMode</a> mode,
                    <a href="../Reflection_Models/BSDF_Representation.html#BxDFReflTransFlags" class="code">BxDFReflTransFlags</a> sampleFlags) const {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computehaircoordinatesystemtermsrelatedtomonowo-0">Compute hair coordinate system terms related to <tt>wo</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1399" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1399"><i></i></a><div id="fragbit-1399" class="collapse"><div class="fragmentcode">       Float sinTheta_o = wo.x;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computehaircoordinatesystemtermsrelatedtomonowo-0">Compute hair coordinate system terms related to <tt>wo</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1399" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1399"><i></i></a><div id="fragbit-1399" class="collapse show"><div class="fragmentcode">       Float sinTheta_o = wo.x;
        Float cosTheta_o = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_o));
        Float phi_o = std::atan2(wo.z, wo.y);
        Float gamma_o = <a href="../Utilities/Mathematical_Infrastructure.html#SafeASin" class="code">SafeASin</a>(h);</div></div>
@@ -6982,7 +6982,7 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D45D" x="0" y="0"></use>
 </g>
-</svg> to sample for hair scattering</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1400" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1400"><i></i></a><div id="fragbit-1400" class="collapse"><div class="fragmentcode">       pstd::array&lt;Float, <a href="#HairBxDF::pMax" class="code">pMax</a> + 1&gt; apPDF = <a href="#HairBxDF::ApPDF" class="code">ApPDF</a>(cosTheta_o);
+</svg> to sample for hair scattering</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1400" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1400"><i></i></a><div id="fragbit-1400" class="collapse show"><div class="fragmentcode">       pstd::array&lt;Float, <a href="#HairBxDF::pMax" class="code">pMax</a> + 1&gt; apPDF = <a href="#HairBxDF::ApPDF" class="code">ApPDF</a>(cosTheta_o);
        int p = <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#SampleDiscrete" class="code">SampleDiscrete</a>(apPDF, uc, nullptr, &amp;uc);</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Computesinthetaoandcosthetaotermsaccountingforscales-0">Compute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.775ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 2486.2 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">sine theta Subscript normal o</title>
@@ -7019,7 +7019,7 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> terms accounting for scales</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1401" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1401"><i></i></a><div id="fragbit-1401" class="collapse"><div class="fragmentcode">       Float sinThetap_o, cosThetap_o;
+</svg> terms accounting for scales</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1401" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1401"><i></i></a><div id="fragbit-1401" class="collapse show"><div class="fragmentcode">       Float sinThetap_o, cosThetap_o;
        if (p == 0) {
            sinThetap_o = sinTheta_o * <a href="#HairBxDF::cos2kAlpha" class="code">cos2kAlpha</a>[1] - cosTheta_o * <a href="#HairBxDF::sin2kAlpha" class="code">sin2kAlpha</a>[1];
            cosThetap_o = cosTheta_o * <a href="#HairBxDF::cos2kAlpha" class="code">cos2kAlpha</a>[1] + sinTheta_o * <a href="#HairBxDF::sin2kAlpha" class="code">sin2kAlpha</a>[1];
@@ -7032,7 +7032,7 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D45D" x="0" y="0"></use>
 </g>
-</svg> values for hair scale tilt</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1402" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1402"><i></i></a><div id="fragbit-1402" class="collapse"><div class="fragmentcode">          else if (p == 1) {
+</svg> values for hair scale tilt</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1402" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1402"><i></i></a><div id="fragbit-1402" class="collapse show"><div class="fragmentcode">          else if (p == 1) {
               sinThetap_o = sinTheta_o * cos2kAlpha[0] + cosTheta_o * sin2kAlpha[0];
               cosThetap_o = cosTheta_o * cos2kAlpha[0] - sinTheta_o * sin2kAlpha[0];
           } else if (p == 2) {
@@ -7059,7 +7059,7 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1403" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1403"><i></i></a><div id="fragbit-1403" class="collapse"><div class="fragmentcode">          cosThetap_o = std::abs(cosThetap_o);</div></div></div></div>
+</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1403" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1403"><i></i></a><div id="fragbit-1403" class="collapse show"><div class="fragmentcode">          cosThetap_o = std::abs(cosThetap_o);</div></div></div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-SampleM_ptocomputethetai-0">Sample <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.313ex" height="2.843ex" style="vertical-align: -1.005ex;" viewBox="0 -791.3 1426.5 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">upper M Subscript p</title>
 <defs aria-hidden="true">
@@ -7080,7 +7080,7 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
  <use xlink:href="#E1-LATINMODERNNORMAL-1D703" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-69" x="663" y="-213"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1404" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1404"><i></i></a><div id="fragbit-1404" class="collapse"><div class="fragmentcode">       Float cosTheta = 1 + <a href="#HairBxDF::v" class="code">v</a>[p] * std::log(std::max&lt;Float&gt;(u[0], 1e-5) +
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1404" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1404"><i></i></a><div id="fragbit-1404" class="collapse show"><div class="fragmentcode">       Float cosTheta = 1 + <a href="#HairBxDF::v" class="code">v</a>[p] * std::log(std::max&lt;Float&gt;(u[0], 1e-5) +
                                             (1 - u[0]) * <a href="../Utilities/Mathematical_Infrastructure.html#FastExp" class="code">FastExp</a>(-2 / <a href="#HairBxDF::v" class="code">v</a>[p]));
        Float sinTheta = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(cosTheta));
        Float cosPhi = std::cos(2 * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a> * u[1]);
@@ -7107,7 +7107,7 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
  <use xlink:href="#E1-LATINMODERNMAIN-394" x="0" y="0"></use>
  <use xlink:href="#E1-LATINMODERNNORMAL-1D719" x="833" y="0"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1405" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1405"><i></i></a><div id="fragbit-1405" class="collapse"><div class="fragmentcode">       &lt;&lt;<span class="fragmentname"><a href="#fragment-Computegammatforrefractedray-0">Compute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.076ex" height="2.176ex" style="vertical-align: -0.838ex;" viewBox="0 -576.1 893.9 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1405" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1405"><i></i></a><div id="fragbit-1405" class="collapse show"><div class="fragmentcode">       &lt;&lt;<span class="fragmentname"><a href="#fragment-Computegammatforrefractedray-0">Compute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.076ex" height="2.176ex" style="vertical-align: -0.838ex;" viewBox="0 -576.1 893.9 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">gamma Subscript normal t</title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E1-LATINMODERNNORMAL-1D6FE" d="M543 421c0 -4 -12 -26 -19 -38c-40 -79 -104 -228 -136 -327c-4 -13 -6 -26 -8 -39c-4 -31 -14 -88 -37 -172c-11 -38 -19 -60 -32 -60c-8 0 -13 7 -13 18c0 26 30 142 52 215c7 20 12 37 12 98c0 79 -11 254 -162 254c-11 0 -120 -1 -159 -116l-4 -5c-10 0 -19 0 -19 10 c0 31 70 183 195 183c69 0 109 -49 133 -110c39 -97 40 -173 41 -204c40 101 80 201 132 296c3 7 9 7 12 7c0 0 12 0 12 -10Z"></path>
@@ -7117,7 +7117,7 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
  <use xlink:href="#E1-LATINMODERNNORMAL-1D6FE" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-74" x="733" y="-213"></use>
 </g>
-</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1406" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1406"><i></i></a><div id="fragbit-1406" class="collapse"><div class="fragmentcode">          Float etap = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(<a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta) - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_o)) / cosTheta_o;
+</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1406" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1406"><i></i></a><div id="fragbit-1406" class="collapse show"><div class="fragmentcode">          Float etap = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(<a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta) - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_o)) / cosTheta_o;
           Float sinGamma_t = h / etap;
           Float cosGamma_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinGamma_t));
           Float gamma_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeASin" class="code">SafeASin</a>(sinGamma_t);</div></div>
@@ -7126,10 +7126,10 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
            dphi = <a href="#HairBxDF::Phi" class="code">Phi</a>(p, gamma_o, gamma_t) + <a href="../Sampling_Algorithms/Sampling_1D_Functions.html#SampleTrimmedLogistic" class="code">SampleTrimmedLogistic</a>(uc, s, -<a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>, <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>);
        else
            dphi = 2 * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a> * uc;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computemonowifromsampledhairscatteringangles-0">Compute <tt>wi</tt> from sampled hair scattering angles</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1407" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1407"><i></i></a><div id="fragbit-1407" class="collapse"><div class="fragmentcode">       Float phi_i = phi_o + dphi;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computemonowifromsampledhairscatteringangles-0">Compute <tt>wi</tt> from sampled hair scattering angles</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1407" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1407"><i></i></a><div id="fragbit-1407" class="collapse show"><div class="fragmentcode">       Float phi_i = phi_o + dphi;
        <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wi(sinTheta_i, cosTheta_i * std::cos(phi_i),
                    cosTheta_i * std::sin(phi_i));</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputePDFforsampledhairscatteringdirectionmonowi-0">Compute PDF for sampled hair scattering direction <tt>wi</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1408" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1408"><i></i></a><div id="fragbit-1408" class="collapse"><div class="fragmentcode">       Float pdf = 0;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputePDFforsampledhairscatteringdirectionmonowi-0">Compute PDF for sampled hair scattering direction <tt>wi</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1408" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1408"><i></i></a><div id="fragbit-1408" class="collapse show"><div class="fragmentcode">       Float pdf = 0;
        for (int p = 0; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p) {
            &lt;&lt;<span class="fragmentname"><a href="#fragment-Computesinthetaoandcosthetaotermsaccountingforscales-0">Compute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.775ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 2486.2 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">sine theta Subscript normal o</title>
@@ -7166,7 +7166,7 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> terms accounting for scales</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1409" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1409"><i></i></a><div id="fragbit-1409" class="collapse"><div class="fragmentcode">              Float sinThetap_o, cosThetap_o;
+</svg> terms accounting for scales</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1409" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1409"><i></i></a><div id="fragbit-1409" class="collapse show"><div class="fragmentcode">              Float sinThetap_o, cosThetap_o;
               if (p == 0) {
                   sinThetap_o = sinTheta_o * <a href="#HairBxDF::cos2kAlpha" class="code">cos2kAlpha</a>[1] - cosTheta_o * <a href="#HairBxDF::sin2kAlpha" class="code">sin2kAlpha</a>[1];
                   cosThetap_o = cosTheta_o * <a href="#HairBxDF::cos2kAlpha" class="code">cos2kAlpha</a>[1] + sinTheta_o * <a href="#HairBxDF::sin2kAlpha" class="code">sin2kAlpha</a>[1];
@@ -7179,7 +7179,7 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D45D" x="0" y="0"></use>
 </g>
-</svg> values for hair scale tilt</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1410" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1410"><i></i></a><div id="fragbit-1410" class="collapse"><div class="fragmentcode">                 else if (p == 1) {
+</svg> values for hair scale tilt</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1410" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1410"><i></i></a><div id="fragbit-1410" class="collapse show"><div class="fragmentcode">                 else if (p == 1) {
                      sinThetap_o = sinTheta_o * cos2kAlpha[0] + cosTheta_o * sin2kAlpha[0];
                      cosThetap_o = cosTheta_o * cos2kAlpha[0] - sinTheta_o * sin2kAlpha[0];
                  } else if (p == 2) {
@@ -7206,7 +7206,7 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1411" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1411"><i></i></a><div id="fragbit-1411" class="collapse"><div class="fragmentcode">                 cosThetap_o = std::abs(cosThetap_o);</div></div></div></div>
+</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1411" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1411"><i></i></a><div id="fragbit-1411" class="collapse show"><div class="fragmentcode">                 cosThetap_o = std::abs(cosThetap_o);</div></div></div></div>
            &lt;&lt;<span class="fragmentname"><a href="#fragment-Handleout-of-rangecosthetaofromscaleadjustment-0">Handle out-of-range <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.03ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 2596.2 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">cosine theta Subscript normal o</title>
 <defs aria-hidden="true">
@@ -7224,7 +7224,7 @@ for (int i = 0; i &lt;= <a href="#HairBxDF::pMax" class="code">pMax</a>; ++i)
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1412" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1412"><i></i></a><div id="fragbit-1412" class="collapse"><div class="fragmentcode">              cosThetap_o = std::abs(cosThetap_o);</div></div>
+</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1412" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1412"><i></i></a><div id="fragbit-1412" class="collapse show"><div class="fragmentcode">              cosThetap_o = std::abs(cosThetap_o);</div></div>
            pdf += <a href="#HairBxDF::Mp" class="code">Mp</a>(cosTheta_i, cosThetap_o, sinTheta_i, sinThetap_o, <a href="#HairBxDF::v" class="code">v</a>[p]) *
                   apPDF[p] * <a href="#HairBxDF::Np" class="code">Np</a>(dphi, p, s, gamma_o, gamma_t);
        }
@@ -7452,7 +7452,7 @@ sample from a uniform distribution.
  <use xlink:href="#E1-LATINMODERNNORMAL-1D6FE" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-74" x="733" y="-213"></use>
 </g>
-</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1413" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1413"><i></i></a><div id="fragbit-1413" class="collapse"><div class="fragmentcode">   Float etap = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(<a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta) - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_o)) / cosTheta_o;
+</svg> for refracted ray</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1413" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1413"><i></i></a><div id="fragbit-1413" class="collapse show"><div class="fragmentcode">   Float etap = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(<a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(eta) - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinTheta_o)) / cosTheta_o;
    Float sinGamma_t = h / etap;
    Float cosGamma_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(sinGamma_t));
    Float gamma_t = <a href="../Utilities/Mathematical_Infrastructure.html#SafeASin" class="code">SafeASin</a>(sinGamma_t);</div></div>
@@ -7768,7 +7768,7 @@ for (int p = 0; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p) {
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> terms accounting for scales</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1414" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1414"><i></i></a><div id="fragbit-1414" class="collapse"><div class="fragmentcode">       Float sinThetap_o, cosThetap_o;
+</svg> terms accounting for scales</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1414" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1414"><i></i></a><div id="fragbit-1414" class="collapse show"><div class="fragmentcode">       Float sinThetap_o, cosThetap_o;
        if (p == 0) {
            sinThetap_o = sinTheta_o * <a href="#HairBxDF::cos2kAlpha" class="code">cos2kAlpha</a>[1] - cosTheta_o * <a href="#HairBxDF::sin2kAlpha" class="code">sin2kAlpha</a>[1];
            cosThetap_o = cosTheta_o * <a href="#HairBxDF::cos2kAlpha" class="code">cos2kAlpha</a>[1] + sinTheta_o * <a href="#HairBxDF::sin2kAlpha" class="code">sin2kAlpha</a>[1];
@@ -7781,7 +7781,7 @@ for (int p = 0; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p) {
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D45D" x="0" y="0"></use>
 </g>
-</svg> values for hair scale tilt</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1415" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1415"><i></i></a><div id="fragbit-1415" class="collapse"><div class="fragmentcode">          else if (p == 1) {
+</svg> values for hair scale tilt</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1415" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1415"><i></i></a><div id="fragbit-1415" class="collapse show"><div class="fragmentcode">          else if (p == 1) {
               sinThetap_o = sinTheta_o * cos2kAlpha[0] + cosTheta_o * sin2kAlpha[0];
               cosThetap_o = cosTheta_o * cos2kAlpha[0] - sinTheta_o * sin2kAlpha[0];
           } else if (p == 2) {
@@ -7808,7 +7808,7 @@ for (int p = 0; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p) {
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1416" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1416"><i></i></a><div id="fragbit-1416" class="collapse"><div class="fragmentcode">          cosThetap_o = std::abs(cosThetap_o);</div></div></div></div>
+</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1416" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1416"><i></i></a><div id="fragbit-1416" class="collapse show"><div class="fragmentcode">          cosThetap_o = std::abs(cosThetap_o);</div></div></div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Handleout-of-rangecosthetaofromscaleadjustment-0">Handle out-of-range <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.03ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 2596.2 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">cosine theta Subscript normal o</title>
 <defs aria-hidden="true">
@@ -7826,7 +7826,7 @@ for (int p = 0; p &lt; <a href="#HairBxDF::pMax" class="code">pMax</a>; ++p) {
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="663" y="-213"></use>
 </g>
 </g>
-</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1417" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1417"><i></i></a><div id="fragbit-1417" class="collapse"><div class="fragmentcode">       cosThetap_o = std::abs(cosThetap_o);</div></div>
+</svg> from scale adjustment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1417" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1417"><i></i></a><div id="fragbit-1417" class="collapse show"><div class="fragmentcode">       cosThetap_o = std::abs(cosThetap_o);</div></div>
     pdf += <a href="#HairBxDF::Mp" class="code">Mp</a>(cosTheta_i, cosThetap_o, sinTheta_i, sinThetap_o, <a href="#HairBxDF::v" class="code">v</a>[p]) *
            apPDF[p] * <a href="#HairBxDF::Np" class="code">Np</a>(dphi, p, s, gamma_o, gamma_t);
 }

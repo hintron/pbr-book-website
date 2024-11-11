@@ -124,7 +124,7 @@ transmission as well.
 <span class="anchor" id="fragment-MeasuredBxDFDefinition-0"></span><div class="fragmentname">&lt;&lt;MeasuredBxDF Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="MeasuredBxDF"></span>MeasuredBxDF {
   public:
-    &lt;&lt;<span class="fragmentname">MeasuredBxDF Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1351" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1351"><i></i></a><div id="fragbit-1351" class="collapse"><div class="fragmentcode">       PBRT_CPU_GPU
+    &lt;&lt;<span class="fragmentname">MeasuredBxDF Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1351" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1351"><i></i></a><div id="fragbit-1351" class="collapse show"><div class="fragmentcode">       PBRT_CPU_GPU
        MeasuredBxDF(const MeasuredBxDFData *brdf, const <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledWavelengths" class="code">SampledWavelengths</a> &amp;lambda)
            : brdf(brdf), lambda(lambda) {}
        static MeasuredBxDFData *BRDFDataFromFile(const std::string &amp;filename,
@@ -152,11 +152,11 @@ transmission as well.
        PBRT_CPU_GPU
        <a href="../Reflection_Models/BSDF_Representation.html#BxDFFlags" class="code">BxDFFlags</a> Flags() const { return (<a href="../Reflection_Models/BSDF_Representation.html#BxDFFlags" class="code">BxDFFlags</a>::Reflection | <a href="../Reflection_Models/BSDF_Representation.html#BxDFFlags" class="code">BxDFFlags</a>::Glossy); }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-MeasuredBxDFPrivateMethods-0">MeasuredBxDF Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1352" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1352"><i></i></a><div id="fragbit-1352" class="collapse"><div class="fragmentcode">       static Float theta2u(Float theta) { return std::sqrt(theta * (2 / <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>)); }
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-MeasuredBxDFPrivateMethods-0">MeasuredBxDF Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1352" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1352"><i></i></a><div id="fragbit-1352" class="collapse show"><div class="fragmentcode">       static Float theta2u(Float theta) { return std::sqrt(theta * (2 / <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>)); }
        static Float phi2u(Float phi) { return phi * (1 / (2 * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>)) + .5f; }
        static Float u2theta(Float u) { return Sqr(u) * (<a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a> / 2.f); }
        static Float u2phi(Float u) { return (2.f * u - 1.f) * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>; }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-MeasuredBxDFPrivateMembers-0">MeasuredBxDF Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1353" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1353"><i></i></a><div id="fragbit-1353" class="collapse"><div class="fragmentcode">       const MeasuredBxDFData *brdf;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-MeasuredBxDFPrivateMembers-0">MeasuredBxDF Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1353" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1353"><i></i></a><div id="fragbit-1353" class="collapse show"><div class="fragmentcode">       const MeasuredBxDFData *brdf;
        <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledWavelengths" class="code">SampledWavelengths</a> lambda;</div></div>
 };</div><p>
 
@@ -2859,7 +2859,7 @@ is available at <tt>http://rgl.epfl.ch/materials</tt>.">
 <p></p>
 <span class="anchor" id="fragment-MeasuredBxDFDataDefinition-0"></span><div class="fragmentname">&lt;&lt;MeasuredBxDFData Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">struct <span class="anchor" id="MeasuredBxDFData"></span>MeasuredBxDFData {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-MeasuredBxDFDataPublicMembers-0">MeasuredBxDFData Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1354" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1354"><i></i></a><div id="fragbit-1354" class="collapse"><div class="fragmentcode">       pstd::vector&lt;float&gt; wavelengths;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-MeasuredBxDFDataPublicMembers-0">MeasuredBxDFData Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1354" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1354"><i></i></a><div id="fragbit-1354" class="collapse show"><div class="fragmentcode">       pstd::vector&lt;float&gt; wavelengths;
        PiecewiseLinear2D&lt;3&gt; spectra;
        PiecewiseLinear2D&lt;0&gt; ndf;
        PiecewiseLinear2D&lt;2&gt; vndf;
@@ -3288,7 +3288,7 @@ Equation&nbsp;(<a href="#eq:measbrdf-brdf-final">9.45</a>).
 <span class="anchor" id="fragment-MeasuredBxDFMethodDefinitions-0"></span><div class="fragmentname">&lt;&lt;MeasuredBxDF Method Definitions&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode"><a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> <span class="anchor" id="MeasuredBxDF::f"></span>MeasuredBxDF::f(<a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wo, <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wi,
                                 <a href="../Reflection_Models/Dielectric_BSDF.html#TransportMode" class="code">TransportMode</a> mode) const {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Checkforvalidreflectionconfigurations-0">Check for valid reflection configurations</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1355" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1355"><i></i></a><div id="fragbit-1355" class="collapse"><div class="fragmentcode">       if (!<a href="../Reflection_Models/BSDF_Representation.html#SameHemisphere" class="code">SameHemisphere</a>(wo, wi))
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Checkforvalidreflectionconfigurations-0">Check for valid reflection configurations</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1355" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1355"><i></i></a><div id="fragbit-1355" class="collapse show"><div class="fragmentcode">       if (!<a href="../Reflection_Models/BSDF_Representation.html#SameHemisphere" class="code">SameHemisphere</a>(wo, wi))
            return <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a>(0);
        if (wo.z &lt; 0) {
            wo = -wo;
@@ -3304,7 +3304,7 @@ Equation&nbsp;(<a href="#eq:measbrdf-brdf-final">9.45</a>).
  <use xlink:href="#E1-LATINMODERNNORMAL-1D714" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6D" x="880" y="-213"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1356" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1356"><i></i></a><div id="fragbit-1356" class="collapse"><div class="fragmentcode">       <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wm = wi + wo;
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1356" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1356"><i></i></a><div id="fragbit-1356" class="collapse show"><div class="fragmentcode">       <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wm = wi + wo;
        if (<a href="../Geometry_and_Transformations/Vectors.html#LengthSquared" class="code">LengthSquared</a>(wm) == 0)
            return <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a>(0);
        wm = <a href="../Geometry_and_Transformations/Vectors.html#Normalize" class="code">Normalize</a>(wm);</div></div>
@@ -3348,7 +3348,7 @@ Equation&nbsp;(<a href="#eq:measbrdf-brdf-final">9.45</a>).
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-32" x="393" y="513"></use>
 </g>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1357" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1357"><i></i></a><div id="fragbit-1357" class="collapse"><div class="fragmentcode">       Float theta_o = <a href="../Geometry_and_Transformations/Spherical_Geometry.html#SphericalTheta" class="code">SphericalTheta</a>(wo), phi_o = std::atan2(wo.y, wo.x);
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1357" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1357"><i></i></a><div id="fragbit-1357" class="collapse show"><div class="fragmentcode">       Float theta_o = <a href="../Geometry_and_Transformations/Spherical_Geometry.html#SphericalTheta" class="code">SphericalTheta</a>(wo), phi_o = std::atan2(wo.y, wo.x);
        Float theta_m = <a href="../Geometry_and_Transformations/Spherical_Geometry.html#SphericalTheta" class="code">SphericalTheta</a>(wm), phi_m = std::atan2(wm.y, wm.x);
        <a href="../Geometry_and_Transformations/Points.html#Point2f" class="code">Point2f</a> u_wo(<a href="#MeasuredBxDF::theta2u" class="code">theta2u</a>(theta_o), <a href="#MeasuredBxDF::phi2u" class="code">phi2u</a>(phi_o));
        <a href="../Geometry_and_Transformations/Points.html#Point2f" class="code">Point2f</a> u_wm(<a href="#MeasuredBxDF::theta2u" class="code">theta2u</a>(theta_m), <a href="#MeasuredBxDF::phi2u" class="code">phi2u</a>(brdf-&gt;<a href="#MeasuredBxDFData::isotropic" class="code">isotropic</a> ? (phi_m - phi_o) :
@@ -3368,12 +3368,12 @@ Equation&nbsp;(<a href="#eq:measbrdf-brdf-final">9.45</a>).
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-31" x="778" y="0"></use>
 </g>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1358" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1358"><i></i></a><div id="fragbit-1358" class="collapse"><div class="fragmentcode">       PLSample ui = <a href="#MeasuredBxDF::brdf" class="code">brdf</a>-&gt;<a href="#MeasuredBxDFData::vndf" class="code">vndf</a>.<a href="#PiecewiseLinear2D::Invert" class="code">Invert</a>(u_wm, phi_o, theta_o);</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Evaluatespectral5Dinterpolant-0">Evaluate spectral 5D interpolant</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1359" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1359"><i></i></a><div id="fragbit-1359" class="collapse"><div class="fragmentcode">       <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> fr;
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1358" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1358"><i></i></a><div id="fragbit-1358" class="collapse show"><div class="fragmentcode">       PLSample ui = <a href="#MeasuredBxDF::brdf" class="code">brdf</a>-&gt;<a href="#MeasuredBxDFData::vndf" class="code">vndf</a>.<a href="#PiecewiseLinear2D::Invert" class="code">Invert</a>(u_wm, phi_o, theta_o);</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Evaluatespectral5Dinterpolant-0">Evaluate spectral 5D interpolant</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1359" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1359"><i></i></a><div id="fragbit-1359" class="collapse show"><div class="fragmentcode">       <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#SampledSpectrum" class="code">SampledSpectrum</a> fr;
        for (int i = 0; i &lt; <a href="../Radiometry,_Spectra,_and_Color/Representing_Spectral_Distributions.html#NSpectrumSamples" class="code">NSpectrumSamples</a>; ++i)
            fr[i] = std::max&lt;Float&gt;(0, <a href="#MeasuredBxDF::brdf" class="code">brdf</a>-&gt;<a href="#MeasuredBxDFData::spectra" class="code">spectra</a>.<a href="#PiecewiseLinear2D::Evaluate" class="code">Evaluate</a>(ui.p, phi_o, theta_o,
                                                              <a href="#MeasuredBxDF::lambda" class="code">lambda</a>[i]));</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ReturnmeasuredBRDFvalue-0">Return measured BRDF value</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1360" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1360"><i></i></a><div id="fragbit-1360" class="collapse"><div class="fragmentcode">       return fr * <a href="#MeasuredBxDF::brdf" class="code">brdf</a>-&gt;<a href="#MeasuredBxDFData::ndf" class="code">ndf</a>.<a href="#PiecewiseLinear2D::Evaluate" class="code">Evaluate</a>(u_wm) /
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ReturnmeasuredBRDFvalue-0">Return measured BRDF value</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1360" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1360"><i></i></a><div id="fragbit-1360" class="collapse show"><div class="fragmentcode">       return fr * <a href="#MeasuredBxDF::brdf" class="code">brdf</a>-&gt;<a href="#MeasuredBxDFData::ndf" class="code">ndf</a>.<a href="#PiecewiseLinear2D::Evaluate" class="code">Evaluate</a>(u_wm) /
               (4 * <a href="#MeasuredBxDF::brdf" class="code">brdf</a>-&gt;<a href="#MeasuredBxDFData::sigma" class="code">sigma</a>.<a href="#PiecewiseLinear2D::Evaluate" class="code">Evaluate</a>(u_wo) * <a href="../Geometry_and_Transformations/Spherical_Geometry.html#CosTheta" class="code">CosTheta</a>(wi));</div></div>
 }</div><p>
 

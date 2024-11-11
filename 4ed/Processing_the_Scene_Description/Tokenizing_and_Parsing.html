@@ -100,7 +100,7 @@ to a statement in a <tt>pbrt</tt> scene description file.
 <span class="anchor" id="fragment-ParserTargetDefinition-0"></span><div class="fragmentname">&lt;&lt;ParserTarget Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="ParserTarget"></span>ParserTarget {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParserTargetInterface-0">ParserTarget Interface</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2855" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2855"><i></i></a><div id="fragbit-2855" class="collapse"><div class="fragmentcode">       virtual void Scale(Float sx, Float sy, Float sz, FileLoc loc) = 0;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParserTargetInterface-0">ParserTarget Interface</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2855" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2855"><i></i></a><div id="fragbit-2855" class="collapse show"><div class="fragmentcode">       virtual void Scale(Float sx, Float sy, Float sz, FileLoc loc) = 0;
        virtual void <a href="../Shapes/Basic_Shape_Interface.html#Shape" class="code">Shape</a>(const std::string &amp;name,
                           <a href="#ParsedParameterVector" class="code">ParsedParameterVector</a> params, FileLoc loc) = 0;
        virtual ~ParserTarget();
@@ -164,7 +164,7 @@ to a statement in a <tt>pbrt</tt> scene description file.
        
        virtual void EndOfFiles() = 0;</div></div>
   protected:
-    &lt;&lt;<span class="fragmentname">ParserTarget Protected Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2856" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2856"><i></i></a><div id="fragbit-2856" class="collapse"><div class="fragmentcode">       template &lt;typename... Args&gt;
+    &lt;&lt;<span class="fragmentname">ParserTarget Protected Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2856" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2856"><i></i></a><div id="fragbit-2856" class="collapse show"><div class="fragmentcode">       template &lt;typename... Args&gt;
        void ErrorExitDeferred(const char *fmt, Args &amp;&amp;... args) const {
            errorExit = true;
            Error(fmt, std::forward&lt;Args&gt;(args)...);
@@ -302,7 +302,7 @@ with <tt>std::vector</tt> in the common case of a handful of parameters.
 <span class="anchor" id="fragment-ParsedParameterDefinition-0"></span><div class="fragmentname">&lt;&lt;ParsedParameter Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="ParsedParameter"></span>ParsedParameter {
   public:
-    &lt;&lt;<span class="fragmentname">ParsedParameter Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2857" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2857"><i></i></a><div id="fragbit-2857" class="collapse"><div class="fragmentcode">       ParsedParameter(FileLoc loc) : loc(loc) {}
+    &lt;&lt;<span class="fragmentname">ParsedParameter Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2857" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2857"><i></i></a><div id="fragbit-2857" class="collapse show"><div class="fragmentcode">       ParsedParameter(FileLoc loc) : loc(loc) {}
        
        void AddFloat(Float v);
        void AddInt(int i);
@@ -310,7 +310,7 @@ with <tt>std::vector</tt> in the common case of a handful of parameters.
        void AddBool(bool v);
        
        std::string ToString() const;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParsedParameterPublicMembers-0">ParsedParameter Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2858" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2858"><i></i></a><div id="fragbit-2858" class="collapse"><div class="fragmentcode">       std::string type, name;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParsedParameterPublicMembers-0">ParsedParameter Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2858" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2858"><i></i></a><div id="fragbit-2858" class="collapse show"><div class="fragmentcode">       std::string type, name;
        FileLoc loc;
        pstd::vector&lt;Float&gt; floats;
        pstd::vector&lt;int&gt; ints;

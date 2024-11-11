@@ -154,14 +154,14 @@ its direction vector <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.48
 <span class="anchor" id="fragment-RayDefinition-0"></span><div class="fragmentname">&lt;&lt;Ray Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="Ray"></span>Ray {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-RayPublicMethods-0">Ray Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-81" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-81"><i></i></a><div id="fragbit-81" class="collapse"><div class="fragmentcode">       PBRT_CPU_GPU
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-RayPublicMethods-0">Ray Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-81" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-81"><i></i></a><div id="fragbit-81" class="collapse show"><div class="fragmentcode">       PBRT_CPU_GPU
        bool HasNaN() const { return (<a href="#Ray::o" class="code">o</a>.HasNaN() || <a href="#Ray::d" class="code">d</a>.HasNaN()); }
        
        std::string ToString() const;
        <a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> operator()(Float t) const { return <a href="#Ray::o" class="code">o</a> + <a href="#Ray::d" class="code">d</a> * t; }
        <a href="#Ray" class="code">Ray</a>(<a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> <a href="#Ray::o" class="code">o</a>, <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> <a href="#Ray::d" class="code">d</a>, Float time = 0.f, <a href="../Volume_Scattering/Media.html#Medium" class="code">Medium</a> medium = nullptr)
            : <a href="#Ray::o" class="code">o</a>(<a href="#Ray::o" class="code">o</a>), <a href="#Ray::d" class="code">d</a>(<a href="#Ray::d" class="code">d</a>), time(time), medium(medium) {}</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-RayPublicMembers-0">Ray Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-82" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-82"><i></i></a><div id="fragbit-82" class="collapse"><div class="fragmentcode">       <a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> o;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-RayPublicMembers-0">Ray Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-82" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-82"><i></i></a><div id="fragbit-82" class="collapse show"><div class="fragmentcode">       <a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> o;
        <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> d;
        Float time = 0;
        <a href="../Volume_Scattering/Media.html#Medium" class="code">Medium</a> medium = nullptr;</div></div>
@@ -410,7 +410,7 @@ require <tt>RayDifferential</tt> parameters.
 <span class="anchor" id="fragment-RayDifferentialDefinition-0"></span><div class="fragmentname">&lt;&lt;RayDifferential Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="RayDifferential"></span>RayDifferential : public <a href="#Ray" class="code">Ray</a> {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-RayDifferentialPublicMethods-0">RayDifferential Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-83" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-83"><i></i></a><div id="fragbit-83" class="collapse"><div class="fragmentcode">       <a href="#RayDifferential" class="code">RayDifferential</a>(<a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> <a href="#Ray::o" class="code">o</a>, <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> <a href="#Ray::d" class="code">d</a>, Float time = 0.f,
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-RayDifferentialPublicMethods-0">RayDifferential Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-83" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-83"><i></i></a><div id="fragbit-83" class="collapse show"><div class="fragmentcode">       <a href="#RayDifferential" class="code">RayDifferential</a>(<a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> <a href="#Ray::o" class="code">o</a>, <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> <a href="#Ray::d" class="code">d</a>, Float time = 0.f,
                        <a href="../Volume_Scattering/Media.html#Medium" class="code">Medium</a> medium = nullptr)
            : <a href="#Ray" class="code">Ray</a>(<a href="#Ray::o" class="code">o</a>, <a href="#Ray::d" class="code">d</a>, time, medium) {}
        explicit <a href="#RayDifferential" class="code">RayDifferential</a>(const <a href="#Ray" class="code">Ray</a> &amp;ray) : <a href="#Ray" class="code">Ray</a>(ray) {}
@@ -427,7 +427,7 @@ require <tt>RayDifferential</tt> parameters.
                                         <a href="#RayDifferential::rxDirection" class="code">rxDirection</a>.HasNaN() || <a href="#RayDifferential::ryDirection" class="code">ryDirection</a>.HasNaN()));
        }
        std::string ToString() const;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-RayDifferentialPublicMembers-0">RayDifferential Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-84" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-84"><i></i></a><div id="fragbit-84" class="collapse"><div class="fragmentcode">       bool hasDifferentials = false;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-RayDifferentialPublicMembers-0">RayDifferential Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-84" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-84"><i></i></a><div id="fragbit-84" class="collapse show"><div class="fragmentcode">       bool hasDifferentials = false;
        <a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> rxOrigin, ryOrigin;
        <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> rxDirection, ryDirection;</div></div>
 };</div><p>

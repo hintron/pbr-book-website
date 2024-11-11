@@ -678,7 +678,7 @@ temperature <tt>T</tt> in Kelvin for the given wavelength <tt>lambda</tt>.
     const Float c = 299792458.f;
     const Float h = 6.62606957e-34f;
     const Float kb = 1.3806488e-23f;
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Returnemittedradianceforblackbodyatwavelengthmonolambda-0">Return emitted radiance for blackbody at wavelength <tt>lambda</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-143" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-143"><i></i></a><div id="fragbit-143" class="collapse"><div class="fragmentcode">       Float l = lambda * 1e-9f;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Returnemittedradianceforblackbodyatwavelengthmonolambda-0">Return emitted radiance for blackbody at wavelength <tt>lambda</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-143" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-143"><i></i></a><div id="fragbit-143" class="collapse show"><div class="fragmentcode">       Float l = lambda * 1e-9f;
        Float Le = (2 * h * c * c) /
            (<a href="../Utilities/Mathematical_Infrastructure.html#Pow" class="code">Pow</a>&lt;5&gt;(l) * (<a href="../Utilities/Mathematical_Infrastructure.html#FastExp" class="code">FastExp</a>((h * c) / (l * kb * T)) - 1));
        return Le;</div></div>

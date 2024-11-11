@@ -87,7 +87,7 @@ class defines the general shape interface.
 <div class="fragmentcode">class <span class="anchor" id="Shape"></span>Shape : public <a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>&lt;<a href="../Shapes/Spheres.html#Sphere" class="code">Sphere</a>, <a href="../Shapes/Cylinders.html#Cylinder" class="code">Cylinder</a>, <a href="../Shapes/Disks.html#Disk" class="code">Disk</a>, <a href="../Shapes/Triangle_Meshes.html#Triangle" class="code">Triangle</a>,
                                    <a href="../Shapes/Bilinear_Patches.html#BilinearPatch" class="code">BilinearPatch</a>, <a href="../Shapes/Curves.html#Curve" class="code">Curve</a>&gt; {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ShapeInterface-0">Shape Interface</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-326" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-326"><i></i></a><div id="fragbit-326" class="collapse"><div class="fragmentcode">       using <a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>::<a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ShapeInterface-0">Shape Interface</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-326" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-326"><i></i></a><div id="fragbit-326" class="collapse show"><div class="fragmentcode">       using <a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>::<a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>;
        
        static pstd::vector&lt;<a href="#Shape" class="code">Shape</a>&gt; Create(const std::string &amp;name,
                                                const <a href="../Geometry_and_Transformations/Transformations.html#Transform" class="code">Transform</a> *renderFromObject,
@@ -427,7 +427,7 @@ bool <span class="anchor" id="Bounds3::IntersectP"></span>Bounds3&lt;T&gt;::Inte
                             Float *hitt0, Float *hitt1) const {
     Float t0 = 0, t1 = tMax;
     for (int i = 0; i &lt; 3; ++i) {
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-Updateintervalformonoithboundingboxslab-0">Update interval for <tt>i</tt>th bounding box slab</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-327" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-327"><i></i></a><div id="fragbit-327" class="collapse"><div class="fragmentcode">           Float invRayDir = 1 / d[i];
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-Updateintervalformonoithboundingboxslab-0">Update interval for <tt>i</tt>th bounding box slab</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-327" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-327"><i></i></a><div id="fragbit-327" class="collapse show"><div class="fragmentcode">           Float invRayDir = 1 / d[i];
            Float tNear = (<a href="../Geometry_and_Transformations/Bounding_Boxes.html#Bounds3::pMin" class="code">pMin</a>[i] - o[i]) * invRayDir;
            Float tFar  = (<a href="../Geometry_and_Transformations/Bounding_Boxes.html#Bounds3::pMax" class="code">pMax</a>[i] - o[i]) * invRayDir;
            &lt;&lt;<span class="fragmentname"><a href="#fragment-Updateparametricintervalfromslabintersectiontvalues-0">Update parametric interval from slab intersection <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.84ex" height="2.009ex" style="vertical-align: -0.338ex;" viewBox="0 -719.6 361.5 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
@@ -438,8 +438,8 @@ bool <span class="anchor" id="Bounds3::IntersectP"></span>Bounds3&lt;T&gt;::Inte
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D461" x="0" y="0"></use>
 </g>
-</svg> values</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-328" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-328"><i></i></a><div id="fragbit-328" class="collapse"><div class="fragmentcode">              if (tNear &gt; tFar) pstd::swap(tNear, tFar);
-              &lt;&lt;<span class="fragmentname"><a href="Managing_Rounding_Error.html#fragment-UpdatemonotFartoensurerobustray--boundsintersection-0">Update <tt>tFar</tt> to ensure robust ray&ndash;bounds intersection</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-329" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-329"><i></i></a><div id="fragbit-329" class="collapse"><div class="fragmentcode">                 tFar *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);</div></div>
+</svg> values</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-328" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-328"><i></i></a><div id="fragbit-328" class="collapse show"><div class="fragmentcode">              if (tNear &gt; tFar) pstd::swap(tNear, tFar);
+              &lt;&lt;<span class="fragmentname"><a href="Managing_Rounding_Error.html#fragment-UpdatemonotFartoensurerobustray--boundsintersection-0">Update <tt>tFar</tt> to ensure robust ray&ndash;bounds intersection</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-329" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-329"><i></i></a><div id="fragbit-329" class="collapse show"><div class="fragmentcode">                 tFar *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);</div></div>
               t0 = tNear &gt; t0 ? tNear : t0;
               t1 = tFar  &lt; t1 ? tFar  : t1;
               if (t0 &gt; t1) return false;</div></div></div></div>
@@ -984,8 +984,8 @@ Float tFar  = (<a href="../Geometry_and_Transformations/Bounding_Boxes.html#Boun
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D461" x="0" y="0"></use>
 </g>
-</svg> values</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-330" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-330"><i></i></a><div id="fragbit-330" class="collapse"><div class="fragmentcode">   if (tNear &gt; tFar) pstd::swap(tNear, tFar);
-   &lt;&lt;<span class="fragmentname"><a href="Managing_Rounding_Error.html#fragment-UpdatemonotFartoensurerobustray--boundsintersection-0">Update <tt>tFar</tt> to ensure robust ray&ndash;bounds intersection</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-331" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-331"><i></i></a><div id="fragbit-331" class="collapse"><div class="fragmentcode">      tFar *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);</div></div>
+</svg> values</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-330" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-330"><i></i></a><div id="fragbit-330" class="collapse show"><div class="fragmentcode">   if (tNear &gt; tFar) pstd::swap(tNear, tFar);
+   &lt;&lt;<span class="fragmentname"><a href="Managing_Rounding_Error.html#fragment-UpdatemonotFartoensurerobustray--boundsintersection-0">Update <tt>tFar</tt> to ensure robust ray&ndash;bounds intersection</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-331" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-331"><i></i></a><div id="fragbit-331" class="collapse show"><div class="fragmentcode">      tFar *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);</div></div>
    t0 = tNear &gt; t0 ? tNear : t0;
    t1 = tFar  &lt; t1 ? tFar  : t1;
    if (t0 &gt; t1) return false;</div></div></div><p>
@@ -1105,7 +1105,7 @@ written so that if <tt>tNear</tt> or <tt>tFar</tt> is NaN, then <tt>t0</tt> or
 </g>
 </svg> values&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">if (tNear &gt; tFar) pstd::swap(tNear, tFar);
-&lt;&lt;<span class="fragmentname"><a href="Managing_Rounding_Error.html#fragment-UpdatemonotFartoensurerobustray--boundsintersection-0">Update <tt>tFar</tt> to ensure robust ray&ndash;bounds intersection</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-332" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-332"><i></i></a><div id="fragbit-332" class="collapse"><div class="fragmentcode">   tFar *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);</div></div>
+&lt;&lt;<span class="fragmentname"><a href="Managing_Rounding_Error.html#fragment-UpdatemonotFartoensurerobustray--boundsintersection-0">Update <tt>tFar</tt> to ensure robust ray&ndash;bounds intersection</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-332" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-332"><i></i></a><div id="fragbit-332" class="collapse show"><div class="fragmentcode">   tFar *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);</div></div>
 t0 = tNear &gt; t0 ? tNear : t0;
 t1 = tFar  &lt; t1 ? tFar  : t1;
 if (t0 &gt; t1) return false;</div><p>
@@ -1181,11 +1181,11 @@ bool Bounds3&lt;T&gt;::IntersectP(<a href="../Geometry_and_Transformations/Point
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D466" x="0" y="0"></use>
 </g>
-</svg> slabs</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-333" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-333"><i></i></a><div id="fragbit-333" class="collapse"><div class="fragmentcode">       Float tMin =  (bounds[  dirIsNeg[0]].x - o.x) * invDir.x;
+</svg> slabs</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-333" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-333"><i></i></a><div id="fragbit-333" class="collapse show"><div class="fragmentcode">       Float tMin =  (bounds[  dirIsNeg[0]].x - o.x) * invDir.x;
        Float tMax =  (bounds[1-dirIsNeg[0]].x - o.x) * invDir.x;
        Float tyMin = (bounds[  dirIsNeg[1]].y - o.y) * invDir.y;
        Float tyMax = (bounds[1-dirIsNeg[1]].y - o.y) * invDir.y;
-       &lt;&lt;<span class="fragmentname">Update <tt>tMax</tt> and <tt>tyMax</tt> to ensure robust bounds intersection</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-334" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-334"><i></i></a><div id="fragbit-334" class="collapse"><div class="fragmentcode">          tMax *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);
+       &lt;&lt;<span class="fragmentname">Update <tt>tMax</tt> and <tt>tyMax</tt> to ensure robust bounds intersection</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-334" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-334"><i></i></a><div id="fragbit-334" class="collapse show"><div class="fragmentcode">          tMax *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);
           tyMax *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);</div></div> 
        if (tMin &gt; tyMax || tyMin &gt; tMax) 
            return false;
@@ -1199,9 +1199,9 @@ bool Bounds3&lt;T&gt;::IntersectP(<a href="../Geometry_and_Transformations/Point
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D467" x="0" y="0"></use>
 </g>
-</svg> slab</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-335" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-335"><i></i></a><div id="fragbit-335" class="collapse"><div class="fragmentcode">       Float tzMin = (bounds[  dirIsNeg[2]].z - o.z) * invDir.z; 
+</svg> slab</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-335" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-335"><i></i></a><div id="fragbit-335" class="collapse show"><div class="fragmentcode">       Float tzMin = (bounds[  dirIsNeg[2]].z - o.z) * invDir.z; 
        Float tzMax = (bounds[1-dirIsNeg[2]].z - o.z) * invDir.z; 
-       &lt;&lt;<span class="fragmentname">Update <tt>tzMax</tt> to ensure robust bounds intersection</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-336" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-336"><i></i></a><div id="fragbit-336" class="collapse"><div class="fragmentcode">          tzMax *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);</div></div> 
+       &lt;&lt;<span class="fragmentname">Update <tt>tzMax</tt> to ensure robust bounds intersection</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-336" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-336"><i></i></a><div id="fragbit-336" class="collapse show"><div class="fragmentcode">          tzMax *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);</div></div> 
        if (tMin &gt; tzMax || tzMin &gt; tMax) 
            return false; 
        if (tzMin &gt; tMin) 
@@ -1242,7 +1242,7 @@ compute the near and far parametric values in each direction directly.
 Float tMax =  (bounds[1-dirIsNeg[0]].x - o.x) * invDir.x;
 Float tyMin = (bounds[  dirIsNeg[1]].y - o.y) * invDir.y;
 Float tyMax = (bounds[1-dirIsNeg[1]].y - o.y) * invDir.y;
-&lt;&lt;<span class="fragmentname">Update <tt>tMax</tt> and <tt>tyMax</tt> to ensure robust bounds intersection</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-337" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-337"><i></i></a><div id="fragbit-337" class="collapse"><div class="fragmentcode">   tMax *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);
+&lt;&lt;<span class="fragmentname">Update <tt>tMax</tt> and <tt>tyMax</tt> to ensure robust bounds intersection</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-337" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-337"><i></i></a><div id="fragbit-337" class="collapse show"><div class="fragmentcode">   tMax *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);
    tyMax *= 1 + 2 * <a href="../Shapes/Managing_Rounding_Error.html#gamma" class="code">gamma</a>(3);</div></div> 
 if (tMin &gt; tyMax || tyMin &gt; tMax) 
     return false;
@@ -2012,7 +2012,7 @@ the normal and shading normal are left with their default values of
 <p></p>
 <span class="anchor" id="fragment-ShapeSampleContextDefinition-0"></span><div class="fragmentname">&lt;&lt;ShapeSampleContext Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">struct <span class="anchor" id="ShapeSampleContext"></span>ShapeSampleContext {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ShapeSampleContextPublicMethods-0">ShapeSampleContext Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-338" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-338"><i></i></a><div id="fragbit-338" class="collapse"><div class="fragmentcode">       <a href="#ShapeSampleContext" class="code">ShapeSampleContext</a>(Point3fi <a href="#ShapeSampleContext::pi" class="code">pi</a>, <a href="../Geometry_and_Transformations/Normals.html#Normal3f" class="code">Normal3f</a> n, <a href="../Geometry_and_Transformations/Normals.html#Normal3f" class="code">Normal3f</a> ns, Float time)
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ShapeSampleContextPublicMethods-0">ShapeSampleContext Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-338" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-338"><i></i></a><div id="fragbit-338" class="collapse show"><div class="fragmentcode">       <a href="#ShapeSampleContext" class="code">ShapeSampleContext</a>(Point3fi <a href="#ShapeSampleContext::pi" class="code">pi</a>, <a href="../Geometry_and_Transformations/Normals.html#Normal3f" class="code">Normal3f</a> n, <a href="../Geometry_and_Transformations/Normals.html#Normal3f" class="code">Normal3f</a> ns, Float time)
          : <a href="#ShapeSampleContext::pi" class="code">pi</a>(<a href="#ShapeSampleContext::pi" class="code">pi</a>), n(n), ns(ns), time(time) {}
        <a href="#ShapeSampleContext" class="code">ShapeSampleContext</a>(const <a href="../Geometry_and_Transformations/Interactions.html#SurfaceInteraction" class="code">SurfaceInteraction</a> &amp;si)
          : <a href="#ShapeSampleContext::pi" class="code">pi</a>(si.<a href="#ShapeSampleContext::pi" class="code">pi</a>), n(si.n), ns(si.shading.n), time(si.time) {}

@@ -93,7 +93,7 @@ types, we will focus here on the 3D variant, <a href="#Bounds3"><tt>Bounds3</tt>
 <div class="fragmentcode">template &lt;typename T&gt;
 class <span class="anchor" id="Bounds2"></span>Bounds2 {
   public:
-    &lt;&lt;<span class="fragmentname">Bounds2 Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-85" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-85"><i></i></a><div id="fragbit-85" class="collapse"><div class="fragmentcode">       PBRT_CPU_GPU
+    &lt;&lt;<span class="fragmentname">Bounds2 Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-85" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-85"><i></i></a><div id="fragbit-85" class="collapse show"><div class="fragmentcode">       PBRT_CPU_GPU
        Bounds2() {
            T minNum = std::numeric_limits&lt;T&gt;::lowest();
            T maxNum = std::numeric_limits&lt;T&gt;::max();
@@ -184,7 +184,7 @@ class <span class="anchor" id="Bounds2"></span>Bounds2 {
        }
        
        std::string ToString() const { return StringPrintf("[ %s - %s ]", pMin, pMax); }</div></div>
-    &lt;&lt;<span class="fragmentname">Bounds2 Public Members</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-86" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-86"><i></i></a><div id="fragbit-86" class="collapse"><div class="fragmentcode">       Point2&lt;T&gt; pMin, pMax;</div></div>
+    &lt;&lt;<span class="fragmentname">Bounds2 Public Members</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-86" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-86"><i></i></a><div id="fragbit-86" class="collapse show"><div class="fragmentcode">       Point2&lt;T&gt; pMin, pMax;</div></div>
 };</div><p>
 
 
@@ -200,7 +200,7 @@ class <span class="anchor" id="Bounds2"></span>Bounds2 {
 <div class="fragmentcode">template &lt;typename T&gt;
 class <span class="anchor" id="Bounds3"></span>Bounds3 {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Bounds3PublicMethods-0">Bounds3 Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-87" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-87"><i></i></a><div id="fragbit-87" class="collapse"><div class="fragmentcode">       Bounds3() {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Bounds3PublicMethods-0">Bounds3 Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-87" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-87"><i></i></a><div id="fragbit-87" class="collapse show"><div class="fragmentcode">       Bounds3() {
            T minNum = std::numeric_limits&lt;T&gt;::lowest();
            T maxNum = std::numeric_limits&lt;T&gt;::max();
            <a href="#Bounds3::pMin" class="code">pMin</a> = Point3&lt;T&gt;(maxNum, maxNum, maxNum);
@@ -279,7 +279,7 @@ class <span class="anchor" id="Bounds3"></span>Bounds3 {
        bool IntersectP(<a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> o, <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> d, Float tMax, <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> invDir, const int dirIsNeg[3]) const;
        
        std::string ToString() const { return StringPrintf("[ %s - %s ]", <a href="#Bounds3::pMin" class="code">pMin</a>, <a href="#Bounds3::pMax" class="code">pMax</a>); }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Bounds3PublicMembers-0">Bounds3 Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-88" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-88"><i></i></a><div id="fragbit-88" class="collapse"><div class="fragmentcode">       Point3&lt;T&gt; pMin, pMax;</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Bounds3PublicMembers-0">Bounds3 Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-88" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-88"><i></i></a><div id="fragbit-88" class="collapse show"><div class="fragmentcode">       Point3&lt;T&gt; pMin, pMax;</div></div>
 };</div><p>
 
 

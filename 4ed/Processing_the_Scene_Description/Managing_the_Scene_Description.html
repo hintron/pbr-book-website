@@ -109,7 +109,7 @@ copy of the current graphics state before parsing begins.
 <span class="anchor" id="fragment-BasicSceneBuilderDefinition-0"></span><div class="fragmentname">&lt;&lt;BasicSceneBuilder Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="BasicSceneBuilder"></span>BasicSceneBuilder : public <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParserTarget" class="code">ParserTarget</a> {
   public:
-    &lt;&lt;<span class="fragmentname">BasicSceneBuilder Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2859" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2859"><i></i></a><div id="fragbit-2859" class="collapse"><div class="fragmentcode">       BasicSceneBuilder(BasicScene *scene);
+    &lt;&lt;<span class="fragmentname">BasicSceneBuilder Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2859" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2859"><i></i></a><div id="fragbit-2859" class="collapse show"><div class="fragmentcode">       BasicSceneBuilder(BasicScene *scene);
        void Option(const std::string &amp;name, const std::string &amp;value, FileLoc loc);
        void Identity(FileLoc loc);
        void Translate(Float dx, Float dy, Float dz, FileLoc loc);
@@ -161,14 +161,14 @@ copy of the current graphics state before parsing begins.
        void MergeImported(BasicSceneBuilder *);
        std::string ToString() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-BasicSceneBuilder::GraphicsStateDefinition-0">BasicSceneBuilder::GraphicsState Definition</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2860" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2860"><i></i></a><div id="fragbit-2860" class="collapse"><div class="fragmentcode">       struct GraphicsState {
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-GraphicsStatePublicMethods-0">GraphicsState Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2861" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2861"><i></i></a><div id="fragbit-2861" class="collapse"><div class="fragmentcode">              GraphicsState();
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-BasicSceneBuilder::GraphicsStateDefinition-0">BasicSceneBuilder::GraphicsState Definition</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2860" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2860"><i></i></a><div id="fragbit-2860" class="collapse show"><div class="fragmentcode">       struct GraphicsState {
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-GraphicsStatePublicMethods-0">GraphicsState Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2861" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2861"><i></i></a><div id="fragbit-2861" class="collapse show"><div class="fragmentcode">              GraphicsState();
               template &lt;typename F&gt;
               void ForActiveTransforms(F func) {
                   for (int i = 0; i &lt; MaxTransforms; ++i)
                       if (<a href="#GraphicsState::activeTransformBits" class="code">activeTransformBits</a> &amp; (1 &lt;&lt; i)) <a href="#GraphicsState::ctm" class="code">ctm</a>[i] = func(<a href="#GraphicsState::ctm" class="code">ctm</a>[i]);
               }</div></div>
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-GraphicsStatePublicMembers-0">GraphicsState Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2862" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2862"><i></i></a><div id="fragbit-2862" class="collapse"><div class="fragmentcode">              std::string currentInsideMedium, currentOutsideMedium;
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-GraphicsStatePublicMembers-0">GraphicsState Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2862" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2862"><i></i></a><div id="fragbit-2862" class="collapse show"><div class="fragmentcode">              std::string currentInsideMedium, currentOutsideMedium;
               
               int currentMaterialIndex = 0;
               std::string currentMaterialName;
@@ -188,7 +188,7 @@ copy of the current graphics state before parsing begins.
               uint32_t activeTransformBits = AllTransformsBits;
               Float transformStartTime = 0, transformEndTime = 1;</div></div>
        };</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-BasicSceneBuilderPrivateMethods-0">BasicSceneBuilder Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2863" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2863"><i></i></a><div id="fragbit-2863" class="collapse"><div class="fragmentcode">       class <a href="../Geometry_and_Transformations/Transformations.html#Transform" class="code">Transform</a> <a href="#BasicSceneBuilder::RenderFromObject" class="code">RenderFromObject</a>(int index) const {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-BasicSceneBuilderPrivateMethods-0">BasicSceneBuilder Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2863" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2863"><i></i></a><div id="fragbit-2863" class="collapse show"><div class="fragmentcode">       class <a href="../Geometry_and_Transformations/Transformations.html#Transform" class="code">Transform</a> <a href="#BasicSceneBuilder::RenderFromObject" class="code">RenderFromObject</a>(int index) const {
            return pbrt::<a href="../Geometry_and_Transformations/Transformations.html#Transform" class="code">Transform</a>((<a href="#BasicSceneBuilder::renderFromWorld" class="code">renderFromWorld</a> *
                                    <a href="#BasicSceneBuilder::graphicsState" class="code">graphicsState</a>.ctm[index]).<a href="../Geometry_and_Transformations/Transformations.html#Transform::GetMatrix" class="code">GetMatrix</a>());
        }
@@ -197,7 +197,7 @@ copy of the current graphics state before parsing begins.
                    <a href="#BasicSceneBuilder::RenderFromObject" class="code">RenderFromObject</a>(1), <a href="#BasicSceneBuilder::graphicsState" class="code">graphicsState</a>.<a href="#GraphicsState::transformEndTime" class="code">transformEndTime</a>};
        }
        bool CTMIsAnimated() const { return <a href="#BasicSceneBuilder::graphicsState" class="code">graphicsState</a>.ctm.IsAnimated(); }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-BasicSceneBuilderPrivateMembers-0">BasicSceneBuilder Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2864" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2864"><i></i></a><div id="fragbit-2864" class="collapse"><div class="fragmentcode">       <a href="../Processing_the_Scene_Description/BasicScene_and_Final_Object_Creation.html#BasicScene" class="code">BasicScene</a> *scene;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-BasicSceneBuilderPrivateMembers-0">BasicSceneBuilder Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2864" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2864"><i></i></a><div id="fragbit-2864" class="collapse show"><div class="fragmentcode">       <a href="../Processing_the_Scene_Description/BasicScene_and_Final_Object_Creation.html#BasicScene" class="code">BasicScene</a> *scene;
        enum class BlockState { OptionsBlock, WorldBlock };
        BlockState currentBlock = BlockState::OptionsBlock;
        <a href="#BasicSceneBuilder::GraphicsState" class="code">GraphicsState</a> graphicsState;
@@ -256,7 +256,7 @@ not included here.
 <span class="anchor" id="fragment-BasicSceneBuilderMethodDefinitions-0"></span><div class="fragmentname">&lt;&lt;BasicSceneBuilder Method Definitions&gt;&gt;=&nbsp;<a href="#fragment-BasicSceneBuilderMethodDefinitions-1"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">BasicSceneBuilder::BasicSceneBuilder(<a href="../Processing_the_Scene_Description/BasicScene_and_Final_Object_Creation.html#BasicScene" class="code">BasicScene</a> *scene)
     : scene(scene) {
-    &lt;&lt;<span class="fragmentname">Set scene defaults</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2865" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2865"><i></i></a><div id="fragbit-2865" class="collapse"><div class="fragmentcode">       camera.name = SceneEntity::internedStrings.Lookup("perspective");
+    &lt;&lt;<span class="fragmentname">Set scene defaults</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2865" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2865"><i></i></a><div id="fragbit-2865" class="collapse show"><div class="fragmentcode">       camera.name = SceneEntity::internedStrings.Lookup("perspective");
        sampler.name = SceneEntity::internedStrings.Lookup("zsobol");
        filter.name = SceneEntity::internedStrings.Lookup("gaussian");
        integrator.name = SceneEntity::internedStrings.Lookup("volpath");
@@ -348,7 +348,7 @@ for some of the other scene entity types.
 <p></p>
 <span class="anchor" id="fragment-SceneEntityDefinition-0"></span><div class="fragmentname">&lt;&lt;SceneEntity Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">struct <span class="anchor" id="SceneEntity"></span>SceneEntity {
-    &lt;&lt;<span class="fragmentname">SceneEntity Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2866" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2866"><i></i></a><div id="fragbit-2866" class="collapse"><div class="fragmentcode">       SceneEntity() = default;
+    &lt;&lt;<span class="fragmentname">SceneEntity Public Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2866" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2866"><i></i></a><div id="fragbit-2866" class="collapse show"><div class="fragmentcode">       SceneEntity() = default;
        SceneEntity(const std::string &amp;name, ParameterDictionary parameters, FileLoc loc)
            : name(internedStrings.Lookup(name)), parameters(parameters), loc(loc) {}
        
@@ -356,7 +356,7 @@ for some of the other scene entity types.
            return StringPrintf("[ SceneEntity name: %s parameters: %s loc: %s ]", name,
                                parameters, loc);
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-SceneEntityPublicMembers-0">SceneEntity Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2867" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2867"><i></i></a><div id="fragbit-2867" class="collapse"><div class="fragmentcode">       <a href="../Utilities/Containers_and_Memory_Management.html#InternedString" class="code">InternedString</a> name;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-SceneEntityPublicMembers-0">SceneEntity Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2867" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2867"><i></i></a><div id="fragbit-2867" class="collapse show"><div class="fragmentcode">       <a href="../Utilities/Containers_and_Memory_Management.html#InternedString" class="code">InternedString</a> name;
        FileLoc loc;
        <a href="#ParameterDictionary" class="code">ParameterDictionary</a> parameters;
        static <a href="../Utilities/Containers_and_Memory_Management.html#InternCache" class="code">InternCache</a>&lt;std::string&gt; internedStrings;</div></div>
@@ -447,7 +447,7 @@ vectors of <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.h
 <span class="anchor" id="fragment-ParameterDictionaryDefinition-0"></span><div class="fragmentname">&lt;&lt;ParameterDictionary Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="ParameterDictionary"></span>ParameterDictionary {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParameterDictionaryPublicMethods-0">ParameterDictionary Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2868" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2868"><i></i></a><div id="fragbit-2868" class="collapse"><div class="fragmentcode">       ParameterDictionary(<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameterVector" class="code">ParsedParameterVector</a> params,
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParameterDictionaryPublicMethods-0">ParameterDictionary Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2868" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2868"><i></i></a><div id="fragbit-2868" class="collapse show"><div class="fragmentcode">       ParameterDictionary(<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameterVector" class="code">ParsedParameterVector</a> params,
                            const <a href="../Radiometry,_Spectra,_and_Color/Color.html#RGBColorSpace" class="code">RGBColorSpace</a> *colorSpace);
        ParameterDictionary(<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameterVector" class="code">ParsedParameterVector</a> params0,
                            const <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameterVector" class="code">ParsedParameterVector</a> &amp;params1,
@@ -512,7 +512,7 @@ vectors of <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.h
        std::vector&lt;std::string&gt; GetStringArray(const std::string &amp;name) const;
        void ReportUnused() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname">ParameterDictionary Private Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2869" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2869"><i></i></a><div id="fragbit-2869" class="collapse"><div class="fragmentcode">       template &lt;ParameterType PT&gt;
+    &lt;&lt;<span class="fragmentname">ParameterDictionary Private Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2869" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2869"><i></i></a><div id="fragbit-2869" class="collapse show"><div class="fragmentcode">       template &lt;ParameterType PT&gt;
        typename ParameterTypeTraits&lt;PT&gt;::ReturnType lookupSingle(
            const std::string &amp;name,
            typename ParameterTypeTraits&lt;PT&gt;::ReturnType defaultValue) const;
@@ -533,7 +533,7 @@ vectors of <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.h
        void remove(const std::string &amp;name, const char *typeName);
        void checkParameterTypes();
        static std::string ToParameterDefinition(const ParsedParameter *p, int indentCount);</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParameterDictionaryPrivateMembers-0">ParameterDictionary Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2870" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2870"><i></i></a><div id="fragbit-2870" class="collapse"><div class="fragmentcode">       <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameterVector" class="code">ParsedParameterVector</a> params;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParameterDictionaryPrivateMembers-0">ParameterDictionary Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2870" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2870"><i></i></a><div id="fragbit-2870" class="collapse show"><div class="fragmentcode">       <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameterVector" class="code">ParsedParameterVector</a> params;
        const <a href="../Radiometry,_Spectra,_and_Color/Color.html#RGBColorSpace" class="code">RGBColorSpace</a> *colorSpace = nullptr;
        int nOwnedParams;</div></div>
 };</div><p>
@@ -693,17 +693,17 @@ both <tt>lookupSingle</tt>&rsquo;s return type and the provided default value.
 typename ParameterTypeTraits&lt;PT&gt;::ReturnType
 <span class="anchor" id="ParameterDictionary::lookupSingle"></span>ParameterDictionary::lookupSingle(const std::string &amp;name,
         typename ParameterTypeTraits&lt;PT&gt;::ReturnType defaultValue) const {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Searchmonoparamsforparametermononame-0">Search <tt>params</tt> for parameter <tt>name</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2871" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2871"><i></i></a><div id="fragbit-2871" class="collapse"><div class="fragmentcode">       using traits = ParameterTypeTraits&lt;PT&gt;;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Searchmonoparamsforparametermononame-0">Search <tt>params</tt> for parameter <tt>name</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2871" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2871"><i></i></a><div id="fragbit-2871" class="collapse show"><div class="fragmentcode">       using traits = ParameterTypeTraits&lt;PT&gt;;
        for (const <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter" class="code">ParsedParameter</a> *p : params) {
            if (p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::name" class="code">name</a> != <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::name" class="code">name</a> || p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::type" class="code">type</a> != traits::typeName)
                continue;
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Extractparametervaluesfrommonop-0">Extract parameter values from <tt>p</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2872" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2872"><i></i></a><div id="fragbit-2872" class="collapse"><div class="fragmentcode">              const auto &amp;values = traits::GetValues(*p);</div></div>
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Issueerrorifanincorrectnumberofparametervalueswereprovided-0">Issue error if an incorrect number of parameter values were provided</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2873" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2873"><i></i></a><div id="fragbit-2873" class="collapse"><div class="fragmentcode">              if (values.empty())
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Extractparametervaluesfrommonop-0">Extract parameter values from <tt>p</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2872" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2872"><i></i></a><div id="fragbit-2872" class="collapse show"><div class="fragmentcode">              const auto &amp;values = traits::GetValues(*p);</div></div>
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Issueerrorifanincorrectnumberofparametervalueswereprovided-0">Issue error if an incorrect number of parameter values were provided</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2873" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2873"><i></i></a><div id="fragbit-2873" class="collapse show"><div class="fragmentcode">              if (values.empty())
                   <a href="../Utilities/User_Interaction.html#ErrorExit" class="code">ErrorExit</a>(&amp;p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::loc" class="code">loc</a>, "No values provided for parameter \"%s\".", name);
               if (values.size() != traits::nPerItem)
                   <a href="../Utilities/User_Interaction.html#ErrorExit" class="code">ErrorExit</a>(&amp;p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::loc" class="code">loc</a>, "Expected %d values for parameter \"%s\".",
                             traits::nPerItem, name);</div></div>
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-ReturnparametervaluesasmonoReturnType-0">Return parameter values as <tt>ReturnType</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2874" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2874"><i></i></a><div id="fragbit-2874" class="collapse"><div class="fragmentcode">              p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::lookedUp" class="code">lookedUp</a> = true;
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-ReturnparametervaluesasmonoReturnType-0">Return parameter values as <tt>ReturnType</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2874" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2874"><i></i></a><div id="fragbit-2874" class="collapse show"><div class="fragmentcode">              p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::lookedUp" class="code">lookedUp</a> = true;
               return traits::Convert(values.data(), &amp;p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::loc" class="code">loc</a>);</div></div>
        }</div></div>
     return defaultValue;
@@ -720,7 +720,7 @@ typename ParameterTypeTraits&lt;PT&gt;::ReturnType
 <span class="anchor" id="fragment-Point3fParameterTypeTraitsDefinition-0"></span><div class="fragmentname">&lt;&lt;Point3f ParameterTypeTraits Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">template &lt;&gt;
 struct <span class="anchor" id="ParameterTypeTraits"></span>ParameterTypeTraits&lt;<a href="#ParameterType::Point3f" class="code">ParameterType</a>::<a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a>&gt; {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParameterType::Point3fTypeTraits-0">ParameterType::Point3f Type Traits</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2875" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2875"><i></i></a><div id="fragbit-2875" class="collapse"><div class="fragmentcode">       using ReturnType = <a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a>;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ParameterType::Point3fTypeTraits-0">ParameterType::Point3f Type Traits</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2875" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2875"><i></i></a><div id="fragbit-2875" class="collapse show"><div class="fragmentcode">       using ReturnType = <a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a>;
        static constexpr char typeName[] = "point3";
        static const auto &amp;GetValues(const <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter" class="code">ParsedParameter</a> &amp;param) {
            return param.<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::floats" class="code">floats</a>;
@@ -763,13 +763,13 @@ parameter name but also for a matching type string.
 for (const <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter" class="code">ParsedParameter</a> *p : params) {
     if (p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::name" class="code">name</a> != <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::name" class="code">name</a> || p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::type" class="code">type</a> != traits::typeName)
         continue;
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Extractparametervaluesfrommonop-0">Extract parameter values from <tt>p</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2876" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2876"><i></i></a><div id="fragbit-2876" class="collapse"><div class="fragmentcode">       const auto &amp;values = traits::GetValues(*p);</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Issueerrorifanincorrectnumberofparametervalueswereprovided-0">Issue error if an incorrect number of parameter values were provided</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2877" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2877"><i></i></a><div id="fragbit-2877" class="collapse"><div class="fragmentcode">       if (values.empty())
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Extractparametervaluesfrommonop-0">Extract parameter values from <tt>p</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2876" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2876"><i></i></a><div id="fragbit-2876" class="collapse show"><div class="fragmentcode">       const auto &amp;values = traits::GetValues(*p);</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Issueerrorifanincorrectnumberofparametervalueswereprovided-0">Issue error if an incorrect number of parameter values were provided</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2877" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2877"><i></i></a><div id="fragbit-2877" class="collapse show"><div class="fragmentcode">       if (values.empty())
            <a href="../Utilities/User_Interaction.html#ErrorExit" class="code">ErrorExit</a>(&amp;p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::loc" class="code">loc</a>, "No values provided for parameter \"%s\".", name);
        if (values.size() != traits::nPerItem)
            <a href="../Utilities/User_Interaction.html#ErrorExit" class="code">ErrorExit</a>(&amp;p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::loc" class="code">loc</a>, "Expected %d values for parameter \"%s\".",
                      traits::nPerItem, name);</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ReturnparametervaluesasmonoReturnType-0">Return parameter values as <tt>ReturnType</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2878" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2878"><i></i></a><div id="fragbit-2878" class="collapse"><div class="fragmentcode">       p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::lookedUp" class="code">lookedUp</a> = true;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ReturnparametervaluesasmonoReturnType-0">Return parameter values as <tt>ReturnType</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2878" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2878"><i></i></a><div id="fragbit-2878" class="collapse show"><div class="fragmentcode">       p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::lookedUp" class="code">lookedUp</a> = true;
        return traits::Convert(values.data(), &amp;p-&gt;<a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameter::loc" class="code">loc</a>);</div></div>
 }</div><p>
 
@@ -937,13 +937,13 @@ in an instance of the <tt>GraphicsState</tt> class.
 <p></p>
 <span class="anchor" id="fragment-BasicSceneBuilder::GraphicsStateDefinition-0"></span><div class="fragmentname">&lt;&lt;BasicSceneBuilder::GraphicsState Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">struct <span class="anchor" id="BasicSceneBuilder::GraphicsState"></span>GraphicsState {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-GraphicsStatePublicMethods-0">GraphicsState Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2879" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2879"><i></i></a><div id="fragbit-2879" class="collapse"><div class="fragmentcode">       GraphicsState();
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-GraphicsStatePublicMethods-0">GraphicsState Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2879" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2879"><i></i></a><div id="fragbit-2879" class="collapse show"><div class="fragmentcode">       GraphicsState();
        template &lt;typename F&gt;
        void ForActiveTransforms(F func) {
            for (int i = 0; i &lt; MaxTransforms; ++i)
                if (<a href="#GraphicsState::activeTransformBits" class="code">activeTransformBits</a> &amp; (1 &lt;&lt; i)) <a href="#GraphicsState::ctm" class="code">ctm</a>[i] = func(<a href="#GraphicsState::ctm" class="code">ctm</a>[i]);
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-GraphicsStatePublicMembers-0">GraphicsState Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2880" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2880"><i></i></a><div id="fragbit-2880" class="collapse"><div class="fragmentcode">       std::string currentInsideMedium, currentOutsideMedium;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-GraphicsStatePublicMembers-0">GraphicsState Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2880" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2880"><i></i></a><div id="fragbit-2880" class="collapse show"><div class="fragmentcode">       std::string currentInsideMedium, currentOutsideMedium;
        
        int currentMaterialIndex = 0;
        std::string currentMaterialName;
@@ -1334,7 +1334,7 @@ earlier.
 <span class="anchor" id="fragment-BasicSceneBuilderMethodDefinitions-6"></span><div class="fragmentname">&lt;&lt;BasicSceneBuilder Method Definitions&gt;&gt;+=&nbsp;<a href="#fragment-BasicSceneBuilderMethodDefinitions-5"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="#fragment-BasicSceneBuilderMethodDefinitions-7"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">void <span class="anchor" id="BasicSceneBuilder::AttributeEnd"></span>BasicSceneBuilder::AttributeEnd(FileLoc loc) {
     VERIFY_WORLD("AttributeEnd");
-    &lt;&lt;<span class="fragmentname">Issue error on unmatched <tt>AttributeEnd</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2881" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2881"><i></i></a><div id="fragbit-2881" class="collapse"><div class="fragmentcode">       if (pushedGraphicsStates.empty()) {
+    &lt;&lt;<span class="fragmentname">Issue error on unmatched <tt>AttributeEnd</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2881" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2881"><i></i></a><div id="fragbit-2881" class="collapse show"><div class="fragmentcode">       if (pushedGraphicsStates.empty()) {
            Error(&amp;loc, "Unmatched AttributeEnd encountered. Ignoring it.");
            return;
        }</div></div>
@@ -1424,12 +1424,12 @@ transformation and handling other details; that code is not included here.)
 <span class="anchor" id="fragment-BasicSceneBuilderMethodDefinitions-8"></span><div class="fragmentname">&lt;&lt;BasicSceneBuilder Method Definitions&gt;&gt;+=&nbsp;<a href="#fragment-BasicSceneBuilderMethodDefinitions-7"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="#fragment-BasicSceneBuilderMethodDefinitions-9"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">void <span class="anchor" id="BasicSceneBuilder::WorldBegin"></span>BasicSceneBuilder::WorldBegin(FileLoc loc) {
     VERIFY_OPTIONS("WorldBegin");
-    &lt;&lt;<span class="fragmentname">Reset graphics state for <tt>WorldBegin</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2882" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2882"><i></i></a><div id="fragbit-2882" class="collapse"><div class="fragmentcode">       currentBlock = BlockState::WorldBlock;
+    &lt;&lt;<span class="fragmentname">Reset graphics state for <tt>WorldBegin</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2882" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2882"><i></i></a><div id="fragbit-2882" class="collapse show"><div class="fragmentcode">       currentBlock = BlockState::WorldBlock;
        for (int i = 0; i &lt; MaxTransforms; ++i)
            graphicsState.ctm[i] = pbrt::<a href="../Geometry_and_Transformations/Transformations.html#Transform" class="code">Transform</a>();
        graphicsState.activeTransformBits = AllTransformsBits;
        namedCoordinateSystems["world"] = graphicsState.ctm;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Passpre-monoWorldBeginentitiestomonoscene-0">Pass pre-<tt>WorldBegin</tt> entities to <tt>scene</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2883" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2883"><i></i></a><div id="fragbit-2883" class="collapse"><div class="fragmentcode">       <a href="#BasicSceneBuilder::scene" class="code">scene</a>-&gt;<a href="../Processing_the_Scene_Description/BasicScene_and_Final_Object_Creation.html#BasicScene::SetOptions" class="code">SetOptions</a>(filter, film, camera, sampler, integrator, accelerator);</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Passpre-monoWorldBeginentitiestomonoscene-0">Pass pre-<tt>WorldBegin</tt> entities to <tt>scene</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2883" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2883"><i></i></a><div id="fragbit-2883" class="collapse show"><div class="fragmentcode">       <a href="#BasicSceneBuilder::scene" class="code">scene</a>-&gt;<a href="../Processing_the_Scene_Description/BasicScene_and_Final_Object_Creation.html#BasicScene::SetOptions" class="code">SetOptions</a>(filter, film, camera, sampler, integrator, accelerator);</div></div>
 }</div><p>
 
 
@@ -1458,12 +1458,12 @@ specified.
 <span class="anchor" id="fragment-BasicSceneBuilderMethodDefinitions-9"></span><div class="fragmentname">&lt;&lt;BasicSceneBuilder Method Definitions&gt;&gt;+=&nbsp;<a href="#fragment-BasicSceneBuilderMethodDefinitions-8"><span class="fa fa-caret-up"></span></a></div>
 <div class="fragmentcode">void <span class="anchor" id="BasicSceneBuilder::MakeNamedMedium"></span>BasicSceneBuilder::MakeNamedMedium(const std::string &amp;name,
         <a href="../Processing_the_Scene_Description/Tokenizing_and_Parsing.html#ParsedParameterVector" class="code">ParsedParameterVector</a> params, FileLoc loc) {
-    &lt;&lt;<span class="fragmentname">Issue error if medium <tt>name</tt> is multiply defined</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2884" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2884"><i></i></a><div id="fragbit-2884" class="collapse"><div class="fragmentcode">       if (mediumNames.find(name) != mediumNames.end()) {
+    &lt;&lt;<span class="fragmentname">Issue error if medium <tt>name</tt> is multiply defined</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2884" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2884"><i></i></a><div id="fragbit-2884" class="collapse show"><div class="fragmentcode">       if (mediumNames.find(name) != mediumNames.end()) {
            ErrorExitDeferred(&amp;loc, "Named medium \"%s\" redefined.", name);
            return;
        }
        mediumNames.insert(name);</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-CreatemonoParameterDictionaryformediumandcallmonoAddMedium-0">Create <tt>ParameterDictionary</tt> for medium and call <tt>AddMedium()</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2885" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2885"><i></i></a><div id="fragbit-2885" class="collapse"><div class="fragmentcode">       ParameterDictionary dict(std::move(params), <a href="#BasicSceneBuilder::graphicsState" class="code">graphicsState</a>.mediumAttributes,
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-CreatemonoParameterDictionaryformediumandcallmonoAddMedium-0">Create <tt>ParameterDictionary</tt> for medium and call <tt>AddMedium()</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2885" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2885"><i></i></a><div id="fragbit-2885" class="collapse show"><div class="fragmentcode">       ParameterDictionary dict(std::move(params), <a href="#BasicSceneBuilder::graphicsState" class="code">graphicsState</a>.mediumAttributes,
                                 <a href="#BasicSceneBuilder::graphicsState" class="code">graphicsState</a>.<a href="#GraphicsState::colorSpace" class="code">colorSpace</a>);
        <a href="#BasicSceneBuilder::scene" class="code">scene</a>-&gt;<a href="../Processing_the_Scene_Description/BasicScene_and_Final_Object_Creation.html#BasicScene::AddMedium" class="code">AddMedium</a>(MediumSceneEntity(name, std::move(dict), loc,
                                           <a href="#BasicSceneBuilder::RenderFromObject" class="code">RenderFromObject</a>()));</div></div>

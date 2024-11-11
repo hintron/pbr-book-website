@@ -514,7 +514,7 @@ the text.)
 <p></p>
 <span class="anchor" id="fragment-Point2fmonoSOADefinition-0"></span><div class="fragmentname">&lt;&lt;Point2f <tt>SOA</tt> Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">template &lt;&gt; struct SOA&lt;<a href="../Geometry_and_Transformations/Points.html#Point2f" class="code">Point2f</a>&gt; {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Point2fmonoSOATypes-0">Point2f <tt>SOA</tt> Types</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2412" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2412"><i></i></a><div id="fragbit-2412" class="collapse"><div class="fragmentcode">       struct GetSetIndirector {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Point2fmonoSOATypes-0">Point2f <tt>SOA</tt> Types</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2412" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2412"><i></i></a><div id="fragbit-2412" class="collapse show"><div class="fragmentcode">       struct GetSetIndirector {
            void operator=(const <a href="../Geometry_and_Transformations/Points.html#Point2f" class="code">Point2f</a> &amp;a) {
                soa-&gt;<a href="#SOAPoint2f::x" class="code">x</a>[i] = a.<a href="#SOAPoint2f::x" class="code">x</a>;
                soa-&gt;<a href="#SOAPoint2f::y" class="code">y</a>[i] = a.<a href="#SOAPoint2f::y" class="code">y</a>;
@@ -522,7 +522,7 @@ the text.)
            SOA *soa;
            int i;
        };</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Point2fmonoSOAPublicMethods-0">Point2f <tt>SOA</tt> Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2413" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2413"><i></i></a><div id="fragbit-2413" class="collapse"><div class="fragmentcode">       SOA(int n, Allocator alloc) : nAlloc(n) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Point2fmonoSOAPublicMethods-0">Point2f <tt>SOA</tt> Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2413" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2413"><i></i></a><div id="fragbit-2413" class="collapse show"><div class="fragmentcode">       SOA(int n, Allocator alloc) : nAlloc(n) {
            this-&gt;<a href="#SOAPoint2f::x" class="code">x</a> = alloc.<a href="../Introduction/Using_and_Understanding_the_Code.html#std::pmr::polymorphic_allocator::allocate_object" class="code">allocate_object</a>&lt;Float&gt;(n);
            this-&gt;<a href="#SOAPoint2f::y" class="code">y</a> = alloc.<a href="../Introduction/Using_and_Understanding_the_Code.html#std::pmr::polymorphic_allocator::allocate_object" class="code">allocate_object</a>&lt;Float&gt;(n);
        }
@@ -535,7 +535,7 @@ the text.)
        GetSetIndirector operator[](int i) {
            return GetSetIndirector{this, i};
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Point2fmonoSOAPublicMembers-0">Point2f <tt>SOA</tt> Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2414" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2414"><i></i></a><div id="fragbit-2414" class="collapse"><div class="fragmentcode">       int nAlloc;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Point2fmonoSOAPublicMembers-0">Point2f <tt>SOA</tt> Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2414" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2414"><i></i></a><div id="fragbit-2414" class="collapse show"><div class="fragmentcode">       int nAlloc;
        Float * PBRT_RESTRICT x;
        Float * PBRT_RESTRICT y;</div></div>
 };</div><p>
@@ -694,7 +694,7 @@ the <tt>SOA</tt> public methods.
 <div class="fragmentcode">template &lt;typename WorkItem&gt;
 class <span class="anchor" id="WorkQueue"></span>WorkQueue : public <a href="#SOA" class="code">SOA</a>&lt;WorkItem&gt; {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-WorkQueuePublicMethods-0">WorkQueue Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2415" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2415"><i></i></a><div id="fragbit-2415" class="collapse"><div class="fragmentcode">       WorkQueue(int n, Allocator alloc) : SOA&lt;WorkItem&gt;(n, alloc) {}
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-WorkQueuePublicMethods-0">WorkQueue Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2415" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2415"><i></i></a><div id="fragbit-2415" class="collapse show"><div class="fragmentcode">       WorkQueue(int n, Allocator alloc) : SOA&lt;WorkItem&gt;(n, alloc) {}
        int Size() const {
            return <a href="#WorkQueue::size" class="code">size</a>.load(std::memory_order_relaxed);
        }
@@ -707,11 +707,11 @@ class <span class="anchor" id="WorkQueue"></span>WorkQueue : public <a href="#SO
            return index;
        }</div></div>
   protected:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-WorkQueueProtectedMethods-0">WorkQueue Protected Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2416" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2416"><i></i></a><div id="fragbit-2416" class="collapse"><div class="fragmentcode">       int AllocateEntry() {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-WorkQueueProtectedMethods-0">WorkQueue Protected Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2416" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2416"><i></i></a><div id="fragbit-2416" class="collapse show"><div class="fragmentcode">       int AllocateEntry() {
              return <a href="#WorkQueue::size" class="code">size</a>.fetch_add(1, std::memory_order_relaxed);
        }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-WorkQueuePrivateMembers-0">WorkQueue Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2417" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2417"><i></i></a><div id="fragbit-2417" class="collapse"><div class="fragmentcode">       std::atomic&lt;int&gt; size{0};
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-WorkQueuePrivateMembers-0">WorkQueue Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2417" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2417"><i></i></a><div id="fragbit-2417" class="collapse show"><div class="fragmentcode">       std::atomic&lt;int&gt; size{0};
        </div></div>
 };</div><p>
 
@@ -814,14 +814,14 @@ callback function is passed the <tt>WorkItem</tt> that it is responsible for.
 void <span class="anchor" id="ForAllQueued"></span>ForAllQueued(const char *desc, const WorkQueue&lt;WorkItem&gt; *q,
                   int maxQueued, F &amp;&amp;func) {
     if (<a href="../Utilities/System_Startup,_Cleanup,_and_Options.html#Options" class="code">Options</a>-&gt;<a href="../Utilities/System_Startup,_Cleanup,_and_Options.html#BasicPBRTOptions::useGPU" class="code">useGPU</a>) {
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-LaunchGPUthreadstoprocessmonoqusingmonofunc-0">Launch GPU threads to process <tt>q</tt> using <tt>func</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2418" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2418"><i></i></a><div id="fragbit-2418" class="collapse"><div class="fragmentcode">           <a href="#GPUParallelFor" class="code">GPUParallelFor</a>(desc, maxQueued, [=] PBRT_GPU (int index) mutable {
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-LaunchGPUthreadstoprocessmonoqusingmonofunc-0">Launch GPU threads to process <tt>q</tt> using <tt>func</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2418" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2418"><i></i></a><div id="fragbit-2418" class="collapse show"><div class="fragmentcode">           <a href="#GPUParallelFor" class="code">GPUParallelFor</a>(desc, maxQueued, [=] PBRT_GPU (int index) mutable {
                if (index &gt;= q-&gt;<a href="#WorkQueue::Size" class="code">Size</a>())
                    return;
                func((*q)[index]);
            });
            </div></div>
     } else {
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-ProcessmonoqusingmonofuncwithCPUthreads-0">Process <tt>q</tt> using <tt>func</tt> with CPU threads</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2419" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2419"><i></i></a><div id="fragbit-2419" class="collapse"><div class="fragmentcode">           <a href="../Utilities/Parallelism.html#ParallelFor" class="code">ParallelFor</a>(0, q-&gt;<a href="#WorkQueue::Size" class="code">Size</a>(), [&amp;](int index) { func((*q)[index]); });</div></div>
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-ProcessmonoqusingmonofuncwithCPUthreads-0">Process <tt>q</tt> using <tt>func</tt> with CPU threads</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2419" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2419"><i></i></a><div id="fragbit-2419" class="collapse show"><div class="fragmentcode">           <a href="../Utilities/Parallelism.html#ParallelFor" class="code">ParallelFor</a>(0, q-&gt;<a href="#WorkQueue::Size" class="code">Size</a>(), [&amp;](int index) { func((*q)[index]); });</div></div>
     }
 }</div><p>
 
@@ -888,7 +888,7 @@ a <a href="../Utilities/Containers_and_Memory_Management.html#TypePack"><tt>Type
 <span class="anchor" id="fragment-MultiWorkQueueDefinition-1"></span><div class="fragmentname">&lt;&lt;MultiWorkQueue Definition&gt;&gt;+=&nbsp;<a href="#fragment-MultiWorkQueueDefinition-0"><span class="fa fa-caret-up"></span></a></div>
 <div class="fragmentcode">template &lt;typename... Ts&gt; class MultiWorkQueue&lt;<a href="../Utilities/Containers_and_Memory_Management.html#TypePack" class="code">TypePack</a>&lt;Ts...&gt;&gt; {
 public:
-  &lt;&lt;<span class="fragmentname"><a href="#fragment-MultiWorkQueuePublicMethods-0">MultiWorkQueue Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2420" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2420"><i></i></a><div id="fragbit-2420" class="collapse"><div class="fragmentcode">     template &lt;typename T&gt;
+  &lt;&lt;<span class="fragmentname"><a href="#fragment-MultiWorkQueuePublicMethods-0">MultiWorkQueue Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2420" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2420"><i></i></a><div id="fragbit-2420" class="collapse show"><div class="fragmentcode">     template &lt;typename T&gt;
      WorkQueue&lt;T&gt; *<a href="#MultiWorkQueue::Get" class="code">Get</a>() {
          return &amp;pstd::get&lt;WorkQueue&lt;T&gt;&gt;(<a href="#MultiWorkQueue::queues" class="code">queues</a>);
      }
@@ -902,7 +902,7 @@ public:
      int <a href="#WorkQueue::Push" class="code">Push</a>(const T &amp;value) { return <a href="#MultiWorkQueue::Get" class="code">Get</a>&lt;T&gt;()-&gt;<a href="#WorkQueue::Push" class="code">Push</a>(value); }
      void <a href="#WorkQueue::Reset" class="code">Reset</a>() { (<a href="#MultiWorkQueue::Get" class="code">Get</a>&lt;Ts&gt;()-&gt;<a href="#WorkQueue::Reset" class="code">Reset</a>(), ...); }</div></div>
 private:
-  &lt;&lt;<span class="fragmentname"><a href="#fragment-MultiWorkQueuePrivateMembers-0">MultiWorkQueue Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2421" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2421"><i></i></a><div id="fragbit-2421" class="collapse"><div class="fragmentcode">     pstd::tuple&lt;WorkQueue&lt;Ts&gt;...&gt; queues;</div></div>
+  &lt;&lt;<span class="fragmentname"><a href="#fragment-MultiWorkQueuePrivateMembers-0">MultiWorkQueue Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2421" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2421"><i></i></a><div id="fragbit-2421" class="collapse show"><div class="fragmentcode">     pstd::tuple&lt;WorkQueue&lt;Ts&gt;...&gt; queues;</div></div>
 };</div><p>
 
 
