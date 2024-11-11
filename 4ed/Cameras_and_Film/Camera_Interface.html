@@ -444,16 +444,16 @@ geometric model.
 
 </p>
 <p></p>
-<span class="anchor" id="fig:fp-precision-loss-far-from-origin"></span><div class="card outerfigure"><div class="card-body figure"><p>
-
-
-</p>
-
+<span class="anchor" id="fig:fp-precision-loss-far-from-origin"></span>
+<div class="card outerfigure"><div class="card-body figure">
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 48.125%;  position:relative;"><div id="xa_Original4" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 48.125%;  position:relative;"><div id="xa_Original4-1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 48.125%;  position:relative;"><div id="xa_Original4-2" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Original4'), {
-  title: '(a)_Original4', children: [
- { title: '(a) Original', image: 'sportscar-original.png' },  { title: '(b) Translated, world space', image: 'sportscar-1m-world.png' },  { title: '(c) Translated, camera-world space', image: 'sportscar-1m-cameraworld.png' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Original4'), {title: '(a)_Original4', children: [{ title: '(a) Original', image: 'sportscar-original.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Original4-1'), {title: '(b) Translated, world space', children: [{ title: '(b) Translated, world space', image: 'sportscar-1m-world.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Original4-2'), {title: '(c) Translated, camera-world space', children: [{ title: '(c) Translated, camera-world space', image: 'sportscar-1m-cameraworld.png' }]});
 </script>
 <figcaption class="caption">Figure 5.1: Effect of the Loss of Floating-Point Precision Far from the
 Origin. <span class="legend">
