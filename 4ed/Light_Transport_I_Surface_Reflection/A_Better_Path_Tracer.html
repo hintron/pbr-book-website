@@ -107,16 +107,14 @@ for a comparison of the two.
 
 </p>
 <p></p>
-<span class="anchor" id="fig:simplepath-vs-path-integrators"></span><div class="card outerfigure"><div class="card-body figure"><p>
-
-
-</p>
-
+<span class="anchor" id="fig:simplepath-vs-path-integrators"></span>
+<div class="card outerfigure"><div class="card-body figure">
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 64.388%;  position:relative;"><div id="xa_SimplePathIntegrator57" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 64.388%;  position:relative;"><div id="xa_SimplePathIntegrator57-1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_SimplePathIntegrator57'), {
-  title: '(a)_SimplePathIntegrator57', children: [
- { title: '(a) SimplePathIntegrator', image: 'sanmiguel-simplepath.exr' },  { title: '(b) PathIntegrator', image: 'sanmiguel-path.exr' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_SimplePathIntegrator57'), {children: [{ title: '(a) SimplePathIntegrator', image: 'sanmiguel-simplepath.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_SimplePathIntegrator57-1'), {children: [{ title: '(b) PathIntegrator', image: 'sanmiguel-path.exr' }]});
 </script>
 <figcaption class="caption">Figure 13.7: Comparison of the <a href="../Light_Transport_I_Surface_Reflection/A_Simple_Path_Tracer.html#SimplePathIntegrator"><tt>SimplePathIntegrator</tt></a> and the
 <a href="#PathIntegrator"><tt>PathIntegrator</tt></a>. <span class="legend">
@@ -1375,10 +1373,7 @@ A zoomed-in region of Figure&nbsp;<a href="#fig:sample-bsdf-light">13.8</a> is s
 samples in the direct lighting calculation.
 (b)&nbsp;Rendered using the power heuristic.  The pixels behind the
 light source have a visible reduction in noise.</span>
-</figcaption><p>
- 
-
-</p>
+</figcaption>
 </div></div><p>
 
 
@@ -2111,16 +2106,14 @@ sampling; the variance spikes there follow.)
 
 </p>
 <p></p>
-<span class="anchor" id="fig:roughened-bsdfs"></span><div class="card outerfigure"><div class="card-body figure"><p>
-
-
-</p>
-
+<span class="anchor" id="fig:roughened-bsdfs"></span>
+<div class="card outerfigure"><div class="card-body figure">
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 73.143%;  position:relative;"><div id="xa_Increasing_roughness_everywhere58" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 73.143%;  position:relative;"><div id="xa_Increasing_roughness_everywhere58-1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Increasing_roughness_everywhere58'), {
-  title: '(a)_Increasing_roughness_everywhere58', children: [
- { title: '(a) Increasing roughness everywhere', image: 'bmw-m6-regularize-all.png' },  { title: '(b) Increasing roughness after scattering', image: 'bmw-m6-regularize.png' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Increasing_roughness_everywhere58'), {children: [{ title: '(a) Increasing roughness everywhere', image: 'bmw-m6-regularize-all.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Increasing_roughness_everywhere58-1'), {children: [{ title: '(b) Increasing roughness after scattering', image: 'bmw-m6-regularize.png' }]});
 </script>
 <figcaption class="caption">Figure 13.13: Scene from Figure&nbsp;<a href="#fig:tricky-indirect-lighting">13.12</a> with
 Roughened BSDFs. <span class="legend">
