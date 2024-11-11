@@ -165,7 +165,7 @@ implementation.)
                            <a href="../Radiometry,_Spectra,_and_Color/Color.html#RGBUnboundedSpectrum" class="code">RGBUnboundedSpectrum</a>, <a href="../Radiometry,_Spectra,_and_Color/Color.html#RGBIlluminantSpectrum" class="code">RGBIlluminantSpectrum</a>,
                            <a href="#BlackbodySpectrum" class="code">BlackbodySpectrum</a>&gt; {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-SpectrumInterface-0">Spectrum Interface</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-144" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-144"><i></i></a><div id="fragbit-144" class="collapse"><div class="fragmentcode">       using <a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>::<a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-SpectrumInterface-0">Spectrum Interface</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-144" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-144"><i></i></a><div id="fragbit-144" class="collapse show"><div class="fragmentcode">       using <a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>::<a href="../Utilities/Containers_and_Memory_Management.html#TaggedPointer" class="code">TaggedPointer</a>;
        std::string ToString() const;
        Float operator()(Float lambda) const;
        Float MaxValue() const;
@@ -344,7 +344,7 @@ wavelengths <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="11.302ex" hei
 <span class="anchor" id="fragment-SpectrumDefinitions-1"></span><div class="fragmentname">&lt;&lt;Spectrum Definitions&gt;&gt;+=&nbsp;<a href="#fragment-SpectrumDefinitions-0"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="#fragment-SpectrumDefinitions-2"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">class <span class="anchor" id="DenselySampledSpectrum"></span>DenselySampledSpectrum {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-DenselySampledSpectrumPublicMethods-0">DenselySampledSpectrum Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-145" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-145"><i></i></a><div id="fragbit-145" class="collapse"><div class="fragmentcode">       DenselySampledSpectrum(int <a href="#DenselySampledSpectrum::lambda_min" class="code">lambda_min</a> = <a href="#Lambda_min" class="code">Lambda_min</a>, int <a href="#DenselySampledSpectrum::lambda_max" class="code">lambda_max</a> = <a href="#Lambda_max" class="code">Lambda_max</a>,
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-DenselySampledSpectrumPublicMethods-0">DenselySampledSpectrum Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-145" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-145"><i></i></a><div id="fragbit-145" class="collapse show"><div class="fragmentcode">       DenselySampledSpectrum(int <a href="#DenselySampledSpectrum::lambda_min" class="code">lambda_min</a> = <a href="#Lambda_min" class="code">Lambda_min</a>, int <a href="#DenselySampledSpectrum::lambda_max" class="code">lambda_max</a> = <a href="#Lambda_max" class="code">Lambda_max</a>,
                               Allocator alloc = {})
            : <a href="#DenselySampledSpectrum::lambda_min" class="code">lambda_min</a>(<a href="#DenselySampledSpectrum::lambda_min" class="code">lambda_min</a>),
              <a href="#DenselySampledSpectrum::lambda_max" class="code">lambda_max</a>(<a href="#DenselySampledSpectrum::lambda_max" class="code">lambda_max</a>),
@@ -412,7 +412,7 @@ wavelengths <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="11.302ex" hei
            return true;
        }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-DenselySampledSpectrumPrivateMembers-0">DenselySampledSpectrum Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-146" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-146"><i></i></a><div id="fragbit-146" class="collapse"><div class="fragmentcode">       int lambda_min, lambda_max;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-DenselySampledSpectrumPrivateMembers-0">DenselySampledSpectrum Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-146" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-146"><i></i></a><div id="fragbit-146" class="collapse show"><div class="fragmentcode">       int lambda_min, lambda_max;
        pstd::vector&lt;Float&gt; values;</div></div>
 };</div><p>
 
@@ -511,7 +511,7 @@ rate in regions where its variation is greatest.
 <span class="anchor" id="fragment-SpectrumDefinitions-2"></span><div class="fragmentname">&lt;&lt;Spectrum Definitions&gt;&gt;+=&nbsp;<a href="#fragment-SpectrumDefinitions-1"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="#fragment-SpectrumDefinitions-3"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">class <span class="anchor" id="PiecewiseLinearSpectrum"></span>PiecewiseLinearSpectrum {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-PiecewiseLinearSpectrumPublicMethods-0">PiecewiseLinearSpectrum Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-147" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-147"><i></i></a><div id="fragbit-147" class="collapse"><div class="fragmentcode">       PiecewiseLinearSpectrum() = default;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-PiecewiseLinearSpectrumPublicMethods-0">PiecewiseLinearSpectrum Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-147" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-147"><i></i></a><div id="fragbit-147" class="collapse show"><div class="fragmentcode">       PiecewiseLinearSpectrum() = default;
        
        PBRT_CPU_GPU
        void Scale(Float s) {
@@ -540,7 +540,7 @@ rate in regions where its variation is greatest.
        static PiecewiseLinearSpectrum *FromInterleaved(pstd::span&lt;const Float&gt; samples,
                                                        bool normalize, Allocator alloc);</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-PiecewiseLinearSpectrumPrivateMembers-0">PiecewiseLinearSpectrum Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-148" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-148"><i></i></a><div id="fragbit-148" class="collapse"><div class="fragmentcode">       pstd::vector&lt;Float&gt; lambdas, values;</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-PiecewiseLinearSpectrumPrivateMembers-0">PiecewiseLinearSpectrum Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-148" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-148"><i></i></a><div id="fragbit-148" class="collapse show"><div class="fragmentcode">       pstd::vector&lt;Float&gt; lambdas, values;</div></div>
 };</div><p>
 
 
@@ -625,9 +625,9 @@ between them.
 <p></p>
 <span class="anchor" id="fragment-SpectrumMethodDefinitions-0"></span><div class="fragmentname">&lt;&lt;Spectrum Method Definitions&gt;&gt;=&nbsp;<a href="#fragment-SpectrumMethodDefinitions-1"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">Float <span class="anchor" id="PiecewiseLinearSpectrum::operator"></span>PiecewiseLinearSpectrum::operator()(Float lambda) const {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-HandlemonoPiecewiseLinearSpectrumcornercases-0">Handle <tt>PiecewiseLinearSpectrum</tt> corner cases</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-149" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-149"><i></i></a><div id="fragbit-149" class="collapse"><div class="fragmentcode">       if (<a href="#PiecewiseLinearSpectrum::lambdas" class="code">lambdas</a>.empty() || lambda &lt; <a href="#PiecewiseLinearSpectrum::lambdas" class="code">lambdas</a>.front() || lambda &gt; <a href="#PiecewiseLinearSpectrum::lambdas" class="code">lambdas</a>.back())
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-HandlemonoPiecewiseLinearSpectrumcornercases-0">Handle <tt>PiecewiseLinearSpectrum</tt> corner cases</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-149" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-149"><i></i></a><div id="fragbit-149" class="collapse show"><div class="fragmentcode">       if (<a href="#PiecewiseLinearSpectrum::lambdas" class="code">lambdas</a>.empty() || lambda &lt; <a href="#PiecewiseLinearSpectrum::lambdas" class="code">lambdas</a>.front() || lambda &gt; <a href="#PiecewiseLinearSpectrum::lambdas" class="code">lambdas</a>.back())
            return 0;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Findoffsettolargestmonolambdasbelowmonolambdaandinterpolate-0">Find offset to largest <tt>lambdas</tt> below <tt>lambda</tt> and interpolate</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-150" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-150"><i></i></a><div id="fragbit-150" class="collapse"><div class="fragmentcode">       int o = <a href="../Utilities/Mathematical_Infrastructure.html#FindInterval" class="code">FindInterval</a>(<a href="#PiecewiseLinearSpectrum::lambdas" class="code">lambdas</a>.size(),
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Findoffsettolargestmonolambdasbelowmonolambdaandinterpolate-0">Find offset to largest <tt>lambdas</tt> below <tt>lambda</tt> and interpolate</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-150" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-150"><i></i></a><div id="fragbit-150" class="collapse show"><div class="fragmentcode">       int o = <a href="../Utilities/Mathematical_Infrastructure.html#FindInterval" class="code">FindInterval</a>(<a href="#PiecewiseLinearSpectrum::lambdas" class="code">lambdas</a>.size(),
                             [&amp;](int i) { return <a href="#PiecewiseLinearSpectrum::lambdas" class="code">lambdas</a>[i] &lt;= lambda; });
        Float t = (lambda - <a href="#PiecewiseLinearSpectrum::lambdas" class="code">lambdas</a>[o]) / (<a href="#PiecewiseLinearSpectrum::lambdas" class="code">lambdas</a>[o + 1] - <a href="#PiecewiseLinearSpectrum::lambdas" class="code">lambdas</a>[o]);
        return <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(t, <a href="#PiecewiseLinearSpectrum::values" class="code">values</a>[o], <a href="#PiecewiseLinearSpectrum::values" class="code">values</a>[o + 1]);</div></div>
@@ -701,8 +701,8 @@ temperature.
 <span class="anchor" id="fragment-SpectrumDefinitions-3"></span><div class="fragmentname">&lt;&lt;Spectrum Definitions&gt;&gt;+=&nbsp;<a href="#fragment-SpectrumDefinitions-2"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="Color.html#fragment-SpectrumDefinitions-4"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">class <span class="anchor" id="BlackbodySpectrum"></span>BlackbodySpectrum {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-BlackbodySpectrumPublicMethods-0">BlackbodySpectrum Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-151" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-151"><i></i></a><div id="fragbit-151" class="collapse"><div class="fragmentcode">       BlackbodySpectrum(Float T) : T(T) {
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeblackbodynormalizationconstantforgiventemperature-0">Compute blackbody normalization constant for given temperature</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-152" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-152"><i></i></a><div id="fragbit-152" class="collapse"><div class="fragmentcode">              Float lambdaMax = 2.8977721e-3f / T;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-BlackbodySpectrumPublicMethods-0">BlackbodySpectrum Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-151" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-151"><i></i></a><div id="fragbit-151" class="collapse show"><div class="fragmentcode">       BlackbodySpectrum(Float T) : T(T) {
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeblackbodynormalizationconstantforgiventemperature-0">Compute blackbody normalization constant for given temperature</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-152" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-152"><i></i></a><div id="fragbit-152" class="collapse show"><div class="fragmentcode">              Float lambdaMax = 2.8977721e-3f / T;
               normalizationFactor = 1 / <a href="../Radiometry,_Spectra,_and_Color/Light_Emission.html#Blackbody" class="code">Blackbody</a>(lambdaMax * 1e9f, T);</div></div>
        }
        Float operator()(Float lambda) const {
@@ -721,7 +721,7 @@ temperature.
        
        std::string ToString() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-BlackbodySpectrumPrivateMembers-0">BlackbodySpectrum Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-153" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-153"><i></i></a><div id="fragbit-153" class="collapse"><div class="fragmentcode">       Float T;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-BlackbodySpectrumPrivateMembers-0">BlackbodySpectrum Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-153" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-153"><i></i></a><div id="fragbit-153" class="collapse show"><div class="fragmentcode">       Float T;
        Float normalizationFactor;</div></div>
 };</div><p>
 
@@ -734,7 +734,7 @@ parameter.
 <p></p>
 <span class="anchor" id="fragment-BlackbodySpectrumPublicMethods-0"></span><div class="fragmentname">&lt;&lt;BlackbodySpectrum Public Methods&gt;&gt;=&nbsp;<a href="#fragment-BlackbodySpectrumPublicMethods-1"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">BlackbodySpectrum(Float T) : T(T) {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeblackbodynormalizationconstantforgiventemperature-0">Compute blackbody normalization constant for given temperature</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-154" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-154"><i></i></a><div id="fragbit-154" class="collapse"><div class="fragmentcode">       Float lambdaMax = 2.8977721e-3f / T;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeblackbodynormalizationconstantforgiventemperature-0">Compute blackbody normalization constant for given temperature</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-154" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-154"><i></i></a><div id="fragbit-154" class="collapse show"><div class="fragmentcode">       Float lambdaMax = 2.8977721e-3f / T;
        normalizationFactor = 1 / <a href="../Radiometry,_Spectra,_and_Color/Light_Emission.html#Blackbody" class="code">Blackbody</a>(lambdaMax * 1e9f, T);</div></div>
 }</div><p>
 
@@ -1318,7 +1318,7 @@ operations to be performed with them.
 <span class="anchor" id="fragment-SampledSpectrumDefinition-0"></span><div class="fragmentname">&lt;&lt;SampledSpectrum Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="SampledSpectrum"></span>SampledSpectrum {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-SampledSpectrumPublicMethods-0">SampledSpectrum Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-155" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-155"><i></i></a><div id="fragbit-155" class="collapse"><div class="fragmentcode">       PBRT_CPU_GPU
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-SampledSpectrumPublicMethods-0">SampledSpectrum Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-155" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-155"><i></i></a><div id="fragbit-155" class="collapse show"><div class="fragmentcode">       PBRT_CPU_GPU
        <a href="#SampledSpectrum" class="code">SampledSpectrum</a> operator+(const <a href="#SampledSpectrum" class="code">SampledSpectrum</a> &amp;s) const {
            <a href="#SampledSpectrum" class="code">SampledSpectrum</a> ret = *this;
            return ret += s;
@@ -1618,7 +1618,7 @@ different wavelengths.
 <span class="anchor" id="fragment-SampledWavelengthsDefinitions-0"></span><div class="fragmentname">&lt;&lt;SampledWavelengths Definitions&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="SampledWavelengths"></span>SampledWavelengths {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-SampledWavelengthsPublicMethods-0">SampledWavelengths Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-156" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-156"><i></i></a><div id="fragbit-156" class="collapse"><div class="fragmentcode">       PBRT_CPU_GPU
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-SampledWavelengthsPublicMethods-0">SampledWavelengths Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-156" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-156"><i></i></a><div id="fragbit-156" class="collapse show"><div class="fragmentcode">       PBRT_CPU_GPU
        bool operator==(const <a href="#SampledWavelengths" class="code">SampledWavelengths</a> &amp;swl) const {
            return <a href="#SampledWavelengths::lambda" class="code">lambda</a> == swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a> &amp;&amp; <a href="#SampledWavelengths::pdf" class="code">pdf</a> == swl.<a href="#SampledWavelengths::pdf" class="code">pdf</a>;
        }
@@ -1631,14 +1631,14 @@ different wavelengths.
        static <a href="#SampledWavelengths" class="code">SampledWavelengths</a> SampleUniform(Float u,
                Float lambda_min = <a href="#Lambda_min" class="code">Lambda_min</a>, Float lambda_max = <a href="#Lambda_max" class="code">Lambda_max</a>) {
            <a href="#SampledWavelengths" class="code">SampledWavelengths</a> swl;
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Samplefirstwavelengthusingmonou-0">Sample first wavelength using <tt>u</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-157" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-157"><i></i></a><div id="fragbit-157" class="collapse"><div class="fragmentcode">              swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[0] = <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(u, lambda_min, lambda_max);</div></div>
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Initializemonolambdaforremainingwavelengths-0">Initialize <tt>lambda</tt> for remaining wavelengths</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-158" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-158"><i></i></a><div id="fragbit-158" class="collapse"><div class="fragmentcode">              Float delta = (lambda_max - lambda_min) / <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>;
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Samplefirstwavelengthusingmonou-0">Sample first wavelength using <tt>u</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-157" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-157"><i></i></a><div id="fragbit-157" class="collapse show"><div class="fragmentcode">              swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[0] = <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(u, lambda_min, lambda_max);</div></div>
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Initializemonolambdaforremainingwavelengths-0">Initialize <tt>lambda</tt> for remaining wavelengths</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-158" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-158"><i></i></a><div id="fragbit-158" class="collapse show"><div class="fragmentcode">              Float delta = (lambda_max - lambda_min) / <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>;
               for (int i = 1; i &lt; <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>; ++i) {
                   swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[i] = swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[i - 1] + delta;
                   if (swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[i] &gt; lambda_max)
                       swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[i] = lambda_min + (swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[i] - lambda_max);
               }</div></div>
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputePDFforsampledwavelengths-0">Compute PDF for sampled wavelengths</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-159" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-159"><i></i></a><div id="fragbit-159" class="collapse"><div class="fragmentcode">              for (int i = 0; i &lt; <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>; ++i)
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputePDFforsampledwavelengths-0">Compute PDF for sampled wavelengths</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-159" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-159"><i></i></a><div id="fragbit-159" class="collapse show"><div class="fragmentcode">              for (int i = 0; i &lt; <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>; ++i)
                   swl.<a href="#SampledWavelengths::pdf" class="code">pdf</a>[i] = 1 / (lambda_max - lambda_min);</div></div>
            return swl;
        }
@@ -1647,7 +1647,7 @@ different wavelengths.
        <a href="#SampledSpectrum" class="code">SampledSpectrum</a> PDF() const { return <a href="#SampledSpectrum" class="code">SampledSpectrum</a>(<a href="#SampledWavelengths::pdf" class="code">pdf</a>); }
        void TerminateSecondary() {
            if (<a href="#SampledWavelengths::SecondaryTerminated" class="code">SecondaryTerminated</a>()) return;
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Updatewavelengthprobabilitiesfortermination-0">Update wavelength probabilities for termination</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-160" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-160"><i></i></a><div id="fragbit-160" class="collapse"><div class="fragmentcode">              for (int i = 1; i &lt; <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>; ++i)
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Updatewavelengthprobabilitiesfortermination-0">Update wavelength probabilities for termination</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-160" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-160"><i></i></a><div id="fragbit-160" class="collapse show"><div class="fragmentcode">              for (int i = 1; i &lt; <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>; ++i)
                   <a href="#SampledWavelengths::pdf" class="code">pdf</a>[i] = 0;
               <a href="#SampledWavelengths::pdf" class="code">pdf</a>[0] /= <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>;</div></div>
        }
@@ -1668,7 +1668,7 @@ different wavelengths.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D456" x="0" y="0"></use>
 </g>
-</svg>th wavelength sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-161" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-161"><i></i></a><div id="fragbit-161" class="collapse"><div class="fragmentcode">                  Float up = u + Float(i) / <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>;
+</svg>th wavelength sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-161" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-161"><i></i></a><div id="fragbit-161" class="collapse show"><div class="fragmentcode">                  Float up = u + Float(i) / <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>;
                   if (up &gt; 1)
                       up -= 1;</div></div>
                swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[i] = <a href="../Cameras_and_Film/Film_and_Imaging.html#SampleVisibleWavelengths" class="code">SampleVisibleWavelengths</a>(up);
@@ -1677,7 +1677,7 @@ different wavelengths.
            return swl;
        }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-SampledWavelengthsPrivateMembers-0">SampledWavelengths Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-162" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-162"><i></i></a><div id="fragbit-162" class="collapse"><div class="fragmentcode">       friend struct SOA&lt;<a href="#SampledWavelengths" class="code">SampledWavelengths</a>&gt;;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-SampledWavelengthsPrivateMembers-0">SampledWavelengths Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-162" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-162"><i></i></a><div id="fragbit-162" class="collapse show"><div class="fragmentcode">       friend struct SOA&lt;<a href="#SampledWavelengths" class="code">SampledWavelengths</a>&gt;;
        pstd::array&lt;Float, <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>&gt; lambda, pdf;</div></div>
 };</div><p>
 
@@ -1709,14 +1709,14 @@ wavelengths.
 <div class="fragmentcode">static <a href="#SampledWavelengths" class="code">SampledWavelengths</a> <span class="anchor" id="SampledWavelengths::SampleUniform"></span>SampleUniform(Float u,
         Float lambda_min = <a href="#Lambda_min" class="code">Lambda_min</a>, Float lambda_max = <a href="#Lambda_max" class="code">Lambda_max</a>) {
     <a href="#SampledWavelengths" class="code">SampledWavelengths</a> swl;
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Samplefirstwavelengthusingmonou-0">Sample first wavelength using <tt>u</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-163" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-163"><i></i></a><div id="fragbit-163" class="collapse"><div class="fragmentcode">       swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[0] = <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(u, lambda_min, lambda_max);</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Initializemonolambdaforremainingwavelengths-0">Initialize <tt>lambda</tt> for remaining wavelengths</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-164" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-164"><i></i></a><div id="fragbit-164" class="collapse"><div class="fragmentcode">       Float delta = (lambda_max - lambda_min) / <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Samplefirstwavelengthusingmonou-0">Sample first wavelength using <tt>u</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-163" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-163"><i></i></a><div id="fragbit-163" class="collapse show"><div class="fragmentcode">       swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[0] = <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(u, lambda_min, lambda_max);</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Initializemonolambdaforremainingwavelengths-0">Initialize <tt>lambda</tt> for remaining wavelengths</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-164" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-164"><i></i></a><div id="fragbit-164" class="collapse show"><div class="fragmentcode">       Float delta = (lambda_max - lambda_min) / <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>;
        for (int i = 1; i &lt; <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>; ++i) {
            swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[i] = swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[i - 1] + delta;
            if (swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[i] &gt; lambda_max)
                swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[i] = lambda_min + (swl.<a href="#SampledWavelengths::lambda" class="code">lambda</a>[i] - lambda_max);
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputePDFforsampledwavelengths-0">Compute PDF for sampled wavelengths</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-165" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-165"><i></i></a><div id="fragbit-165" class="collapse"><div class="fragmentcode">       for (int i = 0; i &lt; <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>; ++i)
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputePDFforsampledwavelengths-0">Compute PDF for sampled wavelengths</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-165" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-165"><i></i></a><div id="fragbit-165" class="collapse show"><div class="fragmentcode">       for (int i = 0; i &lt; <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>; ++i)
            swl.<a href="#SampledWavelengths::pdf" class="code">pdf</a>[i] = 1 / (lambda_max - lambda_min);</div></div>
     return swl;
 }</div><p>
@@ -1793,7 +1793,7 @@ exclusively.
 <span class="anchor" id="fragment-SampledWavelengthsPublicMethods-2"></span><div class="fragmentname">&lt;&lt;SampledWavelengths Public Methods&gt;&gt;+=&nbsp;<a href="#fragment-SampledWavelengthsPublicMethods-1"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="#fragment-SampledWavelengthsPublicMethods-3"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">void <span class="anchor" id="SampledWavelengths::TerminateSecondary"></span>TerminateSecondary() {
     if (<a href="#SampledWavelengths::SecondaryTerminated" class="code">SecondaryTerminated</a>()) return;
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Updatewavelengthprobabilitiesfortermination-0">Update wavelength probabilities for termination</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-166" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-166"><i></i></a><div id="fragbit-166" class="collapse"><div class="fragmentcode">       for (int i = 1; i &lt; <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>; ++i)
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Updatewavelengthprobabilitiesfortermination-0">Update wavelength probabilities for termination</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-166" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-166"><i></i></a><div id="fragbit-166" class="collapse show"><div class="fragmentcode">       for (int i = 1; i &lt; <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>; ++i)
            <a href="#SampledWavelengths::pdf" class="code">pdf</a>[i] = 0;
        <a href="#SampledWavelengths::pdf" class="code">pdf</a>[0] /= <a href="#NSpectrumSamples" class="code">NSpectrumSamples</a>;</div></div>
 }</div><p>

@@ -1467,7 +1467,7 @@ built up in <tt>invBaseM</tt> as the digits are processed.
     Float invBase = (Float)1 / (Float)base, invBaseM = 1;
     uint64_t reversedDigits = 0;
     while (a) {
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-ExtractleastsignificantdigitfrommonoaandupdatemonoreversedDigits-0">Extract least significant digit from <tt>a</tt> and update <tt>reversedDigits</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1142" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1142"><i></i></a><div id="fragbit-1142" class="collapse"><div class="fragmentcode">           uint64_t next = a / base;
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-ExtractleastsignificantdigitfrommonoaandupdatemonoreversedDigits-0">Extract least significant digit from <tt>a</tt> and update <tt>reversedDigits</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1142" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1142"><i></i></a><div id="fragbit-1142" class="collapse show"><div class="fragmentcode">           uint64_t next = a / base;
            uint64_t digit = a - next * base;
            reversedDigits = reversedDigits * base + digit;
            invBaseM *= invBase;
@@ -1906,16 +1906,16 @@ initialization of a set of digit permutations for a single base <svg xmlns:xlink
 <span class="anchor" id="fragment-DigitPermutationDefinition-0"></span><div class="fragmentname">&lt;&lt;DigitPermutation Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="DigitPermutation"></span>DigitPermutation {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-DigitPermutationPublicMethods-0">DigitPermutation Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1143" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1143"><i></i></a><div id="fragbit-1143" class="collapse"><div class="fragmentcode">       DigitPermutation(int <a href="#DigitPermutation::base" class="code">base</a>, uint32_t seed, <a href="../Introduction/Using_and_Understanding_the_Code.html#Allocator" class="code">Allocator</a> alloc)
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-DigitPermutationPublicMethods-0">DigitPermutation Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1143" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1143"><i></i></a><div id="fragbit-1143" class="collapse show"><div class="fragmentcode">       DigitPermutation(int <a href="#DigitPermutation::base" class="code">base</a>, uint32_t seed, <a href="../Introduction/Using_and_Understanding_the_Code.html#Allocator" class="code">Allocator</a> alloc)
            : <a href="#DigitPermutation::base" class="code">base</a>(<a href="#DigitPermutation::base" class="code">base</a>) {
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Computenumberofdigitsneededformonobase-0">Compute number of digits needed for <tt>base</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1144" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1144"><i></i></a><div id="fragbit-1144" class="collapse"><div class="fragmentcode">              <a href="#DigitPermutation::nDigits" class="code">nDigits</a> = 0;
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Computenumberofdigitsneededformonobase-0">Compute number of digits needed for <tt>base</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1144" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1144"><i></i></a><div id="fragbit-1144" class="collapse show"><div class="fragmentcode">              <a href="#DigitPermutation::nDigits" class="code">nDigits</a> = 0;
               Float invBase = (Float)1 / (Float)base, invBaseM = 1;
               while (1 - (base - 1) * invBaseM &lt; 1) {
                   ++<a href="#DigitPermutation::nDigits" class="code">nDigits</a>;
                   invBaseM *= invBase;
               }</div></div>
            <a href="#DigitPermutation::permutations" class="code">permutations</a> = alloc.<a href="../Introduction/Using_and_Understanding_the_Code.html#std::pmr::polymorphic_allocator::allocate_object" class="code">allocate_object</a>&lt;uint16_t&gt;(<a href="#DigitPermutation::nDigits" class="code">nDigits</a> * <a href="#DigitPermutation::base" class="code">base</a>);
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Computerandompermutationsforalldigits-0">Compute random permutations for all digits</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1145" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1145"><i></i></a><div id="fragbit-1145" class="collapse"><div class="fragmentcode">              for (int digitIndex = 0; digitIndex &lt; <a href="#DigitPermutation::nDigits" class="code">nDigits</a>; ++digitIndex) {
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Computerandompermutationsforalldigits-0">Compute random permutations for all digits</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1145" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1145"><i></i></a><div id="fragbit-1145" class="collapse show"><div class="fragmentcode">              for (int digitIndex = 0; digitIndex &lt; <a href="#DigitPermutation::nDigits" class="code">nDigits</a>; ++digitIndex) {
                   uint64_t dseed = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#DigitPermutation::base" class="code">base</a>, digitIndex, seed);
                   for (int digitValue = 0; digitValue &lt; <a href="#DigitPermutation::base" class="code">base</a>; ++digitValue) {
                       int index = digitIndex * <a href="#DigitPermutation::base" class="code">base</a> + digitValue;
@@ -1928,7 +1928,7 @@ initialization of a set of digit permutations for a single base <svg xmlns:xlink
        }
        std::string ToString() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-DigitPermutationPrivateMembers-0">DigitPermutation Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1146" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1146"><i></i></a><div id="fragbit-1146" class="collapse"><div class="fragmentcode">       int base, nDigits;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-DigitPermutationPrivateMembers-0">DigitPermutation Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1146" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1146"><i></i></a><div id="fragbit-1146" class="collapse show"><div class="fragmentcode">       int base, nDigits;
        uint16_t *permutations;</div></div>
 };</div><p>
 
@@ -1946,14 +1946,14 @@ permutation for each one.
 <span class="anchor" id="fragment-DigitPermutationPublicMethods-0"></span><div class="fragmentname">&lt;&lt;DigitPermutation Public Methods&gt;&gt;=&nbsp;<a href="#fragment-DigitPermutationPublicMethods-1"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">DigitPermutation(int <a href="#DigitPermutation::base" class="code">base</a>, uint32_t seed, <a href="../Introduction/Using_and_Understanding_the_Code.html#Allocator" class="code">Allocator</a> alloc)
     : <a href="#DigitPermutation::base" class="code">base</a>(<a href="#DigitPermutation::base" class="code">base</a>) {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computenumberofdigitsneededformonobase-0">Compute number of digits needed for <tt>base</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1147" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1147"><i></i></a><div id="fragbit-1147" class="collapse"><div class="fragmentcode">       <a href="#DigitPermutation::nDigits" class="code">nDigits</a> = 0;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computenumberofdigitsneededformonobase-0">Compute number of digits needed for <tt>base</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1147" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1147"><i></i></a><div id="fragbit-1147" class="collapse show"><div class="fragmentcode">       <a href="#DigitPermutation::nDigits" class="code">nDigits</a> = 0;
        Float invBase = (Float)1 / (Float)base, invBaseM = 1;
        while (1 - (base - 1) * invBaseM &lt; 1) {
            ++<a href="#DigitPermutation::nDigits" class="code">nDigits</a>;
            invBaseM *= invBase;
        }</div></div>
     <a href="#DigitPermutation::permutations" class="code">permutations</a> = alloc.<a href="../Introduction/Using_and_Understanding_the_Code.html#std::pmr::polymorphic_allocator::allocate_object" class="code">allocate_object</a>&lt;uint16_t&gt;(<a href="#DigitPermutation::nDigits" class="code">nDigits</a> * <a href="#DigitPermutation::base" class="code">base</a>);
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computerandompermutationsforalldigits-0">Compute random permutations for all digits</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1148" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1148"><i></i></a><div id="fragbit-1148" class="collapse"><div class="fragmentcode">       for (int digitIndex = 0; digitIndex &lt; <a href="#DigitPermutation::nDigits" class="code">nDigits</a>; ++digitIndex) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computerandompermutationsforalldigits-0">Compute random permutations for all digits</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1148" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1148"><i></i></a><div id="fragbit-1148" class="collapse show"><div class="fragmentcode">       for (int digitIndex = 0; digitIndex &lt; <a href="#DigitPermutation::nDigits" class="code">nDigits</a>; ++digitIndex) {
            uint64_t dseed = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#DigitPermutation::base" class="code">base</a>, digitIndex, seed);
            for (int digitValue = 0; digitValue &lt; <a href="#DigitPermutation::base" class="code">base</a>; ++digitValue) {
                int index = digitIndex * <a href="#DigitPermutation::base" class="code">base</a> + digitValue;
@@ -2120,7 +2120,7 @@ of &lt;&lt;<span class="fragmentname"><a href="#fragment-Computenumberofdigitsne
     uint64_t reversedDigits = 0;
     int digitIndex = 0;
     while (1 - (base - 1) * invBaseM &lt; 1) {
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-PermuteleastsignificantdigitfrommonoaandupdatemonoreversedDigits-0">Permute least significant digit from <tt>a</tt> and update <tt>reversedDigits</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1149" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1149"><i></i></a><div id="fragbit-1149" class="collapse"><div class="fragmentcode">           uint64_t next = a / base;
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-PermuteleastsignificantdigitfrommonoaandupdatemonoreversedDigits-0">Permute least significant digit from <tt>a</tt> and update <tt>reversedDigits</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1149" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1149"><i></i></a><div id="fragbit-1149" class="collapse show"><div class="fragmentcode">           uint64_t next = a / base;
            int digitValue = a - next * base;
            reversedDigits =
                reversedDigits * base + perm.<a href="#DigitPermutation::Permute" class="code">Permute</a>(digitIndex, digitValue);
@@ -2328,7 +2328,7 @@ permutation.
     uint64_t reversedDigits = 0;
     int digitIndex = 0;
     while (1 - invBaseM &lt; 1) {
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputeOwen-scrambleddigitformonodigitIndex-0">Compute Owen-scrambled digit for <tt>digitIndex</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1150" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1150"><i></i></a><div id="fragbit-1150" class="collapse"><div class="fragmentcode">           uint64_t next = a / base;
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputeOwen-scrambleddigitformonodigitIndex-0">Compute Owen-scrambled digit for <tt>digitIndex</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1150" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1150"><i></i></a><div id="fragbit-1150" class="collapse show"><div class="fragmentcode">           uint64_t next = a / base;
            int digitValue = a - next * base;
            uint32_t digitHash = <a href="../Utilities/Mathematical_Infrastructure.html#MixBits" class="code">MixBits</a>(hash ^ reversedDigits);
            digitValue = <a href="../Utilities/Mathematical_Infrastructure.html#PermutationElement" class="code">PermutationElement</a>(digitValue, base, digitHash);
@@ -2403,7 +2403,7 @@ using the Halton sequence.
 <span class="anchor" id="fragment-HaltonSamplerDefinition-0"></span><div class="fragmentname">&lt;&lt;HaltonSampler Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="HaltonSampler"></span>HaltonSampler {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-HaltonSamplerPublicMethods-0">HaltonSampler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1151" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1151"><i></i></a><div id="fragbit-1151" class="collapse"><div class="fragmentcode">       HaltonSampler(int samplesPerPixel, <a href="../Geometry_and_Transformations/Points.html#Point2i" class="code">Point2i</a> fullResolution,
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-HaltonSamplerPublicMethods-0">HaltonSampler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1151" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1151"><i></i></a><div id="fragbit-1151" class="collapse show"><div class="fragmentcode">       HaltonSampler(int samplesPerPixel, <a href="../Geometry_and_Transformations/Points.html#Point2i" class="code">Point2i</a> fullResolution,
            RandomizeStrategy randomize = RandomizeStrategy::PermuteDigits, int seed = 0, 
                      Allocator alloc = {});
        
@@ -2419,7 +2419,7 @@ using the Halton sequence.
        void StartPixelSample(<a href="../Geometry_and_Transformations/Points.html#Point2i" class="code">Point2i</a> p, int sampleIndex, int dim) {
            <a href="#HaltonSampler::haltonIndex" class="code">haltonIndex</a> = 0;
            int sampleStride = <a href="#HaltonSampler::baseScales" class="code">baseScales</a>[0] * <a href="#HaltonSampler::baseScales" class="code">baseScales</a>[1];
-           &lt;&lt;<span class="fragmentname">Compute Halton sample index for first sample in pixel <tt>p</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1152" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1152"><i></i></a><div id="fragbit-1152" class="collapse"><div class="fragmentcode">              if (sampleStride &gt; 1) {
+           &lt;&lt;<span class="fragmentname">Compute Halton sample index for first sample in pixel <tt>p</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1152" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1152"><i></i></a><div id="fragbit-1152" class="collapse show"><div class="fragmentcode">              if (sampleStride &gt; 1) {
                   <a href="../Geometry_and_Transformations/Points.html#Point2i" class="code">Point2i</a> pm(Mod(p[0], MaxHaltonResolution), Mod(p[1], MaxHaltonResolution));
                   for (int i = 0; i &lt; 2; ++i) {
                       uint64_t dimOffset =
@@ -2452,7 +2452,7 @@ using the Halton sequence.
        <a href="../Sampling_and_Reconstruction/Sampling_Interface.html#Sampler" class="code">Sampler</a> Clone(Allocator alloc);
        std::string ToString() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-HaltonSamplerPrivateMethods-0">HaltonSampler Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1153" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1153"><i></i></a><div id="fragbit-1153" class="collapse"><div class="fragmentcode">       static uint64_t multiplicativeInverse(int64_t a, int64_t n) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-HaltonSamplerPrivateMethods-0">HaltonSampler Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1153" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1153"><i></i></a><div id="fragbit-1153" class="collapse show"><div class="fragmentcode">       static uint64_t multiplicativeInverse(int64_t a, int64_t n) {
            int64_t x, y;
            extendedGCD(a, n, &amp;x, &amp;y);
            return Mod(x, n);
@@ -2478,7 +2478,7 @@ using the Halton sequence.
                return <a href="#OwenScrambledRadicalInverse" class="code">OwenScrambledRadicalInverse</a>(dimension, <a href="#HaltonSampler::haltonIndex" class="code">haltonIndex</a>,
                                                   <a href="../Utilities/Mathematical_Infrastructure.html#MixBits" class="code">MixBits</a>(1 + (dimension &lt;&lt; 4)));
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-HaltonSamplerPrivateMembers-0">HaltonSampler Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1154" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1154"><i></i></a><div id="fragbit-1154" class="collapse"><div class="fragmentcode">       int samplesPerPixel;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-HaltonSamplerPrivateMembers-0">HaltonSampler Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1154" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1154"><i></i></a><div id="fragbit-1154" class="collapse show"><div class="fragmentcode">       int samplesPerPixel;
        RandomizeStrategy randomize;
        pstd::vector&lt;<a href="#DigitPermutation" class="code">DigitPermutation</a>&gt; *digitPermutations = nullptr;
        static constexpr int MaxHaltonResolution = 128;
@@ -2540,7 +2540,7 @@ those pixels if the <a href="#HaltonSampler"><tt>HaltonSampler</tt></a> is being
     : <a href="#HaltonSampler::samplesPerPixel" class="code">samplesPerPixel</a>(<a href="#HaltonSampler::samplesPerPixel" class="code">samplesPerPixel</a>), <a href="#HaltonSampler::randomize" class="code">randomize</a>(<a href="#HaltonSampler::randomize" class="code">randomize</a>) {
     if (<a href="#HaltonSampler::randomize" class="code">randomize</a> == <a href="#RandomizeStrategy::PermuteDigits" class="code">RandomizeStrategy</a>::PermuteDigits)
         <a href="#HaltonSampler::digitPermutations" class="code">digitPermutations</a> = <a href="#ComputeRadicalInversePermutations" class="code">ComputeRadicalInversePermutations</a>(seed, alloc);
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Findradicalinversebasescalesandexponentsthatcoversamplingarea-0">Find radical inverse base scales and exponents that cover sampling area</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1155" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1155"><i></i></a><div id="fragbit-1155" class="collapse"><div class="fragmentcode">       for (int i = 0; i &lt; 2; ++i) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Findradicalinversebasescalesandexponentsthatcoversamplingarea-0">Find radical inverse base scales and exponents that cover sampling area</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1155" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1155"><i></i></a><div id="fragbit-1155" class="collapse show"><div class="fragmentcode">       for (int i = 0; i &lt; 2; ++i) {
            int base = (i == 0) ? 2 : 3;
            int scale = 1, exp = 0;
            while (scale &lt; std::min(fullRes[i], <a href="#HaltonSampler::MaxHaltonResolution" class="code">MaxHaltonResolution</a>)) {
@@ -2550,7 +2550,7 @@ those pixels if the <a href="#HaltonSampler"><tt>HaltonSampler</tt></a> is being
            baseScales[i] = scale;
            baseExponents[i] = exp;
        }</div></div>
-    &lt;&lt;<span class="fragmentname">Compute multiplicative inverses for <tt>baseScales</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1156" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1156"><i></i></a><div id="fragbit-1156" class="collapse"><div class="fragmentcode">       multInverse[0] = multiplicativeInverse(<a href="#HaltonSampler::baseScales" class="code">baseScales</a>[1], <a href="#HaltonSampler::baseScales" class="code">baseScales</a>[0]);
+    &lt;&lt;<span class="fragmentname">Compute multiplicative inverses for <tt>baseScales</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1156" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1156"><i></i></a><div id="fragbit-1156" class="collapse show"><div class="fragmentcode">       multInverse[0] = multiplicativeInverse(<a href="#HaltonSampler::baseScales" class="code">baseScales</a>[1], <a href="#HaltonSampler::baseScales" class="code">baseScales</a>[0]);
        multInverse[1] = multiplicativeInverse(<a href="#HaltonSampler::baseScales" class="code">baseScales</a>[0], <a href="#HaltonSampler::baseScales" class="code">baseScales</a>[1]);</div></div>
 }</div><p>
 
@@ -4592,7 +4592,7 @@ product of that and the current <tt>sampleIndex</tt>.
 <div class="fragmentcode">void <span class="anchor" id="HaltonSampler::StartPixelSample"></span>StartPixelSample(<a href="../Geometry_and_Transformations/Points.html#Point2i" class="code">Point2i</a> p, int sampleIndex, int dim) {
     <a href="#HaltonSampler::haltonIndex" class="code">haltonIndex</a> = 0;
     int sampleStride = <a href="#HaltonSampler::baseScales" class="code">baseScales</a>[0] * <a href="#HaltonSampler::baseScales" class="code">baseScales</a>[1];
-    &lt;&lt;<span class="fragmentname">Compute Halton sample index for first sample in pixel <tt>p</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1157" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1157"><i></i></a><div id="fragbit-1157" class="collapse"><div class="fragmentcode">       if (sampleStride &gt; 1) {
+    &lt;&lt;<span class="fragmentname">Compute Halton sample index for first sample in pixel <tt>p</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1157" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1157"><i></i></a><div id="fragbit-1157" class="collapse show"><div class="fragmentcode">       if (sampleStride &gt; 1) {
            <a href="../Geometry_and_Transformations/Points.html#Point2i" class="code">Point2i</a> pm(Mod(p[0], MaxHaltonResolution), Mod(p[1], MaxHaltonResolution));
            for (int i = 0; i &lt; 2; ++i) {
                uint64_t dimOffset =

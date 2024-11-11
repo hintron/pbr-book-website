@@ -3633,7 +3633,7 @@ functions.
 <span class="anchor" id="fragment-PiecewiseConstant1DDefinition-0"></span><div class="fragmentname">&lt;&lt;PiecewiseConstant1D Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="PiecewiseConstant1D"></span>PiecewiseConstant1D {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-PiecewiseConstant1DPublicMethods-0">PiecewiseConstant1D Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2652" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2652"><i></i></a><div id="fragbit-2652" class="collapse"><div class="fragmentcode">       PBRT_CPU_GPU
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-PiecewiseConstant1DPublicMethods-0">PiecewiseConstant1D Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2652" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2652"><i></i></a><div id="fragbit-2652" class="collapse show"><div class="fragmentcode">       PBRT_CPU_GPU
        size_t BytesUsed() const {
            return (<a href="#PiecewiseConstant1D::func" class="code">func</a>.capacity() + <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>.capacity()) * sizeof(Float);
        }
@@ -3652,7 +3652,7 @@ functions.
                            Allocator alloc = {})
            : <a href="#PiecewiseConstant1D::func" class="code">func</a>(f.begin(), f.end(), alloc), <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>(f.size() + 1, alloc),
              <a href="#PiecewiseConstant1D::min" class="code">min</a>(<a href="#PiecewiseConstant1D::min" class="code">min</a>), <a href="#PiecewiseConstant1D::max" class="code">max</a>(<a href="#PiecewiseConstant1D::max" class="code">max</a>) {
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Takeabsolutevalueofmonofunc-0">Take absolute value of <tt>func</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2653" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2653"><i></i></a><div id="fragbit-2653" class="collapse"><div class="fragmentcode">              for (Float &amp;f : <a href="#PiecewiseConstant1D::func" class="code">func</a>) f = std::abs(f);</div></div>
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Takeabsolutevalueofmonofunc-0">Take absolute value of <tt>func</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2653" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2653"><i></i></a><div id="fragbit-2653" class="collapse show"><div class="fragmentcode">              for (Float &amp;f : <a href="#PiecewiseConstant1D::func" class="code">func</a>) f = std::abs(f);</div></div>
            &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeintegralofstepfunctionatx_i-0">Compute integral of step function at <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.129ex" height="2.009ex" style="vertical-align: -0.671ex;" viewBox="0 -576.1 916.8 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">x Subscript i</title>
 <defs aria-hidden="true">
@@ -3663,12 +3663,12 @@ functions.
  <use xlink:href="#E1-LATINMODERNNORMAL-1D465" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNNORMAL-1D456" x="809" y="-213"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2654" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2654"><i></i></a><div id="fragbit-2654" class="collapse"><div class="fragmentcode">              <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[0] = 0;
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2654" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2654"><i></i></a><div id="fragbit-2654" class="collapse show"><div class="fragmentcode">              <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[0] = 0;
               size_t n = f.size();
               for (size_t i = 1; i &lt; n + 1; ++i)
                   <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[i] = <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[i - 1] + func[i - 1] * (max - min) / n;
               </div></div>
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-TransformstepfunctionintegralintoCDF-0">Transform step function integral into CDF</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2655" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2655"><i></i></a><div id="fragbit-2655" class="collapse"><div class="fragmentcode">              <a href="#PiecewiseConstant1D::funcInt" class="code">funcInt</a> = <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[n];
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-TransformstepfunctionintegralintoCDF-0">Transform step function integral into CDF</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2655" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2655"><i></i></a><div id="fragbit-2655" class="collapse show"><div class="fragmentcode">              <a href="#PiecewiseConstant1D::funcInt" class="code">funcInt</a> = <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[n];
               if (<a href="#PiecewiseConstant1D::funcInt" class="code">funcInt</a> == 0)
                   for (size_t i = 1; i &lt; n + 1; ++i)
                       <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[i] = Float(i) / Float(n);
@@ -3679,15 +3679,15 @@ functions.
        Float Integral() const { return funcInt; }
        size_t size() const { return <a href="#PiecewiseConstant1D::func" class="code">func</a>.size(); }
        Float Sample(Float u, Float *pdf = nullptr, int *offset = nullptr) const {
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-FindsurroundingCDFsegmentsandmonooffset-0">Find surrounding CDF segments and <tt>offset</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2656" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2656"><i></i></a><div id="fragbit-2656" class="collapse"><div class="fragmentcode">              int o = <a href="../Utilities/Mathematical_Infrastructure.html#FindInterval" class="code">FindInterval</a>((int)<a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>.size(),
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-FindsurroundingCDFsegmentsandmonooffset-0">Find surrounding CDF segments and <tt>offset</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2656" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2656"><i></i></a><div id="fragbit-2656" class="collapse show"><div class="fragmentcode">              int o = <a href="../Utilities/Mathematical_Infrastructure.html#FindInterval" class="code">FindInterval</a>((int)<a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>.size(),
                                    [&amp;](int index) { return <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[index] &lt;= u; });
               if (offset)
                   *offset = o;</div></div>
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputeoffsetalongCDFsegment-0">Compute offset along CDF segment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2657" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2657"><i></i></a><div id="fragbit-2657" class="collapse"><div class="fragmentcode">              Float du = u - <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[o];
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputeoffsetalongCDFsegment-0">Compute offset along CDF segment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2657" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2657"><i></i></a><div id="fragbit-2657" class="collapse show"><div class="fragmentcode">              Float du = u - <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[o];
               if (<a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[o + 1] - <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[o] &gt; 0)
                   du /= <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[o + 1] - <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[o];
               </div></div>
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputePDFforsampledoffset-0">Compute PDF for sampled offset</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2658" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2658"><i></i></a><div id="fragbit-2658" class="collapse"><div class="fragmentcode">              if (pdf)
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputePDFforsampledoffset-0">Compute PDF for sampled offset</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2658" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2658"><i></i></a><div id="fragbit-2658" class="collapse show"><div class="fragmentcode">              if (pdf)
                   *pdf = (<a href="#PiecewiseConstant1D::funcInt" class="code">funcInt</a> &gt; 0) ? <a href="#PiecewiseConstant1D::func" class="code">func</a>[o] / <a href="#PiecewiseConstant1D::funcInt" class="code">funcInt</a> : 0;</div></div>
            &lt;&lt;<span class="fragmentname"><a href="#fragment-Returnxcorrespondingtosample-0">Return <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 572.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">x</title>
@@ -3697,7 +3697,7 @@ functions.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D465" x="0" y="0"></use>
 </g>
-</svg> corresponding to sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2659" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2659"><i></i></a><div id="fragbit-2659" class="collapse"><div class="fragmentcode">              return <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>((o + du) / <a href="#PiecewiseConstant1D::size" class="code">size</a>(), <a href="#PiecewiseConstant1D::min" class="code">min</a>, <a href="#PiecewiseConstant1D::max" class="code">max</a>);</div></div>
+</svg> corresponding to sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2659" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2659"><i></i></a><div id="fragbit-2659" class="collapse show"><div class="fragmentcode">              return <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>((o + du) / <a href="#PiecewiseConstant1D::size" class="code">size</a>(), <a href="#PiecewiseConstant1D::min" class="code">min</a>, <a href="#PiecewiseConstant1D::max" class="code">max</a>);</div></div>
        }
        pstd::optional&lt;Float&gt; Invert(Float x) const {
            &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputeoffsettoCDFvaluesthatbracketx-0">Compute offset to CDF values that bracket <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 572.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
@@ -3708,15 +3708,15 @@ functions.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D465" x="0" y="0"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2660" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2660"><i></i></a><div id="fragbit-2660" class="collapse"><div class="fragmentcode">              if (x &lt; <a href="#PiecewiseConstant1D::min" class="code">min</a> || x &gt; <a href="#PiecewiseConstant1D::max" class="code">max</a>)
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2660" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2660"><i></i></a><div id="fragbit-2660" class="collapse show"><div class="fragmentcode">              if (x &lt; <a href="#PiecewiseConstant1D::min" class="code">min</a> || x &gt; <a href="#PiecewiseConstant1D::max" class="code">max</a>)
                   return {};
               Float c = (x - <a href="#PiecewiseConstant1D::min" class="code">min</a>) / (<a href="#PiecewiseConstant1D::max" class="code">max</a> - <a href="#PiecewiseConstant1D::min" class="code">min</a>) * <a href="#PiecewiseConstant1D::func" class="code">func</a>.size();
               int offset = <a href="../Utilities/Mathematical_Infrastructure.html#Clamp" class="code">Clamp</a>(int(c), 0, <a href="#PiecewiseConstant1D::func" class="code">func</a>.size() - 1);
               </div></div>
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-LinearlyinterpolatebetweenadjacentCDFvaluestofindsamplevalue-0">Linearly interpolate between adjacent CDF values to find sample value</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2661" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2661"><i></i></a><div id="fragbit-2661" class="collapse"><div class="fragmentcode">              Float delta = c - offset;
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-LinearlyinterpolatebetweenadjacentCDFvaluestofindsamplevalue-0">Linearly interpolate between adjacent CDF values to find sample value</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2661" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2661"><i></i></a><div id="fragbit-2661" class="collapse show"><div class="fragmentcode">              Float delta = c - offset;
               return <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(delta, <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[offset], <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[offset + 1]);</div></div>
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-PiecewiseConstant1DPublicMembers-0">PiecewiseConstant1D Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2662" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2662"><i></i></a><div id="fragbit-2662" class="collapse"><div class="fragmentcode">       pstd::vector&lt;Float&gt; func, cdf;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-PiecewiseConstant1DPublicMembers-0">PiecewiseConstant1D Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2662" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2662"><i></i></a><div id="fragbit-2662" class="collapse show"><div class="fragmentcode">       pstd::vector&lt;Float&gt; func, cdf;
        Float min, max;
        Float funcInt = 0;</div></div>
 };</div><p>
@@ -3784,7 +3784,7 @@ PDF based on its extent.)
                     Allocator alloc = {})
     : <a href="#PiecewiseConstant1D::func" class="code">func</a>(f.begin(), f.end(), alloc), <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>(f.size() + 1, alloc),
       <a href="#PiecewiseConstant1D::min" class="code">min</a>(<a href="#PiecewiseConstant1D::min" class="code">min</a>), <a href="#PiecewiseConstant1D::max" class="code">max</a>(<a href="#PiecewiseConstant1D::max" class="code">max</a>) {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Takeabsolutevalueofmonofunc-0">Take absolute value of <tt>func</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2663" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2663"><i></i></a><div id="fragbit-2663" class="collapse"><div class="fragmentcode">       for (Float &amp;f : <a href="#PiecewiseConstant1D::func" class="code">func</a>) f = std::abs(f);</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Takeabsolutevalueofmonofunc-0">Take absolute value of <tt>func</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2663" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2663"><i></i></a><div id="fragbit-2663" class="collapse show"><div class="fragmentcode">       for (Float &amp;f : <a href="#PiecewiseConstant1D::func" class="code">func</a>) f = std::abs(f);</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeintegralofstepfunctionatx_i-0">Compute integral of step function at <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.129ex" height="2.009ex" style="vertical-align: -0.671ex;" viewBox="0 -576.1 916.8 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">x Subscript i</title>
 <defs aria-hidden="true">
@@ -3795,12 +3795,12 @@ PDF based on its extent.)
  <use xlink:href="#E1-LATINMODERNNORMAL-1D465" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNNORMAL-1D456" x="809" y="-213"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2664" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2664"><i></i></a><div id="fragbit-2664" class="collapse"><div class="fragmentcode">       <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[0] = 0;
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2664" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2664"><i></i></a><div id="fragbit-2664" class="collapse show"><div class="fragmentcode">       <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[0] = 0;
        size_t n = f.size();
        for (size_t i = 1; i &lt; n + 1; ++i)
            <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[i] = <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[i - 1] + func[i - 1] * (max - min) / n;
        </div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-TransformstepfunctionintegralintoCDF-0">Transform step function integral into CDF</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2665" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2665"><i></i></a><div id="fragbit-2665" class="collapse"><div class="fragmentcode">       <a href="#PiecewiseConstant1D::funcInt" class="code">funcInt</a> = <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[n];
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-TransformstepfunctionintegralintoCDF-0">Transform step function integral into CDF</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2665" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2665"><i></i></a><div id="fragbit-2665" class="collapse show"><div class="fragmentcode">       <a href="#PiecewiseConstant1D::funcInt" class="code">funcInt</a> = <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[n];
        if (<a href="#PiecewiseConstant1D::funcInt" class="code">funcInt</a> == 0)
            for (size_t i = 1; i &lt; n + 1; ++i)
                <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[i] = Float(i) / Float(n);
@@ -4016,15 +4016,15 @@ or equal to <tt>u</tt>.  (In other words, <tt>cdf[*offset] &lt;= u &lt; cdf[*off
 <p></p>
 <span class="anchor" id="fragment-PiecewiseConstant1DPublicMethods-2"></span><div class="fragmentname">&lt;&lt;PiecewiseConstant1D Public Methods&gt;&gt;+=&nbsp;<a href="#fragment-PiecewiseConstant1DPublicMethods-1"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="#fragment-PiecewiseConstant1DPublicMethods-3"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">Float <span class="anchor" id="PiecewiseConstant1D::Sample"></span>Sample(Float u, Float *pdf = nullptr, int *offset = nullptr) const {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-FindsurroundingCDFsegmentsandmonooffset-0">Find surrounding CDF segments and <tt>offset</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2666" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2666"><i></i></a><div id="fragbit-2666" class="collapse"><div class="fragmentcode">       int o = <a href="../Utilities/Mathematical_Infrastructure.html#FindInterval" class="code">FindInterval</a>((int)<a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>.size(),
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-FindsurroundingCDFsegmentsandmonooffset-0">Find surrounding CDF segments and <tt>offset</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2666" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2666"><i></i></a><div id="fragbit-2666" class="collapse show"><div class="fragmentcode">       int o = <a href="../Utilities/Mathematical_Infrastructure.html#FindInterval" class="code">FindInterval</a>((int)<a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>.size(),
                             [&amp;](int index) { return <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[index] &lt;= u; });
        if (offset)
            *offset = o;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputeoffsetalongCDFsegment-0">Compute offset along CDF segment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2667" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2667"><i></i></a><div id="fragbit-2667" class="collapse"><div class="fragmentcode">       Float du = u - <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[o];
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputeoffsetalongCDFsegment-0">Compute offset along CDF segment</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2667" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2667"><i></i></a><div id="fragbit-2667" class="collapse show"><div class="fragmentcode">       Float du = u - <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[o];
        if (<a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[o + 1] - <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[o] &gt; 0)
            du /= <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[o + 1] - <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[o];
        </div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputePDFforsampledoffset-0">Compute PDF for sampled offset</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2668" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2668"><i></i></a><div id="fragbit-2668" class="collapse"><div class="fragmentcode">       if (pdf)
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputePDFforsampledoffset-0">Compute PDF for sampled offset</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2668" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2668"><i></i></a><div id="fragbit-2668" class="collapse show"><div class="fragmentcode">       if (pdf)
            *pdf = (<a href="#PiecewiseConstant1D::funcInt" class="code">funcInt</a> &gt; 0) ? <a href="#PiecewiseConstant1D::func" class="code">func</a>[o] / <a href="#PiecewiseConstant1D::funcInt" class="code">funcInt</a> : 0;</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Returnxcorrespondingtosample-0">Return <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 572.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">x</title>
@@ -4034,7 +4034,7 @@ or equal to <tt>u</tt>.  (In other words, <tt>cdf[*offset] &lt;= u &lt; cdf[*off
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D465" x="0" y="0"></use>
 </g>
-</svg> corresponding to sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2669" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2669"><i></i></a><div id="fragbit-2669" class="collapse"><div class="fragmentcode">       return <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>((o + du) / <a href="#PiecewiseConstant1D::size" class="code">size</a>(), <a href="#PiecewiseConstant1D::min" class="code">min</a>, <a href="#PiecewiseConstant1D::max" class="code">max</a>);</div></div>
+</svg> corresponding to sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2669" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2669"><i></i></a><div id="fragbit-2669" class="collapse show"><div class="fragmentcode">       return <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>((o + du) / <a href="#PiecewiseConstant1D::size" class="code">size</a>(), <a href="#PiecewiseConstant1D::min" class="code">min</a>, <a href="#PiecewiseConstant1D::max" class="code">max</a>);</div></div>
 }</div><p>
 
 
@@ -4291,12 +4291,12 @@ given position.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D465" x="0" y="0"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2670" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2670"><i></i></a><div id="fragbit-2670" class="collapse"><div class="fragmentcode">       if (x &lt; <a href="#PiecewiseConstant1D::min" class="code">min</a> || x &gt; <a href="#PiecewiseConstant1D::max" class="code">max</a>)
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2670" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2670"><i></i></a><div id="fragbit-2670" class="collapse show"><div class="fragmentcode">       if (x &lt; <a href="#PiecewiseConstant1D::min" class="code">min</a> || x &gt; <a href="#PiecewiseConstant1D::max" class="code">max</a>)
            return {};
        Float c = (x - <a href="#PiecewiseConstant1D::min" class="code">min</a>) / (<a href="#PiecewiseConstant1D::max" class="code">max</a> - <a href="#PiecewiseConstant1D::min" class="code">min</a>) * <a href="#PiecewiseConstant1D::func" class="code">func</a>.size();
        int offset = <a href="../Utilities/Mathematical_Infrastructure.html#Clamp" class="code">Clamp</a>(int(c), 0, <a href="#PiecewiseConstant1D::func" class="code">func</a>.size() - 1);
        </div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-LinearlyinterpolatebetweenadjacentCDFvaluestofindsamplevalue-0">Linearly interpolate between adjacent CDF values to find sample value</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2671" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2671"><i></i></a><div id="fragbit-2671" class="collapse"><div class="fragmentcode">       Float delta = c - offset;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-LinearlyinterpolatebetweenadjacentCDFvaluestofindsamplevalue-0">Linearly interpolate between adjacent CDF values to find sample value</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2671" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2671"><i></i></a><div id="fragbit-2671" class="collapse show"><div class="fragmentcode">       Float delta = c - offset;
        return <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(delta, <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[offset], <a href="#PiecewiseConstant1D::cdf" class="code">cdf</a>[offset + 1]);</div></div>
 }</div><p>
 

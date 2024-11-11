@@ -1955,7 +1955,7 @@ option for in-memory storage of normalized vectors.
 <span class="anchor" id="fragment-OctahedralVectorDefinition-0"></span><div class="fragmentname">&lt;&lt;OctahedralVector Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="OctahedralVector"></span>OctahedralVector {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-OctahedralVectorPublicMethods-0">OctahedralVector Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-89" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-89"><i></i></a><div id="fragbit-89" class="collapse"><div class="fragmentcode">       OctahedralVector(<a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> v) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-OctahedralVectorPublicMethods-0">OctahedralVector Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-89" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-89"><i></i></a><div id="fragbit-89" class="collapse show"><div class="fragmentcode">       OctahedralVector(<a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> v) {
            v /= std::abs(v.x) + std::abs(v.y) + std::abs(v.z);
            if (v.z &gt;= 0) {
                x = <a href="#OctahedralVector::Encode" class="code">Encode</a>(v.x);
@@ -1973,7 +1973,7 @@ option for in-memory storage of normalized vectors.
  <use xlink:href="#E1-LATINMODERNMAIN-3C" x="745" y="0"></use>
  <use xlink:href="#E1-LATINMODERNMAIN-30" x="1801" y="0"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-90" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-90"><i></i></a><div id="fragbit-90" class="collapse"><div class="fragmentcode">                  x = <a href="#OctahedralVector::Encode" class="code">Encode</a>((1 - std::abs(v.y)) * <a href="#OctahedralVector::Sign" class="code">Sign</a>(v.x));
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-90" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-90"><i></i></a><div id="fragbit-90" class="collapse show"><div class="fragmentcode">                  x = <a href="#OctahedralVector::Encode" class="code">Encode</a>((1 - std::abs(v.y)) * <a href="#OctahedralVector::Sign" class="code">Sign</a>(v.x));
                   y = <a href="#OctahedralVector::Encode" class="code">Encode</a>((1 - std::abs(v.x)) * <a href="#OctahedralVector::Sign" class="code">Sign</a>(v.y));</div></div>
            }
        }
@@ -1994,7 +1994,7 @@ option for in-memory storage of normalized vectors.
  <use xlink:href="#E1-LATINMODERNMAIN-3C" x="745" y="0"></use>
  <use xlink:href="#E1-LATINMODERNMAIN-30" x="1801" y="0"></use>
 </g>
-</svg> portion of the octahedron</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-91" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-91"><i></i></a><div id="fragbit-91" class="collapse"><div class="fragmentcode">              if (v.z &lt; 0) {
+</svg> portion of the octahedron</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-91" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-91"><i></i></a><div id="fragbit-91" class="collapse show"><div class="fragmentcode">              if (v.z &lt; 0) {
                   Float xo = v.x;
                   v.x = (1 - std::abs(v.y)) * <a href="#OctahedralVector::Sign" class="code">Sign</a>(xo);
                   v.y = (1 - std::abs(xo)) * <a href="#OctahedralVector::Sign" class="code">Sign</a>(v.y);
@@ -2003,11 +2003,11 @@ option for in-memory storage of normalized vectors.
        }
        std::string ToString() const { return StringPrintf("[ OctahedralVector x: %d y: %d ]", x, y); }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-OctahedralVectorPrivateMethods-0">OctahedralVector Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-92" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-92"><i></i></a><div id="fragbit-92" class="collapse"><div class="fragmentcode">       static Float Sign(Float v) { return std::copysign(1.f, v); }
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-OctahedralVectorPrivateMethods-0">OctahedralVector Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-92" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-92"><i></i></a><div id="fragbit-92" class="collapse show"><div class="fragmentcode">       static Float Sign(Float v) { return std::copysign(1.f, v); }
        static uint16_t Encode(Float f) {
            return pstd::round(<a href="../Utilities/Mathematical_Infrastructure.html#Clamp" class="code">Clamp</a>((f + 1) / 2, 0, 1) * 65535.f);
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-OctahedralVectorPrivateMembers-0">OctahedralVector Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-93" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-93"><i></i></a><div id="fragbit-93" class="collapse"><div class="fragmentcode">       uint16_t x, y;</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-OctahedralVectorPrivateMembers-0">OctahedralVector Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-93" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-93"><i></i></a><div id="fragbit-93" class="collapse show"><div class="fragmentcode">       uint16_t x, y;</div></div>
 };</div><p>
 
 
@@ -2184,7 +2184,7 @@ the <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.347ex" height="2.17
  <use xlink:href="#E1-LATINMODERNMAIN-3C" x="745" y="0"></use>
  <use xlink:href="#E1-LATINMODERNMAIN-30" x="1801" y="0"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-94" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-94"><i></i></a><div id="fragbit-94" class="collapse"><div class="fragmentcode">           x = <a href="#OctahedralVector::Encode" class="code">Encode</a>((1 - std::abs(v.y)) * <a href="#OctahedralVector::Sign" class="code">Sign</a>(v.x));
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-94" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-94"><i></i></a><div id="fragbit-94" class="collapse show"><div class="fragmentcode">           x = <a href="#OctahedralVector::Encode" class="code">Encode</a>((1 - std::abs(v.y)) * <a href="#OctahedralVector::Sign" class="code">Sign</a>(v.x));
            y = <a href="#OctahedralVector::Encode" class="code">Encode</a>((1 - std::abs(v.x)) * <a href="#OctahedralVector::Sign" class="code">Sign</a>(v.y));</div></div>
     }
 }</div><p>
@@ -2370,7 +2370,7 @@ corresponding unit vector.
  <use xlink:href="#E1-LATINMODERNMAIN-3C" x="745" y="0"></use>
  <use xlink:href="#E1-LATINMODERNMAIN-30" x="1801" y="0"></use>
 </g>
-</svg> portion of the octahedron</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-95" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-95"><i></i></a><div id="fragbit-95" class="collapse"><div class="fragmentcode">       if (v.z &lt; 0) {
+</svg> portion of the octahedron</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-95" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-95"><i></i></a><div id="fragbit-95" class="collapse show"><div class="fragmentcode">       if (v.z &lt; 0) {
            Float xo = v.x;
            v.x = (1 - std::abs(v.y)) * <a href="#OctahedralVector::Sign" class="code">Sign</a>(xo);
            v.y = (1 - std::abs(xo)) * <a href="#OctahedralVector::Sign" class="code">Sign</a>(v.y);
@@ -2887,9 +2887,9 @@ performance.
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-32" x="393" y="513"></use>
 </g>
 </g>
-</svg> and compute absolute values</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-96" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-96"><i></i></a><div id="fragbit-96" class="collapse"><div class="fragmentcode">       Float u = 2 * p.x - 1, v = 2 * p.y - 1;
+</svg> and compute absolute values</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-96" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-96"><i></i></a><div id="fragbit-96" class="collapse show"><div class="fragmentcode">       Float u = 2 * p.x - 1, v = 2 * p.y - 1;
        Float up = std::abs(u), vp = std::abs(v);</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeradiusmonorassigneddistancefromdiagonal-0">Compute radius <tt>r</tt> as signed distance from diagonal</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-97" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-97"><i></i></a><div id="fragbit-97" class="collapse"><div class="fragmentcode">       Float signedDistance = 1 - (up + vp);
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeradiusmonorassigneddistancefromdiagonal-0">Compute radius <tt>r</tt> as signed distance from diagonal</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-97" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-97"><i></i></a><div id="fragbit-97" class="collapse show"><div class="fragmentcode">       Float signedDistance = 1 - (up + vp);
        Float d = std::abs(signedDistance);
        Float r = 1 - d;</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeanglephiforsquaretospheremapping-0">Compute angle <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.385ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 596.5 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
@@ -2900,7 +2900,7 @@ performance.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D719" x="0" y="0"></use>
 </g>
-</svg> for square to sphere mapping</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-98" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-98"><i></i></a><div id="fragbit-98" class="collapse"><div class="fragmentcode">       Float phi = (r == 0 ? 1 : (vp - up) / r + 1) * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a> / 4;</div></div>
+</svg> for square to sphere mapping</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-98" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-98"><i></i></a><div id="fragbit-98" class="collapse show"><div class="fragmentcode">       Float phi = (r == 0 ? 1 : (vp - up) / r + 1) * <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a> / 4;</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Findzcoordinateforsphericaldirection-0">Find <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.086ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 467.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">z</title>
 <defs aria-hidden="true">
@@ -2909,7 +2909,7 @@ performance.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D467" x="0" y="0"></use>
 </g>
-</svg> coordinate for spherical direction</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-99" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-99"><i></i></a><div id="fragbit-99" class="collapse"><div class="fragmentcode">       Float z = pstd::copysign(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(r), signedDistance);</div></div>
+</svg> coordinate for spherical direction</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-99" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-99"><i></i></a><div id="fragbit-99" class="collapse show"><div class="fragmentcode">       Float z = pstd::copysign(1 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(r), signedDistance);</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-Computecosphiandsinphifororiginalquadrantandreturnvector-0">Compute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.884ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 2102.7 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">cosine phi</title>
 <defs aria-hidden="true">
@@ -2938,7 +2938,7 @@ performance.
  <use xlink:href="#E1-LATINMODERNMAIN-6E" x="673" y="0"></use>
  <use xlink:href="#E1-LATINMODERNNORMAL-1D719" x="1396" y="0"></use>
 </g>
-</svg> for original quadrant and return vector</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-100" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-100"><i></i></a><div id="fragbit-100" class="collapse"><div class="fragmentcode">       Float cosPhi = pstd::copysign(std::cos(phi), u);
+</svg> for original quadrant and return vector</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-100" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-100"><i></i></a><div id="fragbit-100" class="collapse show"><div class="fragmentcode">       Float cosPhi = pstd::copysign(std::cos(phi), u);
        Float sinPhi = pstd::copysign(std::sin(phi), v);
        return <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a>(cosPhi * r * <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(2 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(r)),
                        sinPhi * r * <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(2 - <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(r)), z);</div></div>
@@ -3580,7 +3580,7 @@ cone.</span>
 <span class="anchor" id="fragment-DirectionConeDefinition-0"></span><div class="fragmentname">&lt;&lt;DirectionCone Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="DirectionCone"></span>DirectionCone {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-DirectionConePublicMethods-0">DirectionCone Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-101" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-101"><i></i></a><div id="fragbit-101" class="collapse"><div class="fragmentcode">       <a href="#DirectionCone" class="code">DirectionCone</a>() = default;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-DirectionConePublicMethods-0">DirectionCone Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-101" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-101"><i></i></a><div id="fragbit-101" class="collapse show"><div class="fragmentcode">       <a href="#DirectionCone" class="code">DirectionCone</a>() = default;
        <a href="#DirectionCone" class="code">DirectionCone</a>(<a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> w, Float <a href="#DirectionCone::cosTheta" class="code">cosTheta</a>)
            : w(<a href="../Geometry_and_Transformations/Vectors.html#Normalize" class="code">Normalize</a>(w)), <a href="#DirectionCone::cosTheta" class="code">cosTheta</a>(<a href="#DirectionCone::cosTheta" class="code">cosTheta</a>) {}
        explicit <a href="#DirectionCone" class="code">DirectionCone</a>(<a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> w) : <a href="#DirectionCone" class="code">DirectionCone</a>(w, 1) {}
@@ -3591,7 +3591,7 @@ cone.</span>
        std::string ToString() const;
        PBRT_CPU_GPU
        <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> ClosestVectorInCone(<a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wp) const;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-DirectionConePublicMembers-0">DirectionCone Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-102" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-102"><i></i></a><div id="fragbit-102" class="collapse"><div class="fragmentcode">       <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> w;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-DirectionConePublicMembers-0">DirectionCone Public Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-102" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-102"><i></i></a><div id="fragbit-102" class="collapse show"><div class="fragmentcode">       <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> w;
        Float cosTheta = <a href="../Shapes/Managing_Rounding_Error.html#Infinity" class="code">Infinity</a>;</div></div>
 };</div><p>
 
@@ -3673,12 +3673,12 @@ point <tt>p</tt>.
 <p></p>
 <span class="anchor" id="fragment-DirectionConeInlineFunctions-1"></span><div class="fragmentname">&lt;&lt;DirectionCone Inline Functions&gt;&gt;+=&nbsp;<a href="#fragment-DirectionConeInlineFunctions-0"><span class="fa fa-caret-up"></span></a></div>
 <div class="fragmentcode"><a href="#DirectionCone" class="code">DirectionCone</a> <span class="anchor" id="DirectionCone::BoundSubtendedDirections"></span>BoundSubtendedDirections(const <a href="../Geometry_and_Transformations/Bounding_Boxes.html#Bounds3f" class="code">Bounds3f</a> &amp;b, <a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> p) {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeboundingsphereformonobandcheckifmonopisinside-0">Compute bounding sphere for <tt>b</tt> and check if <tt>p</tt> is inside</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-103" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-103"><i></i></a><div id="fragbit-103" class="collapse"><div class="fragmentcode">       Float radius;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computeboundingsphereformonobandcheckifmonopisinside-0">Compute bounding sphere for <tt>b</tt> and check if <tt>p</tt> is inside</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-103" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-103"><i></i></a><div id="fragbit-103" class="collapse show"><div class="fragmentcode">       Float radius;
        <a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> pCenter;
        b.<a href="../Geometry_and_Transformations/Bounding_Boxes.html#Bounds3::BoundingSphere" class="code">BoundingSphere</a>(&amp;pCenter, &amp;radius);
        if (<a href="../Geometry_and_Transformations/Points.html#DistanceSquared" class="code">DistanceSquared</a>(p, pCenter) &lt; <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(radius))
            return <a href="#DirectionCone" class="code">DirectionCone</a>::EntireSphere();</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputeandreturnmonoDirectionConeforboundingsphere-0">Compute and return <tt>DirectionCone</tt> for bounding sphere</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-104" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-104"><i></i></a><div id="fragbit-104" class="collapse"><div class="fragmentcode">       <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> w = <a href="../Geometry_and_Transformations/Vectors.html#Normalize" class="code">Normalize</a>(pCenter - p);
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ComputeandreturnmonoDirectionConeforboundingsphere-0">Compute and return <tt>DirectionCone</tt> for bounding sphere</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-104" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-104"><i></i></a><div id="fragbit-104" class="collapse show"><div class="fragmentcode">       <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> w = <a href="../Geometry_and_Transformations/Vectors.html#Normalize" class="code">Normalize</a>(pCenter - p);
        Float sin2ThetaMax = <a href="../Utilities/Mathematical_Infrastructure.html#Sqr" class="code">Sqr</a>(radius) / <a href="../Geometry_and_Transformations/Points.html#DistanceSquared" class="code">DistanceSquared</a>(pCenter, p);
        Float cosThetaMax = <a href="../Utilities/Mathematical_Infrastructure.html#SafeSqrt" class="code">SafeSqrt</a>(1 - sin2ThetaMax);
        return <a href="#DirectionCone" class="code">DirectionCone</a>(w, cosThetaMax);</div></div>
@@ -3853,9 +3853,9 @@ them.
 <p></p>
 <span class="anchor" id="fragment-DirectionConeFunctionDefinitions-0"></span><div class="fragmentname">&lt;&lt;DirectionCone Function Definitions&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode"><a href="#DirectionCone" class="code">DirectionCone</a> <span class="anchor" id="DirectionCone::Union"></span>Union(const <a href="#DirectionCone" class="code">DirectionCone</a> &amp;a, const <a href="#DirectionCone" class="code">DirectionCone</a> &amp;b) {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Handlethecaseswhereoneorbothconesareempty-0">Handle the cases where one or both cones are empty</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-105" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-105"><i></i></a><div id="fragbit-105" class="collapse"><div class="fragmentcode">       if (a.<a href="#DirectionCone::IsEmpty" class="code">IsEmpty</a>()) return b;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Handlethecaseswhereoneorbothconesareempty-0">Handle the cases where one or both cones are empty</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-105" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-105"><i></i></a><div id="fragbit-105" class="collapse show"><div class="fragmentcode">       if (a.<a href="#DirectionCone::IsEmpty" class="code">IsEmpty</a>()) return b;
        if (b.<a href="#DirectionCone::IsEmpty" class="code">IsEmpty</a>()) return a;</div></div> 
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Handlethecaseswhereoneconeisinsidetheother-0">Handle the cases where one cone is inside the other</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-106" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-106"><i></i></a><div id="fragbit-106" class="collapse"><div class="fragmentcode">       Float theta_a = <a href="../Utilities/Mathematical_Infrastructure.html#SafeACos" class="code">SafeACos</a>(a.<a href="#DirectionCone::cosTheta" class="code">cosTheta</a>), theta_b = <a href="../Utilities/Mathematical_Infrastructure.html#SafeACos" class="code">SafeACos</a>(b.<a href="#DirectionCone::cosTheta" class="code">cosTheta</a>);
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Handlethecaseswhereoneconeisinsidetheother-0">Handle the cases where one cone is inside the other</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-106" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-106"><i></i></a><div id="fragbit-106" class="collapse show"><div class="fragmentcode">       Float theta_a = <a href="../Utilities/Mathematical_Infrastructure.html#SafeACos" class="code">SafeACos</a>(a.<a href="#DirectionCone::cosTheta" class="code">cosTheta</a>), theta_b = <a href="../Utilities/Mathematical_Infrastructure.html#SafeACos" class="code">SafeACos</a>(b.<a href="#DirectionCone::cosTheta" class="code">cosTheta</a>);
        Float theta_d = <a href="../Geometry_and_Transformations/Vectors.html#AngleBetween" class="code">AngleBetween</a>(a.<a href="#DirectionCone::w" class="code">w</a>, b.<a href="#DirectionCone::w" class="code">w</a>);
        if (std::min(theta_d + theta_b, Pi) &lt;= theta_a)
            return a;
@@ -3871,10 +3871,10 @@ them.
  <use xlink:href="#E1-LATINMODERNNORMAL-1D703" x="0" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNNORMAL-1D45C" x="663" y="-213"></use>
 </g>
-</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-107" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-107"><i></i></a><div id="fragbit-107" class="collapse"><div class="fragmentcode">       Float theta_o = (theta_a + theta_d + theta_b) / 2;
+</svg></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-107" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-107"><i></i></a><div id="fragbit-107" class="collapse show"><div class="fragmentcode">       Float theta_o = (theta_a + theta_d + theta_b) / 2;
        if (theta_o &gt;= <a href="../Utilities/Mathematical_Infrastructure.html#Pi" class="code">Pi</a>)
            return <a href="#DirectionCone" class="code">DirectionCone</a>::EntireSphere();</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Findthemergedconesaxisandreturnconeunion-0">Find the merged cone&rsquo;s axis and return cone union</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-108" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-108"><i></i></a><div id="fragbit-108" class="collapse"><div class="fragmentcode">       Float theta_r = theta_o - theta_a;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Findthemergedconesaxisandreturnconeunion-0">Find the merged cone&rsquo;s axis and return cone union</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-108" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-108"><i></i></a><div id="fragbit-108" class="collapse show"><div class="fragmentcode">       Float theta_r = theta_o - theta_a;
        <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> wr = <a href="../Geometry_and_Transformations/Vectors.html#Cross" class="code">Cross</a>(a.<a href="#DirectionCone::w" class="code">w</a>, b.<a href="#DirectionCone::w" class="code">w</a>);
        if (<a href="../Geometry_and_Transformations/Vectors.html#LengthSquared" class="code">LengthSquared</a>(wr) == 0)
            return <a href="#DirectionCone" class="code">DirectionCone</a>::EntireSphere();

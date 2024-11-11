@@ -1000,7 +1000,7 @@ estimated remaining time.
 <span class="anchor" id="fragment-ProgressReporterDefinition-0"></span><div class="fragmentname">&lt;&lt;ProgressReporter Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="ProgressReporter"></span>ProgressReporter {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ProgressReporterPublicMethods-0">ProgressReporter Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2743" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2743"><i></i></a><div id="fragbit-2743" class="collapse"><div class="fragmentcode">       ProgressReporter(int64_t totalWork, std::string title, bool quiet,
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ProgressReporterPublicMethods-0">ProgressReporter Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2743" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2743"><i></i></a><div id="fragbit-2743" class="collapse show"><div class="fragmentcode">       ProgressReporter(int64_t totalWork, std::string title, bool quiet,
                         bool gpu = false);
        ~ProgressReporter();
        void Update(int64_t num = 1);
@@ -1008,8 +1008,8 @@ estimated remaining time.
        double ElapsedSeconds() const;
        std::string ToString() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname">ProgressReporter Private Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2744" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2744"><i></i></a><div id="fragbit-2744" class="collapse"><div class="fragmentcode">       void printBar();</div></div>
-    &lt;&lt;<span class="fragmentname">ProgressReporter Private Members</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2745" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2745"><i></i></a><div id="fragbit-2745" class="collapse"><div class="fragmentcode">       int64_t totalWork;
+    &lt;&lt;<span class="fragmentname">ProgressReporter Private Methods</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2744" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2744"><i></i></a><div id="fragbit-2744" class="collapse show"><div class="fragmentcode">       void printBar();</div></div>
+    &lt;&lt;<span class="fragmentname">ProgressReporter Private Members</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2745" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2745"><i></i></a><div id="fragbit-2745" class="collapse show"><div class="fragmentcode">       int64_t totalWork;
        std::string title;
        bool quiet;
        Timer timer;

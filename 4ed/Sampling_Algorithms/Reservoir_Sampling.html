@@ -353,12 +353,12 @@ parameterized by the type of object being sampled <tt>T</tt>.
 <div class="fragmentcode">template &lt;typename T&gt;
 class <span class="anchor" id="WeightedReservoirSampler"></span>WeightedReservoirSampler {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-WeightedReservoirSamplerPublicMethods-0">WeightedReservoirSampler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2646" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2646"><i></i></a><div id="fragbit-2646" class="collapse"><div class="fragmentcode">       WeightedReservoirSampler() = default;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-WeightedReservoirSamplerPublicMethods-0">WeightedReservoirSampler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2646" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2646"><i></i></a><div id="fragbit-2646" class="collapse show"><div class="fragmentcode">       WeightedReservoirSampler() = default;
        WeightedReservoirSampler(uint64_t rngSeed) : <a href="#WeightedReservoirSampler::rng" class="code">rng</a>(rngSeed) {}
        void Seed(uint64_t seed) { <a href="#WeightedReservoirSampler::rng" class="code">rng</a>.<a href="../Utilities/Mathematical_Infrastructure.html#RNG::SetSequence" class="code">SetSequence</a>(seed); }
        void <a href="#WeightedReservoirSampler::Add" class="code">Add</a>(const T &amp;sample, Float weight) {
            <a href="#WeightedReservoirSampler::weightSum" class="code">weightSum</a> += weight;
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Randomlyaddmonosampletoreservoir-0">Randomly add <tt>sample</tt> to reservoir</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2647" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2647"><i></i></a><div id="fragbit-2647" class="collapse"><div class="fragmentcode">              Float p = weight / <a href="#WeightedReservoirSampler::weightSum" class="code">weightSum</a>;
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Randomlyaddmonosampletoreservoir-0">Randomly add <tt>sample</tt> to reservoir</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2647" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2647"><i></i></a><div id="fragbit-2647" class="collapse show"><div class="fragmentcode">              Float p = weight / <a href="#WeightedReservoirSampler::weightSum" class="code">weightSum</a>;
               if (rng.<a href="../Utilities/Mathematical_Infrastructure.html#RNG::UniformFloat" class="code">Uniform</a>&lt;Float&gt;() &lt; p) {
                   <a href="#WeightedReservoirSampler::reservoir" class="code">reservoir</a> = sample;
                   <a href="#WeightedReservoirSampler::reservoirWeight" class="code">reservoirWeight</a> = weight;
@@ -366,7 +366,7 @@ class <span class="anchor" id="WeightedReservoirSampler"></span>WeightedReservoi
        }
        template &lt;typename F&gt;
        void <a href="#WeightedReservoirSampler::Add" class="code">Add</a>(F func, Float weight) {
-           &lt;&lt;<span class="fragmentname">Process weighted reservoir sample via callback</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2648" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2648"><i></i></a><div id="fragbit-2648" class="collapse"><div class="fragmentcode">              weightSum += weight;
+           &lt;&lt;<span class="fragmentname">Process weighted reservoir sample via callback</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2648" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2648"><i></i></a><div id="fragbit-2648" class="collapse show"><div class="fragmentcode">              weightSum += weight;
               Float p = weight / weightSum;
               if (rng.Uniform&lt;Float&gt;() &lt; p) {
                   reservoir = func();
@@ -394,7 +394,7 @@ class <span class="anchor" id="WeightedReservoirSampler"></span>WeightedReservoi
                                <a href="#WeightedReservoirSampler::rng" class="code">rng</a>, <a href="#WeightedReservoirSampler::weightSum" class="code">weightSum</a>, <a href="#WeightedReservoirSampler::reservoir" class="code">reservoir</a>, <a href="#WeightedReservoirSampler::reservoirWeight" class="code">reservoirWeight</a>);
        }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-WeightedReservoirSamplerPrivateMembers-0">WeightedReservoirSampler Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2649" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2649"><i></i></a><div id="fragbit-2649" class="collapse"><div class="fragmentcode">       <a href="../Utilities/Mathematical_Infrastructure.html#RNG" class="code">RNG</a> rng;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-WeightedReservoirSamplerPrivateMembers-0">WeightedReservoirSampler Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2649" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2649"><i></i></a><div id="fragbit-2649" class="collapse show"><div class="fragmentcode">       <a href="../Utilities/Mathematical_Infrastructure.html#RNG" class="code">RNG</a> rng;
        Float weightSum = 0;
        Float reservoirWeight = 0;
        T reservoir;</div></div>
@@ -441,7 +441,7 @@ the expected distribution.
 <span class="anchor" id="fragment-WeightedReservoirSamplerPublicMethods-2"></span><div class="fragmentname">&lt;&lt;WeightedReservoirSampler Public Methods&gt;&gt;+=&nbsp;<a href="#fragment-WeightedReservoirSamplerPublicMethods-1"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="#fragment-WeightedReservoirSamplerPublicMethods-3"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">void <span class="anchor" id="WeightedReservoirSampler::Add"></span>Add(const T &amp;sample, Float weight) {
     <a href="#WeightedReservoirSampler::weightSum" class="code">weightSum</a> += weight;
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Randomlyaddmonosampletoreservoir-0">Randomly add <tt>sample</tt> to reservoir</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2650" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2650"><i></i></a><div id="fragbit-2650" class="collapse"><div class="fragmentcode">       Float p = weight / <a href="#WeightedReservoirSampler::weightSum" class="code">weightSum</a>;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Randomlyaddmonosampletoreservoir-0">Randomly add <tt>sample</tt> to reservoir</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2650" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2650"><i></i></a><div id="fragbit-2650" class="collapse show"><div class="fragmentcode">       Float p = weight / <a href="#WeightedReservoirSampler::weightSum" class="code">weightSum</a>;
        if (rng.<a href="../Utilities/Mathematical_Infrastructure.html#RNG::UniformFloat" class="code">Uniform</a>&lt;Float&gt;() &lt; p) {
            <a href="#WeightedReservoirSampler::reservoir" class="code">reservoir</a> = sample;
            <a href="#WeightedReservoirSampler::reservoirWeight" class="code">reservoirWeight</a> = weight;
@@ -497,7 +497,7 @@ is not included here.
 <span class="anchor" id="fragment-WeightedReservoirSamplerPublicMethods-3"></span><div class="fragmentname">&lt;&lt;WeightedReservoirSampler Public Methods&gt;&gt;+=&nbsp;<a href="#fragment-WeightedReservoirSamplerPublicMethods-2"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="#fragment-WeightedReservoirSamplerPublicMethods-4"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">template &lt;typename F&gt;
 void Add(F func, Float weight) {
-    &lt;&lt;<span class="fragmentname">Process weighted reservoir sample via callback</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2651" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2651"><i></i></a><div id="fragbit-2651" class="collapse"><div class="fragmentcode">       weightSum += weight;
+    &lt;&lt;<span class="fragmentname">Process weighted reservoir sample via callback</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2651" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2651"><i></i></a><div id="fragbit-2651" class="collapse show"><div class="fragmentcode">       weightSum += weight;
        Float p = weight / weightSum;
        if (rng.Uniform&lt;Float&gt;() &lt; p) {
            reservoir = func();

@@ -154,11 +154,11 @@ make code elsewhere in the system less verbose and easier to verify.
 <span class="anchor" id="fragment-Array2DDefinition-0"></span><div class="fragmentname">&lt;&lt;Array2D Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">template &lt;typename T&gt; class <span class="anchor" id="Array2D"></span>Array2D {
   public:
-    &lt;&lt;<span class="fragmentname">Array2D Type Definitions</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2746" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2746"><i></i></a><div id="fragbit-2746" class="collapse"><div class="fragmentcode">       using value_type = T;
+    &lt;&lt;<span class="fragmentname">Array2D Type Definitions</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2746" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2746"><i></i></a><div id="fragbit-2746" class="collapse show"><div class="fragmentcode">       using value_type = T;
        using iterator = value_type *;
        using const_iterator = const value_type *;
        using allocator_type = pstd::pmr::polymorphic_allocator&lt;std::byte&gt;;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Array2DPublicMethods-0">Array2D Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2747" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2747"><i></i></a><div id="fragbit-2747" class="collapse"><div class="fragmentcode">       Array2D(allocator_type <a href="#Array2D::allocator" class="code">allocator</a> = {}) : Array2D({{0, 0}, {0, 0}}, <a href="#Array2D::allocator" class="code">allocator</a>) {}
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Array2DPublicMethods-0">Array2D Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2747" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2747"><i></i></a><div id="fragbit-2747" class="collapse show"><div class="fragmentcode">       Array2D(allocator_type <a href="#Array2D::allocator" class="code">allocator</a> = {}) : Array2D({{0, 0}, {0, 0}}, <a href="#Array2D::allocator" class="code">allocator</a>) {}
        Array2D(<a href="../Geometry_and_Transformations/Bounding_Boxes.html#Bounds2i" class="code">Bounds2i</a> <a href="#Array2D::extent" class="code">extent</a>, Allocator <a href="#Array2D::allocator" class="code">allocator</a> = {})
            : <a href="#Array2D::extent" class="code">extent</a>(<a href="#Array2D::extent" class="code">extent</a>), <a href="#Array2D::allocator" class="code">allocator</a>(<a href="#Array2D::allocator" class="code">allocator</a>) {
            int n = <a href="#Array2D::extent" class="code">extent</a>.<a href="../Geometry_and_Transformations/Bounding_Boxes.html#Bounds2::Area" class="code">Area</a>();
@@ -272,7 +272,7 @@ make code elsewhere in the system less verbose and easier to verify.
            return s;
        }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Array2DPrivateMembers-0">Array2D Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2748" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2748"><i></i></a><div id="fragbit-2748" class="collapse"><div class="fragmentcode">       <a href="../Geometry_and_Transformations/Bounding_Boxes.html#Bounds2i" class="code">Bounds2i</a> extent;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Array2DPrivateMembers-0">Array2D Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2748" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2748"><i></i></a><div id="fragbit-2748" class="collapse show"><div class="fragmentcode">       <a href="../Geometry_and_Transformations/Bounding_Boxes.html#Bounds2i" class="code">Bounds2i</a> extent;
        Allocator allocator;
        T *values;</div></div>
 };</div><p>
@@ -467,7 +467,7 @@ an interned string, which helps clarify code.
 <span class="anchor" id="fragment-InternedStringDefinition-0"></span><div class="fragmentname">&lt;&lt;InternedString Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="InternedString"></span>InternedString {
 public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-InternedStringPublicMethods-0">InternedString Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2749" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2749"><i></i></a><div id="fragbit-2749" class="collapse"><div class="fragmentcode">       InternedString(const std::string *str) : str(str) {}
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-InternedStringPublicMethods-0">InternedString Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2749" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2749"><i></i></a><div id="fragbit-2749" class="collapse show"><div class="fragmentcode">       InternedString(const std::string *str) : str(str) {}
        operator const std::string &amp;() const { return *str; }
        bool operator==(const char *s) const { return *str == s; }
        bool operator==(const std::string &amp;s) const { return *str == s; }
@@ -723,8 +723,8 @@ polymorphism based on virtual functions.
 <div class="fragmentcode">template &lt;typename... Ts&gt;
 class <span class="anchor" id="TaggedPointer"></span>TaggedPointer {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-TaggedPointerPublicTypes-0">TaggedPointer Public Types</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2750" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2750"><i></i></a><div id="fragbit-2750" class="collapse"><div class="fragmentcode">       using Types = TypePack&lt;Ts...&gt;;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-TaggedPointerPublicMethods-0">TaggedPointer Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2751" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2751"><i></i></a><div id="fragbit-2751" class="collapse"><div class="fragmentcode">       template &lt;typename T&gt;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-TaggedPointerPublicTypes-0">TaggedPointer Public Types</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2750" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2750"><i></i></a><div id="fragbit-2750" class="collapse show"><div class="fragmentcode">       using Types = TypePack&lt;Ts...&gt;;</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-TaggedPointerPublicMethods-0">TaggedPointer Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2751" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2751"><i></i></a><div id="fragbit-2751" class="collapse show"><div class="fragmentcode">       template &lt;typename T&gt;
        <a href="#TaggedPointer" class="code">TaggedPointer</a>(T *<a href="#TaggedPointer::ptr" class="code">ptr</a>) {
            uintptr_t iptr = reinterpret_cast&lt;uintptr_t&gt;(<a href="#TaggedPointer::ptr" class="code">ptr</a>);
            constexpr unsigned int type = <a href="#TaggedPointer::TypeIndex" class="code">TypeIndex</a>&lt;T&gt;();
@@ -811,7 +811,7 @@ class <span class="anchor" id="TaggedPointer"></span>TaggedPointer {
            return detail::DispatchCPU&lt;F, R, Ts...&gt;(func, <a href="#TaggedPointer::ptr" class="code">ptr</a>(), <a href="#TaggedPointer::Tag" class="code">Tag</a>() - 1);
        }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-TaggedPointerPrivateMembers-0">TaggedPointer Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2752" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2752"><i></i></a><div id="fragbit-2752" class="collapse"><div class="fragmentcode">       static constexpr int <a href="#TaggedPointer::tagShift" class="code">tagShift</a> = 57;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-TaggedPointerPrivateMembers-0">TaggedPointer Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2752" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2752"><i></i></a><div id="fragbit-2752" class="collapse show"><div class="fragmentcode">       static constexpr int <a href="#TaggedPointer::tagShift" class="code">tagShift</a> = 57;
        static constexpr int <a href="#TaggedPointer::tagBits" class="code">tagBits</a> = 64 - <a href="#TaggedPointer::tagShift" class="code">tagShift</a>;
        static constexpr uint64_t <a href="#TaggedPointer::tagMask" class="code">tagMask</a> = ((1ull &lt;&lt; <a href="#TaggedPointer::tagBits" class="code">tagBits</a>) - 1) &lt;&lt; <a href="#TaggedPointer::tagShift" class="code">tagShift</a>;
        static constexpr uint64_t ptrMask = ~<a href="#TaggedPointer::tagMask" class="code">tagMask</a>;
@@ -1167,7 +1167,7 @@ point-sampled values.
 <div class="fragmentcode">template &lt;typename T&gt;
 class <span class="anchor" id="SampledGrid"></span>SampledGrid {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-SampledGridPublicMethods-0">SampledGrid Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2753" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2753"><i></i></a><div id="fragbit-2753" class="collapse"><div class="fragmentcode">       SampledGrid(Allocator alloc) : values(alloc) {}
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-SampledGridPublicMethods-0">SampledGrid Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2753" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2753"><i></i></a><div id="fragbit-2753" class="collapse show"><div class="fragmentcode">       SampledGrid(Allocator alloc) : values(alloc) {}
        SampledGrid(pstd::span&lt;const T&gt; v, int nx, int ny, int nz, Allocator alloc)
            : values(v.begin(), v.end(), alloc), nx(nx), ny(ny), nz(nz) {
        }
@@ -1178,10 +1178,10 @@ class <span class="anchor" id="SampledGrid"></span>SampledGrid {
        const_iterator end() const { return values.end(); }
        template &lt;typename F&gt;
        auto Lookup(<a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> p, F convert) const {
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Computevoxelcoordinatesandoffsetsformonop-0">Compute voxel coordinates and offsets for <tt>p</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2754" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2754"><i></i></a><div id="fragbit-2754" class="collapse"><div class="fragmentcode">              <a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> pSamples(p.x * nx - .5f, p.y * ny - .5f, p.z * nz - .5f);
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Computevoxelcoordinatesandoffsetsformonop-0">Compute voxel coordinates and offsets for <tt>p</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2754" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2754"><i></i></a><div id="fragbit-2754" class="collapse show"><div class="fragmentcode">              <a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> pSamples(p.x * nx - .5f, p.y * ny - .5f, p.z * nz - .5f);
               Point3i pi = (Point3i)<a href="../Geometry_and_Transformations/n-Tuple_Base_Classes.html#Tuple3::Floor" class="code">Floor</a>(pSamples);
               <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> d = pSamples - (<a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a>)pi;</div></div>
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Returntrilinearlyinterpolatedvoxelvalues-0">Return trilinearly interpolated voxel values</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2755" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2755"><i></i></a><div id="fragbit-2755" class="collapse"><div class="fragmentcode">              auto d00 = <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(d.x, Lookup(pi, convert),
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Returntrilinearlyinterpolatedvoxelvalues-0">Return trilinearly interpolated voxel values</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2755" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2755"><i></i></a><div id="fragbit-2755" class="collapse show"><div class="fragmentcode">              auto d00 = <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(d.x, Lookup(pi, convert),
                                    Lookup(pi + Vector3i(1, 0, 0), convert));
               auto d10 = <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(d.x, Lookup(pi + Vector3i(0, 1, 0), convert),
                                    Lookup(pi + Vector3i(1, 1, 0), convert));
@@ -1247,7 +1247,7 @@ class <span class="anchor" id="SampledGrid"></span>SampledGrid {
                                values);
        }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-SampledGridPrivateMembers-0">SampledGrid Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2756" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2756"><i></i></a><div id="fragbit-2756" class="collapse"><div class="fragmentcode">       pstd::vector&lt;T&gt; values;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-SampledGridPrivateMembers-0">SampledGrid Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2756" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2756"><i></i></a><div id="fragbit-2756" class="collapse show"><div class="fragmentcode">       pstd::vector&lt;T&gt; values;
        int nx, ny, nz;</div></div>
 };</div><p>
 
@@ -1284,10 +1284,10 @@ from <tt>Lookup()</tt>.)
 <span class="anchor" id="fragment-SampledGridPublicMethods-0"></span><div class="fragmentname">&lt;&lt;SampledGrid Public Methods&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">template &lt;typename F&gt;
 auto <span class="anchor" id="SampledGrid::Lookup"></span>Lookup(<a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> p, F convert) const {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computevoxelcoordinatesandoffsetsformonop-0">Compute voxel coordinates and offsets for <tt>p</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2757" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2757"><i></i></a><div id="fragbit-2757" class="collapse"><div class="fragmentcode">       <a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> pSamples(p.x * nx - .5f, p.y * ny - .5f, p.z * nz - .5f);
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Computevoxelcoordinatesandoffsetsformonop-0">Compute voxel coordinates and offsets for <tt>p</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2757" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2757"><i></i></a><div id="fragbit-2757" class="collapse show"><div class="fragmentcode">       <a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a> pSamples(p.x * nx - .5f, p.y * ny - .5f, p.z * nz - .5f);
        Point3i pi = (Point3i)<a href="../Geometry_and_Transformations/n-Tuple_Base_Classes.html#Tuple3::Floor" class="code">Floor</a>(pSamples);
        <a href="../Geometry_and_Transformations/Vectors.html#Vector3f" class="code">Vector3f</a> d = pSamples - (<a href="../Geometry_and_Transformations/Points.html#Point3f" class="code">Point3f</a>)pi;</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Returntrilinearlyinterpolatedvoxelvalues-0">Return trilinearly interpolated voxel values</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2758" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2758"><i></i></a><div id="fragbit-2758" class="collapse"><div class="fragmentcode">       auto d00 = <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(d.x, Lookup(pi, convert),
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Returntrilinearlyinterpolatedvoxelvalues-0">Return trilinearly interpolated voxel values</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2758" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2758"><i></i></a><div id="fragbit-2758" class="collapse show"><div class="fragmentcode">       auto d00 = <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(d.x, Lookup(pi, convert),
                             Lookup(pi + Vector3i(1, 0, 0), convert));
        auto d10 = <a href="../Monte_Carlo_Integration/Sampling_Using_the_Inversion_Method.html#Lerp" class="code">Lerp</a>(d.x, Lookup(pi + Vector3i(0, 1, 0), convert),
                             Lookup(pi + Vector3i(1, 1, 0), convert));
@@ -1415,7 +1415,7 @@ sharing in Section&nbsp;<a href="../Utilities/Parallelism.html#sec:multi-thread-
 <span class="anchor" id="fragment-ScratchBufferDefinition-0"></span><div class="fragmentname">&lt;&lt;ScratchBuffer Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class alignas(<a href="../Utilities/Parallelism.html#PBRT_L1_CACHE_LINE_SIZE" class="code">PBRT_L1_CACHE_LINE_SIZE</a>) <span class="anchor" id="ScratchBuffer"></span>ScratchBuffer {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ScratchBufferPublicMethods-0">ScratchBuffer Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2759" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2759"><i></i></a><div id="fragbit-2759" class="collapse"><div class="fragmentcode">       <a href="#ScratchBuffer" class="code">ScratchBuffer</a>(int size = 256) : <a href="#ScratchBuffer::allocSize" class="code">allocSize</a>(size) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ScratchBufferPublicMethods-0">ScratchBuffer Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2759" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2759"><i></i></a><div id="fragbit-2759" class="collapse show"><div class="fragmentcode">       <a href="#ScratchBuffer" class="code">ScratchBuffer</a>(int size = 256) : <a href="#ScratchBuffer::allocSize" class="code">allocSize</a>(size) {
            <a href="#ScratchBuffer::ptr" class="code">ptr</a> = (char *)Allocator().<a href="../Introduction/Using_and_Understanding_the_Code.html#std::pmr::polymorphic_allocator::allocate_bytes" class="code">allocate_bytes</a>(size, <a href="#ScratchBuffer::align" class="code">align</a>);
        }
        <a href="#ScratchBuffer" class="code">ScratchBuffer</a>(const <a href="#ScratchBuffer" class="code">ScratchBuffer</a> &amp;) = delete;
@@ -1475,13 +1475,13 @@ sharing in Section&nbsp;<a href="../Utilities/Parallelism.html#sec:multi-thread-
            <a href="#ScratchBuffer::offset" class="code">offset</a> = 0;
        }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ScratchBufferPrivateMethods-0">ScratchBuffer Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2760" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2760"><i></i></a><div id="fragbit-2760" class="collapse"><div class="fragmentcode">       void Realloc(size_t minSize) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ScratchBufferPrivateMethods-0">ScratchBuffer Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2760" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2760"><i></i></a><div id="fragbit-2760" class="collapse show"><div class="fragmentcode">       void Realloc(size_t minSize) {
            <a href="#ScratchBuffer::smallBuffers" class="code">smallBuffers</a>.push_back(std::make_pair(<a href="#ScratchBuffer::ptr" class="code">ptr</a>, <a href="#ScratchBuffer::allocSize" class="code">allocSize</a>));
            <a href="#ScratchBuffer::allocSize" class="code">allocSize</a> = std::max(2 * minSize, <a href="#ScratchBuffer::allocSize" class="code">allocSize</a> + minSize);
            <a href="#ScratchBuffer::ptr" class="code">ptr</a> = (char *)Allocator().<a href="../Introduction/Using_and_Understanding_the_Code.html#std::pmr::polymorphic_allocator::allocate_bytes" class="code">allocate_bytes</a>(<a href="#ScratchBuffer::allocSize" class="code">allocSize</a>, <a href="#ScratchBuffer::align" class="code">align</a>);
            <a href="#ScratchBuffer::offset" class="code">offset</a> = 0;
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ScratchBufferPrivateMembers-0">ScratchBuffer Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2761" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-2761"><i></i></a><div id="fragbit-2761" class="collapse"><div class="fragmentcode">       static constexpr int align = <a href="../Utilities/Parallelism.html#PBRT_L1_CACHE_LINE_SIZE" class="code">PBRT_L1_CACHE_LINE_SIZE</a>;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ScratchBufferPrivateMembers-0">ScratchBuffer Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-2761" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-2761"><i></i></a><div id="fragbit-2761" class="collapse show"><div class="fragmentcode">       static constexpr int align = <a href="../Utilities/Parallelism.html#PBRT_L1_CACHE_LINE_SIZE" class="code">PBRT_L1_CACHE_LINE_SIZE</a>;
        char *ptr = nullptr;
        int allocSize = 0, offset = 0;
        std::list&lt;std::pair&lt;char *, size_t&gt;&gt; smallBuffers;</div></div>

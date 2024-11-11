@@ -2208,7 +2208,7 @@ quite as good as a true Owen scramble.
 <span class="anchor" id="fragment-FastOwenScramblerDefinition-0"></span><div class="fragmentname">&lt;&lt;FastOwenScrambler Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">struct <span class="anchor" id="FastOwenScrambler"></span>FastOwenScrambler {
     FastOwenScrambler(uint32_t seed) : seed(seed) {}
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-FastOwenScramblerPublicMethods-0">FastOwenScrambler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1158" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1158"><i></i></a><div id="fragbit-1158" class="collapse"><div class="fragmentcode">       uint32_t operator()(uint32_t v) const {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-FastOwenScramblerPublicMethods-0">FastOwenScrambler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1158" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1158"><i></i></a><div id="fragbit-1158" class="collapse show"><div class="fragmentcode">       uint32_t operator()(uint32_t v) const {
            v = <a href="../Utilities/Mathematical_Infrastructure.html#ReverseBits32" class="code">ReverseBits32</a>(v);
            v ^= v * 0x3d20adea;
            v += <a href="#FastOwenScrambler::seed" class="code">seed</a>;
@@ -2468,11 +2468,11 @@ on each bit in turn.
 <span class="anchor" id="fragment-OwenScramblerDefinition-0"></span><div class="fragmentname">&lt;&lt;OwenScrambler Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">struct <span class="anchor" id="OwenScrambler"></span>OwenScrambler {
     OwenScrambler(uint32_t seed) : seed(seed) {}
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-OwenScramblerPublicMethods-0">OwenScrambler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1159" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1159"><i></i></a><div id="fragbit-1159" class="collapse"><div class="fragmentcode">       uint32_t operator()(uint32_t v) const {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-OwenScramblerPublicMethods-0">OwenScrambler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1159" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1159"><i></i></a><div id="fragbit-1159" class="collapse show"><div class="fragmentcode">       uint32_t operator()(uint32_t v) const {
            if (<a href="#OwenScrambler::seed" class="code">seed</a> &amp; 1)
                v ^= 1u &lt;&lt; 31;
            for (int b = 1; b &lt; 32; ++b) {
-               &lt;&lt;<span class="fragmentname"><a href="#fragment-ApplyOwenscramblingtobinarydigitmonobinmonov-0">Apply Owen scrambling to binary digit <tt>b</tt> in <tt>v</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1160" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1160"><i></i></a><div id="fragbit-1160" class="collapse"><div class="fragmentcode">                  uint32_t mask = (~0u) &lt;&lt; (32 - b);
+               &lt;&lt;<span class="fragmentname"><a href="#fragment-ApplyOwenscramblingtobinarydigitmonobinmonov-0">Apply Owen scrambling to binary digit <tt>b</tt> in <tt>v</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1160" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1160"><i></i></a><div id="fragbit-1160" class="collapse show"><div class="fragmentcode">                  uint32_t mask = (~0u) &lt;&lt; (32 - b);
                   if ((uint32_t)<a href="../Utilities/Mathematical_Infrastructure.html#MixBits" class="code">MixBits</a>((v &amp; mask) ^ <a href="#OwenScrambler::seed" class="code">seed</a>) &amp; (1u &lt;&lt; b))
                       v ^= 1u &lt;&lt; (31 - b);</div></div> 
            }
@@ -2507,7 +2507,7 @@ to the constructor.
     if (<a href="#OwenScrambler::seed" class="code">seed</a> &amp; 1)
         v ^= 1u &lt;&lt; 31;
     for (int b = 1; b &lt; 32; ++b) {
-        &lt;&lt;<span class="fragmentname"><a href="#fragment-ApplyOwenscramblingtobinarydigitmonobinmonov-0">Apply Owen scrambling to binary digit <tt>b</tt> in <tt>v</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1161" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1161"><i></i></a><div id="fragbit-1161" class="collapse"><div class="fragmentcode">           uint32_t mask = (~0u) &lt;&lt; (32 - b);
+        &lt;&lt;<span class="fragmentname"><a href="#fragment-ApplyOwenscramblingtobinarydigitmonobinmonov-0">Apply Owen scrambling to binary digit <tt>b</tt> in <tt>v</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1161" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1161"><i></i></a><div id="fragbit-1161" class="collapse show"><div class="fragmentcode">           uint32_t mask = (~0u) &lt;&lt; (32 - b);
            if ((uint32_t)<a href="../Utilities/Mathematical_Infrastructure.html#MixBits" class="code">MixBits</a>((v &amp; mask) ^ <a href="#OwenScrambler::seed" class="code">seed</a>) &amp; (1u &lt;&lt; b))
                v ^= 1u &lt;&lt; (31 - b);</div></div> 
     }
@@ -2577,7 +2577,7 @@ Float <span class="anchor" id="SobolSample"></span>SobolSample(int64_t a, int di
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> sample <tt>v</tt> using generator matrices</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1162" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1162"><i></i></a><div id="fragbit-1162" class="collapse"><div class="fragmentcode">       uint32_t v = 0;
+</svg> sample <tt>v</tt> using generator matrices</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1162" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1162"><i></i></a><div id="fragbit-1162" class="collapse show"><div class="fragmentcode">       uint32_t v = 0;
        for (int i = dimension * <a href="#SobolMatrixSize" class="code">SobolMatrixSize</a>; a != 0; a &gt;&gt;= 1, i++)
            if (a &amp; 1)
                v ^= <a href="#SobolMatrices32" class="code">SobolMatrices32</a>[i];</div></div>
@@ -2589,7 +2589,7 @@ Float <span class="anchor" id="SobolSample"></span>SobolSample(int64_t a, int di
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> sample and return floating-point value</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1163" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1163"><i></i></a><div id="fragbit-1163" class="collapse"><div class="fragmentcode">       v = randomizer(v);
+</svg> sample and return floating-point value</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1163" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1163"><i></i></a><div id="fragbit-1163" class="collapse show"><div class="fragmentcode">       v = randomizer(v);
        return std::min(v * 0x1p-32f, <a href="../Sampling_and_Reconstruction/Sampling_Interface.html#FloatOneMinusEpsilon" class="code">FloatOneMinusEpsilon</a>);</div></div>
 }</div><p>
 
@@ -2731,7 +2731,7 @@ to nearby pixels.
 <span class="anchor" id="fragment-SobolSamplerDefinition-0"></span><div class="fragmentname">&lt;&lt;SobolSampler Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="SobolSampler"></span>SobolSampler {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-SobolSamplerPublicMethods-0">SobolSampler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1164" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1164"><i></i></a><div id="fragbit-1164" class="collapse"><div class="fragmentcode">       SobolSampler(int <a href="#SobolSampler::samplesPerPixel" class="code">samplesPerPixel</a>, <a href="../Geometry_and_Transformations/Points.html#Point2i" class="code">Point2i</a> fullResolution,
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-SobolSamplerPublicMethods-0">SobolSampler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1164" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1164"><i></i></a><div id="fragbit-1164" class="collapse show"><div class="fragmentcode">       SobolSampler(int <a href="#SobolSampler::samplesPerPixel" class="code">samplesPerPixel</a>, <a href="../Geometry_and_Transformations/Points.html#Point2i" class="code">Point2i</a> fullResolution,
                     <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy" class="code">RandomizeStrategy</a> <a href="#SobolSampler::randomize" class="code">randomize</a>, int <a href="#SobolSampler::seed" class="code">seed</a> = 0)
            : <a href="#SobolSampler::samplesPerPixel" class="code">samplesPerPixel</a>(<a href="#SobolSampler::samplesPerPixel" class="code">samplesPerPixel</a>), <a href="#SobolSampler::seed" class="code">seed</a>(<a href="#SobolSampler::seed" class="code">seed</a>), <a href="#SobolSampler::randomize" class="code">randomize</a>(<a href="#SobolSampler::randomize" class="code">randomize</a>) {
            <a href="#SobolSampler::scale" class="code">scale</a> = <a href="../Utilities/Mathematical_Infrastructure.html#RoundUpPow2" class="code">RoundUpPow2</a>(std::max(fullResolution.x, fullResolution.y));
@@ -2772,7 +2772,7 @@ to nearby pixels.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> dimensions used for pixel samples</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1165" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1165"><i></i></a><div id="fragbit-1165" class="collapse"><div class="fragmentcode">              for (int dim = 0; dim &lt; 2; ++dim)
+</svg> dimensions used for pixel samples</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1165" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1165"><i></i></a><div id="fragbit-1165" class="collapse show"><div class="fragmentcode">              for (int dim = 0; dim &lt; 2; ++dim)
                   u[dim] = <a href="../Utilities/Mathematical_Infrastructure.html#Clamp" class="code">Clamp</a>(u[dim] * <a href="#SobolSampler::scale" class="code">scale</a> - <a href="#SobolSampler::pixel" class="code">pixel</a>[dim], 0, <a href="../Sampling_and_Reconstruction/Sampling_Interface.html#OneMinusEpsilon" class="code">OneMinusEpsilon</a>);
               </div></div>
            return u;
@@ -2780,7 +2780,7 @@ to nearby pixels.
        <a href="../Sampling_and_Reconstruction/Sampling_Interface.html#Sampler" class="code">Sampler</a> Clone(Allocator alloc);
        std::string ToString() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-SobolSamplerPrivateMethods-0">SobolSampler Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1166" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1166"><i></i></a><div id="fragbit-1166" class="collapse"><div class="fragmentcode">       Float SampleDimension(int dimension) const {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-SobolSamplerPrivateMethods-0">SobolSampler Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1166" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1166"><i></i></a><div id="fragbit-1166" class="collapse show"><div class="fragmentcode">       Float SampleDimension(int dimension) const {
            &lt;&lt;<span class="fragmentname"><a href="#fragment-Returnun-randomizedSobolsampleifappropriate-0">Return un-randomized Sobol <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.902ex" height="2.176ex" style="vertical-align: -0.171ex;" viewBox="0 -863.1 388.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">prime</title>
 <defs aria-hidden="true">
@@ -2789,7 +2789,7 @@ to nearby pixels.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> sample if appropriate</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1167" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1167"><i></i></a><div id="fragbit-1167" class="collapse"><div class="fragmentcode">              if (<a href="#SobolSampler::randomize" class="code">randomize</a> == <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy::None" class="code">RandomizeStrategy</a>::None)
+</svg> sample if appropriate</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1167" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1167"><i></i></a><div id="fragbit-1167" class="collapse show"><div class="fragmentcode">              if (<a href="#SobolSampler::randomize" class="code">randomize</a> == <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy::None" class="code">RandomizeStrategy</a>::None)
                   return <a href="#SobolSample" class="code">SobolSample</a>(<a href="#SobolSampler::sobolIndex" class="code">sobolIndex</a>, dimension, <a href="#NoRandomizer" class="code">NoRandomizer</a>());</div></div>
            &lt;&lt;<span class="fragmentname"><a href="#fragment-ReturnrandomizedSobolsampleusingmonorandomize-0">Return randomized Sobol <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.902ex" height="2.176ex" style="vertical-align: -0.171ex;" viewBox="0 -863.1 388.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">prime</title>
@@ -2799,7 +2799,7 @@ to nearby pixels.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> sample using <tt>randomize</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1168" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1168"><i></i></a><div id="fragbit-1168" class="collapse"><div class="fragmentcode">              uint32_t hash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#SobolSampler::dimension" class="code">dimension</a>, <a href="#SobolSampler::seed" class="code">seed</a>);
+</svg> sample using <tt>randomize</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1168" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1168"><i></i></a><div id="fragbit-1168" class="collapse show"><div class="fragmentcode">              uint32_t hash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#SobolSampler::dimension" class="code">dimension</a>, <a href="#SobolSampler::seed" class="code">seed</a>);
               if (<a href="#SobolSampler::randomize" class="code">randomize</a> == <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy::FastOwen" class="code">RandomizeStrategy</a>::PermuteDigits)
                   return <a href="#SobolSample" class="code">SobolSample</a>(<a href="#SobolSampler::sobolIndex" class="code">sobolIndex</a>, <a href="#SobolSampler::dimension" class="code">dimension</a>, BinaryPermuteScrambler(hash));
               else if (<a href="#SobolSampler::randomize" class="code">randomize</a> == <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy::FastOwen" class="code">RandomizeStrategy</a>::FastOwen)
@@ -2807,7 +2807,7 @@ to nearby pixels.
               else
                   return <a href="#SobolSample" class="code">SobolSample</a>(<a href="#SobolSampler::sobolIndex" class="code">sobolIndex</a>, <a href="#SobolSampler::dimension" class="code">dimension</a>, OwenScrambler(hash));</div></div>
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-SobolSamplerPrivateMembers-0">SobolSampler Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1169" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1169"><i></i></a><div id="fragbit-1169" class="collapse"><div class="fragmentcode">       int samplesPerPixel, scale, seed;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-SobolSamplerPrivateMembers-0">SobolSampler Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1169" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1169"><i></i></a><div id="fragbit-1169" class="collapse show"><div class="fragmentcode">       int samplesPerPixel, scale, seed;
        <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy" class="code">RandomizeStrategy</a> randomize;
        <a href="../Geometry_and_Transformations/Points.html#Point2i" class="code">Point2i</a> pixel;
        int dimension;
@@ -3151,7 +3151,7 @@ using the appropriate randomizer.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> sample if appropriate</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1170" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1170"><i></i></a><div id="fragbit-1170" class="collapse"><div class="fragmentcode">       if (<a href="#SobolSampler::randomize" class="code">randomize</a> == <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy::None" class="code">RandomizeStrategy</a>::None)
+</svg> sample if appropriate</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1170" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1170"><i></i></a><div id="fragbit-1170" class="collapse show"><div class="fragmentcode">       if (<a href="#SobolSampler::randomize" class="code">randomize</a> == <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy::None" class="code">RandomizeStrategy</a>::None)
            return <a href="#SobolSample" class="code">SobolSample</a>(<a href="#SobolSampler::sobolIndex" class="code">sobolIndex</a>, dimension, <a href="#NoRandomizer" class="code">NoRandomizer</a>());</div></div>
     &lt;&lt;<span class="fragmentname"><a href="#fragment-ReturnrandomizedSobolsampleusingmonorandomize-0">Return randomized Sobol <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.902ex" height="2.176ex" style="vertical-align: -0.171ex;" viewBox="0 -863.1 388.1 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">prime</title>
@@ -3161,7 +3161,7 @@ using the appropriate randomizer.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> sample using <tt>randomize</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1171" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1171"><i></i></a><div id="fragbit-1171" class="collapse"><div class="fragmentcode">       uint32_t hash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#SobolSampler::dimension" class="code">dimension</a>, <a href="#SobolSampler::seed" class="code">seed</a>);
+</svg> sample using <tt>randomize</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1171" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1171"><i></i></a><div id="fragbit-1171" class="collapse show"><div class="fragmentcode">       uint32_t hash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#SobolSampler::dimension" class="code">dimension</a>, <a href="#SobolSampler::seed" class="code">seed</a>);
        if (<a href="#SobolSampler::randomize" class="code">randomize</a> == <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy::FastOwen" class="code">RandomizeStrategy</a>::PermuteDigits)
            return <a href="#SobolSample" class="code">SobolSample</a>(<a href="#SobolSampler::sobolIndex" class="code">sobolIndex</a>, <a href="#SobolSampler::dimension" class="code">dimension</a>, BinaryPermuteScrambler(hash));
        else if (<a href="#SobolSampler::randomize" class="code">randomize</a> == <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy::FastOwen" class="code">RandomizeStrategy</a>::FastOwen)
@@ -3252,7 +3252,7 @@ of the value of <tt>randomize</tt>.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> dimensions used for pixel samples</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1172" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1172"><i></i></a><div id="fragbit-1172" class="collapse"><div class="fragmentcode">       for (int dim = 0; dim &lt; 2; ++dim)
+</svg> dimensions used for pixel samples</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1172" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1172"><i></i></a><div id="fragbit-1172" class="collapse show"><div class="fragmentcode">       for (int dim = 0; dim &lt; 2; ++dim)
            u[dim] = <a href="../Utilities/Mathematical_Infrastructure.html#Clamp" class="code">Clamp</a>(u[dim] * <a href="#SobolSampler::scale" class="code">scale</a> - <a href="#SobolSampler::pixel" class="code">pixel</a>[dim], 0, <a href="../Sampling_and_Reconstruction/Sampling_Interface.html#OneMinusEpsilon" class="code">OneMinusEpsilon</a>);
        </div></div>
     return u;
@@ -3410,7 +3410,7 @@ Sobol&rsquo; samples rather than jittered samples.
 <span class="anchor" id="fragment-PaddedSobolSamplerDefinition-0"></span><div class="fragmentname">&lt;&lt;PaddedSobolSampler Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="PaddedSobolSampler"></span>PaddedSobolSampler {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-PaddedSobolSamplerPublicMethods-0">PaddedSobolSampler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1173" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1173"><i></i></a><div id="fragbit-1173" class="collapse"><div class="fragmentcode">       PBRT_CPU_GPU
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-PaddedSobolSamplerPublicMethods-0">PaddedSobolSampler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1173" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1173"><i></i></a><div id="fragbit-1173" class="collapse show"><div class="fragmentcode">       PBRT_CPU_GPU
        static constexpr const char *Name() { return "PaddedSobolSampler"; }
        static PaddedSobolSampler *Create(const ParameterDictionary &amp;parameters,
                                          const FileLoc *loc, Allocator alloc);
@@ -3428,13 +3428,13 @@ Sobol&rsquo; samples rather than jittered samples.
            <a href="#PaddedSobolSampler::dimension" class="code">dimension</a> = dim;
        }
        Float Get1D() {
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Getpermutedindexforcurrentpixelsample-0">Get permuted index for current pixel sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1174" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1174"><i></i></a><div id="fragbit-1174" class="collapse"><div class="fragmentcode">              uint64_t hash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#PaddedSobolSampler::pixel" class="code">pixel</a>, <a href="#PaddedSobolSampler::dimension" class="code">dimension</a>, <a href="#PaddedSobolSampler::seed" class="code">seed</a>);
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Getpermutedindexforcurrentpixelsample-0">Get permuted index for current pixel sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1174" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1174"><i></i></a><div id="fragbit-1174" class="collapse show"><div class="fragmentcode">              uint64_t hash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#PaddedSobolSampler::pixel" class="code">pixel</a>, <a href="#PaddedSobolSampler::dimension" class="code">dimension</a>, <a href="#PaddedSobolSampler::seed" class="code">seed</a>);
               int index = <a href="../Utilities/Mathematical_Infrastructure.html#PermutationElement" class="code">PermutationElement</a>(<a href="#PaddedSobolSampler::sampleIndex" class="code">sampleIndex</a>, <a href="#PaddedSobolSampler::samplesPerPixel" class="code">samplesPerPixel</a>, hash);</div></div>
            int dim = <a href="#PaddedSobolSampler::dimension" class="code">dimension</a>++;
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Returnrandomized1DvanderCorputsamplefordimensionmonodim-0">Return randomized 1D van der Corput sample for dimension <tt>dim</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1175" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1175"><i></i></a><div id="fragbit-1175" class="collapse"><div class="fragmentcode">              return <a href="#PaddedSobolSampler::SampleDimension" class="code">SampleDimension</a>(0, index, hash &gt;&gt; 32);</div></div>
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Returnrandomized1DvanderCorputsamplefordimensionmonodim-0">Return randomized 1D van der Corput sample for dimension <tt>dim</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1175" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1175"><i></i></a><div id="fragbit-1175" class="collapse show"><div class="fragmentcode">              return <a href="#PaddedSobolSampler::SampleDimension" class="code">SampleDimension</a>(0, index, hash &gt;&gt; 32);</div></div>
        }
        <a href="../Geometry_and_Transformations/Points.html#Point2f" class="code">Point2f</a> <a href="#PaddedSobolSampler::Get2D" class="code">Get2D</a>() {
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Getpermutedindexforcurrentpixelsample-0">Get permuted index for current pixel sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1176" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1176"><i></i></a><div id="fragbit-1176" class="collapse"><div class="fragmentcode">              uint64_t hash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#PaddedSobolSampler::pixel" class="code">pixel</a>, <a href="#PaddedSobolSampler::dimension" class="code">dimension</a>, <a href="#PaddedSobolSampler::seed" class="code">seed</a>);
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Getpermutedindexforcurrentpixelsample-0">Get permuted index for current pixel sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1176" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1176"><i></i></a><div id="fragbit-1176" class="collapse show"><div class="fragmentcode">              uint64_t hash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#PaddedSobolSampler::pixel" class="code">pixel</a>, <a href="#PaddedSobolSampler::dimension" class="code">dimension</a>, <a href="#PaddedSobolSampler::seed" class="code">seed</a>);
               int index = <a href="../Utilities/Mathematical_Infrastructure.html#PermutationElement" class="code">PermutationElement</a>(<a href="#PaddedSobolSampler::sampleIndex" class="code">sampleIndex</a>, <a href="#PaddedSobolSampler::samplesPerPixel" class="code">samplesPerPixel</a>, hash);</div></div>
            int dim = <a href="#PaddedSobolSampler::dimension" class="code">dimension</a>;
            <a href="#PaddedSobolSampler::dimension" class="code">dimension</a> += 2;
@@ -3446,7 +3446,7 @@ Sobol&rsquo; samples rather than jittered samples.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1177" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1177"><i></i></a><div id="fragbit-1177" class="collapse"><div class="fragmentcode">              return <a href="../Geometry_and_Transformations/Points.html#Point2f" class="code">Point2f</a>(<a href="#PaddedSobolSampler::SampleDimension" class="code">SampleDimension</a>(0, index, uint32_t(hash)),
+</svg> sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1177" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1177"><i></i></a><div id="fragbit-1177" class="collapse show"><div class="fragmentcode">              return <a href="../Geometry_and_Transformations/Points.html#Point2f" class="code">Point2f</a>(<a href="#PaddedSobolSampler::SampleDimension" class="code">SampleDimension</a>(0, index, uint32_t(hash)),
                              <a href="#PaddedSobolSampler::SampleDimension" class="code">SampleDimension</a>(1, index, hash &gt;&gt; 32));</div></div>
        }
        <a href="../Geometry_and_Transformations/Points.html#Point2f" class="code">Point2f</a> GetPixel2D() { return <a href="#PaddedSobolSampler::Get2D" class="code">Get2D</a>(); }
@@ -3456,7 +3456,7 @@ Sobol&rsquo; samples rather than jittered samples.
        <a href="../Sampling_and_Reconstruction/Sampling_Interface.html#Sampler" class="code">Sampler</a> Clone(Allocator alloc);
        std::string ToString() const;</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-PaddedSobolSamplerPrivateMethods-0">PaddedSobolSampler Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1178" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1178"><i></i></a><div id="fragbit-1178" class="collapse"><div class="fragmentcode">       Float SampleDimension(int dimension, uint32_t a, uint32_t hash) const {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-PaddedSobolSamplerPrivateMethods-0">PaddedSobolSampler Private Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1178" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1178"><i></i></a><div id="fragbit-1178" class="collapse show"><div class="fragmentcode">       Float SampleDimension(int dimension, uint32_t a, uint32_t hash) const {
            if (<a href="#PaddedSobolSampler::randomize" class="code">randomize</a> == <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy::FastOwen" class="code">RandomizeStrategy</a>::None)
                return <a href="#SobolSample" class="code">SobolSample</a>(a, dimension, NoRandomizer());
            else if (<a href="#PaddedSobolSampler::randomize" class="code">randomize</a> == <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy::FastOwen" class="code">RandomizeStrategy</a>::PermuteDigits)
@@ -3466,7 +3466,7 @@ Sobol&rsquo; samples rather than jittered samples.
            else
                return <a href="#SobolSample" class="code">SobolSample</a>(a, dimension, OwenScrambler(hash));
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-PaddedSobolSamplerPrivateMembers-0">PaddedSobolSampler Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1179" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1179"><i></i></a><div id="fragbit-1179" class="collapse"><div class="fragmentcode">       int samplesPerPixel, seed;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-PaddedSobolSamplerPrivateMembers-0">PaddedSobolSampler Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1179" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1179"><i></i></a><div id="fragbit-1179" class="collapse show"><div class="fragmentcode">       int samplesPerPixel, seed;
        <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy" class="code">RandomizeStrategy</a> randomize;
        <a href="../Geometry_and_Transformations/Points.html#Point2i" class="code">Point2i</a> pixel;
        int sampleIndex, dimension;</div></div>
@@ -3512,10 +3512,10 @@ sequence.
 <p></p>
 <span class="anchor" id="fragment-PaddedSobolSamplerPublicMethods-0"></span><div class="fragmentname">&lt;&lt;PaddedSobolSampler Public Methods&gt;&gt;=&nbsp;<a href="#fragment-PaddedSobolSamplerPublicMethods-1"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode">Float <span class="anchor" id="PaddedSobolSampler::Get1D"></span>Get1D() {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Getpermutedindexforcurrentpixelsample-0">Get permuted index for current pixel sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1180" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1180"><i></i></a><div id="fragbit-1180" class="collapse"><div class="fragmentcode">       uint64_t hash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#PaddedSobolSampler::pixel" class="code">pixel</a>, <a href="#PaddedSobolSampler::dimension" class="code">dimension</a>, <a href="#PaddedSobolSampler::seed" class="code">seed</a>);
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Getpermutedindexforcurrentpixelsample-0">Get permuted index for current pixel sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1180" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1180"><i></i></a><div id="fragbit-1180" class="collapse show"><div class="fragmentcode">       uint64_t hash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#PaddedSobolSampler::pixel" class="code">pixel</a>, <a href="#PaddedSobolSampler::dimension" class="code">dimension</a>, <a href="#PaddedSobolSampler::seed" class="code">seed</a>);
        int index = <a href="../Utilities/Mathematical_Infrastructure.html#PermutationElement" class="code">PermutationElement</a>(<a href="#PaddedSobolSampler::sampleIndex" class="code">sampleIndex</a>, <a href="#PaddedSobolSampler::samplesPerPixel" class="code">samplesPerPixel</a>, hash);</div></div>
     int dim = <a href="#PaddedSobolSampler::dimension" class="code">dimension</a>++;
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Returnrandomized1DvanderCorputsamplefordimensionmonodim-0">Return randomized 1D van der Corput sample for dimension <tt>dim</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1181" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1181"><i></i></a><div id="fragbit-1181" class="collapse"><div class="fragmentcode">       return <a href="#PaddedSobolSampler::SampleDimension" class="code">SampleDimension</a>(0, index, hash &gt;&gt; 32);</div></div>
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Returnrandomized1DvanderCorputsamplefordimensionmonodim-0">Return randomized 1D van der Corput sample for dimension <tt>dim</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1181" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1181"><i></i></a><div id="fragbit-1181" class="collapse show"><div class="fragmentcode">       return <a href="#PaddedSobolSampler::SampleDimension" class="code">SampleDimension</a>(0, index, hash &gt;&gt; 32);</div></div>
 }</div><p>
 
 
@@ -3578,7 +3578,7 @@ sample indices.
 <p></p>
 <span class="anchor" id="fragment-PaddedSobolSamplerPublicMethods-1"></span><div class="fragmentname">&lt;&lt;PaddedSobolSampler Public Methods&gt;&gt;+=&nbsp;<a href="#fragment-PaddedSobolSamplerPublicMethods-0"><span class="fa fa-caret-up"></span></a>&nbsp;<a href="#fragment-PaddedSobolSamplerPublicMethods-2"><span class="fa fa-caret-down"></span></a></div>
 <div class="fragmentcode"><a href="../Geometry_and_Transformations/Points.html#Point2f" class="code">Point2f</a> <span class="anchor" id="PaddedSobolSampler::Get2D"></span>Get2D() {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Getpermutedindexforcurrentpixelsample-0">Get permuted index for current pixel sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1182" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1182"><i></i></a><div id="fragbit-1182" class="collapse"><div class="fragmentcode">       uint64_t hash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#PaddedSobolSampler::pixel" class="code">pixel</a>, <a href="#PaddedSobolSampler::dimension" class="code">dimension</a>, <a href="#PaddedSobolSampler::seed" class="code">seed</a>);
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Getpermutedindexforcurrentpixelsample-0">Get permuted index for current pixel sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1182" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1182"><i></i></a><div id="fragbit-1182" class="collapse show"><div class="fragmentcode">       uint64_t hash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#PaddedSobolSampler::pixel" class="code">pixel</a>, <a href="#PaddedSobolSampler::dimension" class="code">dimension</a>, <a href="#PaddedSobolSampler::seed" class="code">seed</a>);
        int index = <a href="../Utilities/Mathematical_Infrastructure.html#PermutationElement" class="code">PermutationElement</a>(<a href="#PaddedSobolSampler::sampleIndex" class="code">sampleIndex</a>, <a href="#PaddedSobolSampler::samplesPerPixel" class="code">samplesPerPixel</a>, hash);</div></div>
     int dim = <a href="#PaddedSobolSampler::dimension" class="code">dimension</a>;
     <a href="#PaddedSobolSampler::dimension" class="code">dimension</a> += 2;
@@ -3590,7 +3590,7 @@ sample indices.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1183" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1183"><i></i></a><div id="fragbit-1183" class="collapse"><div class="fragmentcode">       return <a href="../Geometry_and_Transformations/Points.html#Point2f" class="code">Point2f</a>(<a href="#PaddedSobolSampler::SampleDimension" class="code">SampleDimension</a>(0, index, uint32_t(hash)),
+</svg> sample</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1183" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1183"><i></i></a><div id="fragbit-1183" class="collapse show"><div class="fragmentcode">       return <a href="../Geometry_and_Transformations/Points.html#Point2f" class="code">Point2f</a>(<a href="#PaddedSobolSampler::SampleDimension" class="code">SampleDimension</a>(0, index, uint32_t(hash)),
                       <a href="#PaddedSobolSampler::SampleDimension" class="code">SampleDimension</a>(1, index, hash &gt;&gt; 32));</div></div>
 }</div><p>
 
@@ -3696,7 +3696,7 @@ looks much better thanks to a blue noise distribution of error.
 <span class="anchor" id="fragment-ZSobolSamplerDefinition-0"></span><div class="fragmentname">&lt;&lt;ZSobolSampler Definition&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">class <span class="anchor" id="ZSobolSampler"></span>ZSobolSampler {
   public:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ZSobolSamplerPublicMethods-0">ZSobolSampler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1184" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1184"><i></i></a><div id="fragbit-1184" class="collapse"><div class="fragmentcode">       ZSobolSampler(int samplesPerPixel, <a href="../Geometry_and_Transformations/Points.html#Point2i" class="code">Point2i</a> fullResolution,
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ZSobolSamplerPublicMethods-0">ZSobolSampler Public Methods</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1184" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1184"><i></i></a><div id="fragbit-1184" class="collapse show"><div class="fragmentcode">       ZSobolSampler(int samplesPerPixel, <a href="../Geometry_and_Transformations/Points.html#Point2i" class="code">Point2i</a> fullResolution,
                      <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy" class="code">RandomizeStrategy</a> <a href="#ZSobolSampler::randomize" class="code">randomize</a>, int <a href="#ZSobolSampler::seed" class="code">seed</a> = 0)
            : <a href="#ZSobolSampler::randomize" class="code">randomize</a>(<a href="#ZSobolSampler::randomize" class="code">randomize</a>), <a href="#ZSobolSampler::seed" class="code">seed</a>(<a href="#ZSobolSampler::seed" class="code">seed</a>) {
            <a href="#ZSobolSampler::log2SamplesPerPixel" class="code">log2SamplesPerPixel</a> = <a href="../Utilities/Mathematical_Infrastructure.html#Log2Int" class="code">Log2Int</a>(samplesPerPixel);
@@ -3728,7 +3728,7 @@ looks much better thanks to a blue noise distribution of error.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> sample at <tt>sampleIndex</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1185" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1185"><i></i></a><div id="fragbit-1185" class="collapse"><div class="fragmentcode">              uint32_t sampleHash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#ZSobolSampler::dimension" class="code">dimension</a>, <a href="#ZSobolSampler::seed" class="code">seed</a>);
+</svg> sample at <tt>sampleIndex</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1185" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1185"><i></i></a><div id="fragbit-1185" class="collapse show"><div class="fragmentcode">              uint32_t sampleHash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#ZSobolSampler::dimension" class="code">dimension</a>, <a href="#ZSobolSampler::seed" class="code">seed</a>);
               if (<a href="#ZSobolSampler::randomize" class="code">randomize</a> == RandomizeStrategy::None)
                   return <a href="#SobolSample" class="code">SobolSample</a>(sampleIndex, 0, NoRandomizer());
               else if (<a href="#ZSobolSampler::randomize" class="code">randomize</a> == RandomizeStrategy::PermuteDigits)
@@ -3749,7 +3749,7 @@ looks much better thanks to a blue noise distribution of error.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> sample at <tt>sampleIndex</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1186" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1186"><i></i></a><div id="fragbit-1186" class="collapse"><div class="fragmentcode">              uint64_t bits = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#ZSobolSampler::dimension" class="code">dimension</a>, <a href="#ZSobolSampler::seed" class="code">seed</a>);
+</svg> sample at <tt>sampleIndex</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1186" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1186"><i></i></a><div id="fragbit-1186" class="collapse show"><div class="fragmentcode">              uint64_t bits = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#ZSobolSampler::dimension" class="code">dimension</a>, <a href="#ZSobolSampler::seed" class="code">seed</a>);
               uint32_t sampleHash[2] = {uint32_t(bits), uint32_t(bits &gt;&gt; 32)};
               if (<a href="#ZSobolSampler::randomize" class="code">randomize</a> == RandomizeStrategy::None)
                   return {<a href="#SobolSample" class="code">SobolSample</a>(sampleIndex, 0, NoRandomizer()),
@@ -3768,16 +3768,16 @@ looks much better thanks to a blue noise distribution of error.
        <a href="../Sampling_and_Reconstruction/Sampling_Interface.html#Sampler" class="code">Sampler</a> Clone(Allocator alloc);
        std::string ToString() const;
        uint64_t <a href="#ZSobolSampler::GetSampleIndex" class="code">GetSampleIndex</a>() const {
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Definethefullsetof4-waypermutationsinmonopermutations-0">Define the full set of 4-way permutations in <tt>permutations</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1187" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1187"><i></i></a><div id="fragbit-1187" class="collapse"><div class="fragmentcode">              static const uint8_t permutations[24][4] = {
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Definethefullsetof4-waypermutationsinmonopermutations-0">Define the full set of 4-way permutations in <tt>permutations</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1187" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1187"><i></i></a><div id="fragbit-1187" class="collapse show"><div class="fragmentcode">              static const uint8_t permutations[24][4] = {
                   {0, 1, 2, 3}, {0, 1, 3, 2}, {0, 2, 1, 3}, {0, 2, 3, 1},
-                  &lt;&lt;<span class="fragmentname">Define remaining 20 4-way permutations</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1188" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1188"><i></i></a><div id="fragbit-1188" class="collapse"><div class="fragmentcode">                     {0, 3, 2, 1},
+                  &lt;&lt;<span class="fragmentname">Define remaining 20 4-way permutations</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1188" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1188"><i></i></a><div id="fragbit-1188" class="collapse show"><div class="fragmentcode">                     {0, 3, 2, 1},
                              {0, 3, 1, 2}, {1, 0, 2, 3}, {1, 0, 3, 2}, {1, 2, 0, 3}, {1, 2, 3, 0},
                              {1, 3, 2, 0}, {1, 3, 0, 2}, {2, 1, 0, 3}, {2, 1, 3, 0}, {2, 0, 1, 3},
                              {2, 0, 3, 1}, {2, 3, 0, 1}, {2, 3, 1, 0}, {3, 1, 2, 0}, {3, 1, 0, 2},
                              {3, 2, 1, 0}, {3, 2, 0, 1}, {3, 0, 2, 1}, {3, 0, 1, 2}</div></div>
               };</div></div>
            uint64_t sampleIndex = 0;
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Applyrandompermutationstofullbase-4digits-0">Apply random permutations to full base-4 digits</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1189" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1189"><i></i></a><div id="fragbit-1189" class="collapse"><div class="fragmentcode">              bool pow2Samples = <a href="#ZSobolSampler::log2SamplesPerPixel" class="code">log2SamplesPerPixel</a> &amp; 1;
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Applyrandompermutationstofullbase-4digits-0">Apply random permutations to full base-4 digits</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1189" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1189"><i></i></a><div id="fragbit-1189" class="collapse show"><div class="fragmentcode">              bool pow2Samples = <a href="#ZSobolSampler::log2SamplesPerPixel" class="code">log2SamplesPerPixel</a> &amp; 1;
               int lastDigit = pow2Samples ? 1 : 0;
               for (int i = <a href="#ZSobolSampler::nBase4Digits" class="code">nBase4Digits</a> - 1; i &gt;= lastDigit; --i) {
                   &lt;&lt;<span class="fragmentname"><a href="#fragment-Randomlypermuteithbase-4digitinmonomortonIndex-0">Randomly permute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.802ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 345.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
@@ -3788,14 +3788,14 @@ looks much better thanks to a blue noise distribution of error.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D456" x="0" y="0"></use>
 </g>
-</svg>th base-4 digit in <tt>mortonIndex</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1190" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1190"><i></i></a><div id="fragbit-1190" class="collapse"><div class="fragmentcode">                     int digitShift = 2 * i - (pow2Samples ? 1 : 0);
+</svg>th base-4 digit in <tt>mortonIndex</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1190" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1190"><i></i></a><div id="fragbit-1190" class="collapse show"><div class="fragmentcode">                     int digitShift = 2 * i - (pow2Samples ? 1 : 0);
                      int digit = (<a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; digitShift) &amp; 3;
-                     &lt;&lt;<span class="fragmentname"><a href="#fragment-Choosepermutationmonoptouseformonodigit-0">Choose permutation <tt>p</tt> to use for <tt>digit</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1191" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1191"><i></i></a><div id="fragbit-1191" class="collapse"><div class="fragmentcode">                        uint64_t higherDigits = <a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; (digitShift + 2);
+                     &lt;&lt;<span class="fragmentname"><a href="#fragment-Choosepermutationmonoptouseformonodigit-0">Choose permutation <tt>p</tt> to use for <tt>digit</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1191" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1191"><i></i></a><div id="fragbit-1191" class="collapse show"><div class="fragmentcode">                        uint64_t higherDigits = <a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; (digitShift + 2);
                         int p = (<a href="../Utilities/Mathematical_Infrastructure.html#MixBits" class="code">MixBits</a>(higherDigits ^ (0x55555555u * dimension)) &gt;&gt; 24) % 24;</div></div>
                      digit = permutations[p][digit];
                      sampleIndex |= uint64_t(digit) &lt;&lt; digitShift;</div></div>
               }</div></div>
-           &lt;&lt;<span class="fragmentname"><a href="#fragment-Handlepower-of-2butnot4samplecount-0">Handle power-of-2 (but not 4) sample count</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1192" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1192"><i></i></a><div id="fragbit-1192" class="collapse"><div class="fragmentcode">              if (pow2Samples) {
+           &lt;&lt;<span class="fragmentname"><a href="#fragment-Handlepower-of-2butnot4samplecount-0">Handle power-of-2 (but not 4) sample count</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1192" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1192"><i></i></a><div id="fragbit-1192" class="collapse show"><div class="fragmentcode">              if (pow2Samples) {
                   int digit = <a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &amp; 1;
                   sampleIndex |= digit ^
                       (<a href="../Utilities/Mathematical_Infrastructure.html#MixBits" class="code">MixBits</a>((<a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; 1) ^ (0x55555555u * <a href="#ZSobolSampler::dimension" class="code">dimension</a>)) &amp; 1);
@@ -3803,7 +3803,7 @@ looks much better thanks to a blue noise distribution of error.
            return sampleIndex;
        }</div></div>
   private:
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-ZSobolSamplerPrivateMembers-0">ZSobolSampler Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1193" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1193"><i></i></a><div id="fragbit-1193" class="collapse"><div class="fragmentcode">       <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy" class="code">RandomizeStrategy</a> randomize;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-ZSobolSamplerPrivateMembers-0">ZSobolSampler Private Members</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1193" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1193"><i></i></a><div id="fragbit-1193" class="collapse show"><div class="fragmentcode">       <a href="../Sampling_and_Reconstruction/Halton_Sampler.html#RandomizeStrategy" class="code">RandomizeStrategy</a> randomize;
        int seed, log2SamplesPerPixel, nBase4Digits;
        uint64_t mortonIndex;
        int dimension;</div></div>
@@ -4249,7 +4249,7 @@ is not included here.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> sample at <tt>sampleIndex</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1194" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1194"><i></i></a><div id="fragbit-1194" class="collapse"><div class="fragmentcode">       uint32_t sampleHash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#ZSobolSampler::dimension" class="code">dimension</a>, <a href="#ZSobolSampler::seed" class="code">seed</a>);
+</svg> sample at <tt>sampleIndex</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1194" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1194"><i></i></a><div id="fragbit-1194" class="collapse show"><div class="fragmentcode">       uint32_t sampleHash = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#ZSobolSampler::dimension" class="code">dimension</a>, <a href="#ZSobolSampler::seed" class="code">seed</a>);
        if (<a href="#ZSobolSampler::randomize" class="code">randomize</a> == RandomizeStrategy::None)
            return <a href="#SobolSample" class="code">SobolSample</a>(sampleIndex, 0, NoRandomizer());
        else if (<a href="#ZSobolSampler::randomize" class="code">randomize</a> == RandomizeStrategy::PermuteDigits)
@@ -4285,7 +4285,7 @@ not included.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNVARIANTS-2032" x="0" y="513"></use>
 </g>
-</svg> sample at <tt>sampleIndex</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1195" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1195"><i></i></a><div id="fragbit-1195" class="collapse"><div class="fragmentcode">       uint64_t bits = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#ZSobolSampler::dimension" class="code">dimension</a>, <a href="#ZSobolSampler::seed" class="code">seed</a>);
+</svg> sample at <tt>sampleIndex</tt></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1195" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1195"><i></i></a><div id="fragbit-1195" class="collapse show"><div class="fragmentcode">       uint64_t bits = <a href="../Utilities/Mathematical_Infrastructure.html#Hash" class="code">Hash</a>(<a href="#ZSobolSampler::dimension" class="code">dimension</a>, <a href="#ZSobolSampler::seed" class="code">seed</a>);
        uint32_t sampleHash[2] = {uint32_t(bits), uint32_t(bits &gt;&gt; 32)};
        if (<a href="#ZSobolSampler::randomize" class="code">randomize</a> == RandomizeStrategy::None)
            return {<a href="#SobolSample" class="code">SobolSample</a>(sampleIndex, 0, NoRandomizer()),
@@ -4330,16 +4330,16 @@ available.
 <p></p>
 <span class="anchor" id="fragment-ZSobolSamplerPublicMethods-5"></span><div class="fragmentname">&lt;&lt;ZSobolSampler Public Methods&gt;&gt;+=&nbsp;<a href="#fragment-ZSobolSamplerPublicMethods-4"><span class="fa fa-caret-up"></span></a></div>
 <div class="fragmentcode">uint64_t <span class="anchor" id="ZSobolSampler::GetSampleIndex"></span>GetSampleIndex() const {
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Definethefullsetof4-waypermutationsinmonopermutations-0">Define the full set of 4-way permutations in <tt>permutations</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1196" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1196"><i></i></a><div id="fragbit-1196" class="collapse"><div class="fragmentcode">       static const uint8_t permutations[24][4] = {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Definethefullsetof4-waypermutationsinmonopermutations-0">Define the full set of 4-way permutations in <tt>permutations</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1196" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1196"><i></i></a><div id="fragbit-1196" class="collapse show"><div class="fragmentcode">       static const uint8_t permutations[24][4] = {
            {0, 1, 2, 3}, {0, 1, 3, 2}, {0, 2, 1, 3}, {0, 2, 3, 1},
-           &lt;&lt;<span class="fragmentname">Define remaining 20 4-way permutations</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1197" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1197"><i></i></a><div id="fragbit-1197" class="collapse"><div class="fragmentcode">              {0, 3, 2, 1},
+           &lt;&lt;<span class="fragmentname">Define remaining 20 4-way permutations</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1197" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1197"><i></i></a><div id="fragbit-1197" class="collapse show"><div class="fragmentcode">              {0, 3, 2, 1},
                       {0, 3, 1, 2}, {1, 0, 2, 3}, {1, 0, 3, 2}, {1, 2, 0, 3}, {1, 2, 3, 0},
                       {1, 3, 2, 0}, {1, 3, 0, 2}, {2, 1, 0, 3}, {2, 1, 3, 0}, {2, 0, 1, 3},
                       {2, 0, 3, 1}, {2, 3, 0, 1}, {2, 3, 1, 0}, {3, 1, 2, 0}, {3, 1, 0, 2},
                       {3, 2, 1, 0}, {3, 2, 0, 1}, {3, 0, 2, 1}, {3, 0, 1, 2}</div></div>
        };</div></div>
     uint64_t sampleIndex = 0;
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Applyrandompermutationstofullbase-4digits-0">Apply random permutations to full base-4 digits</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1198" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1198"><i></i></a><div id="fragbit-1198" class="collapse"><div class="fragmentcode">       bool pow2Samples = <a href="#ZSobolSampler::log2SamplesPerPixel" class="code">log2SamplesPerPixel</a> &amp; 1;
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Applyrandompermutationstofullbase-4digits-0">Apply random permutations to full base-4 digits</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1198" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1198"><i></i></a><div id="fragbit-1198" class="collapse show"><div class="fragmentcode">       bool pow2Samples = <a href="#ZSobolSampler::log2SamplesPerPixel" class="code">log2SamplesPerPixel</a> &amp; 1;
        int lastDigit = pow2Samples ? 1 : 0;
        for (int i = <a href="#ZSobolSampler::nBase4Digits" class="code">nBase4Digits</a> - 1; i &gt;= lastDigit; --i) {
            &lt;&lt;<span class="fragmentname"><a href="#fragment-Randomlypermuteithbase-4digitinmonomortonIndex-0">Randomly permute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.802ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 345.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
@@ -4350,14 +4350,14 @@ available.
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D456" x="0" y="0"></use>
 </g>
-</svg>th base-4 digit in <tt>mortonIndex</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1199" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1199"><i></i></a><div id="fragbit-1199" class="collapse"><div class="fragmentcode">              int digitShift = 2 * i - (pow2Samples ? 1 : 0);
+</svg>th base-4 digit in <tt>mortonIndex</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1199" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1199"><i></i></a><div id="fragbit-1199" class="collapse show"><div class="fragmentcode">              int digitShift = 2 * i - (pow2Samples ? 1 : 0);
               int digit = (<a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; digitShift) &amp; 3;
-              &lt;&lt;<span class="fragmentname"><a href="#fragment-Choosepermutationmonoptouseformonodigit-0">Choose permutation <tt>p</tt> to use for <tt>digit</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1200" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1200"><i></i></a><div id="fragbit-1200" class="collapse"><div class="fragmentcode">                 uint64_t higherDigits = <a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; (digitShift + 2);
+              &lt;&lt;<span class="fragmentname"><a href="#fragment-Choosepermutationmonoptouseformonodigit-0">Choose permutation <tt>p</tt> to use for <tt>digit</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1200" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1200"><i></i></a><div id="fragbit-1200" class="collapse show"><div class="fragmentcode">                 uint64_t higherDigits = <a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; (digitShift + 2);
                  int p = (<a href="../Utilities/Mathematical_Infrastructure.html#MixBits" class="code">MixBits</a>(higherDigits ^ (0x55555555u * dimension)) &gt;&gt; 24) % 24;</div></div>
               digit = permutations[p][digit];
               sampleIndex |= uint64_t(digit) &lt;&lt; digitShift;</div></div>
        }</div></div>
-    &lt;&lt;<span class="fragmentname"><a href="#fragment-Handlepower-of-2butnot4samplecount-0">Handle power-of-2 (but not 4) sample count</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1201" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1201"><i></i></a><div id="fragbit-1201" class="collapse"><div class="fragmentcode">       if (pow2Samples) {
+    &lt;&lt;<span class="fragmentname"><a href="#fragment-Handlepower-of-2butnot4samplecount-0">Handle power-of-2 (but not 4) sample count</a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1201" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1201"><i></i></a><div id="fragbit-1201" class="collapse show"><div class="fragmentcode">       if (pow2Samples) {
            int digit = <a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &amp; 1;
            sampleIndex |= digit ^
                (<a href="../Utilities/Mathematical_Infrastructure.html#MixBits" class="code">MixBits</a>((<a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; 1) ^ (0x55555555u * <a href="#ZSobolSampler::dimension" class="code">dimension</a>)) &amp; 1);
@@ -4393,7 +4393,7 @@ elements explicitly enumerated; they are stored in the
 <span class="anchor" id="fragment-Definethefullsetof4-waypermutationsinmonopermutations-0"></span><div class="fragmentname">&lt;&lt;Define the full set of 4-way permutations in <tt>permutations</tt>&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">static const uint8_t permutations[24][4] = {
     {0, 1, 2, 3}, {0, 1, 3, 2}, {0, 2, 1, 3}, {0, 2, 3, 1},
-    &lt;&lt;<span class="fragmentname">Define remaining 20 4-way permutations</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1202" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1202"><i></i></a><div id="fragbit-1202" class="collapse"><div class="fragmentcode">       {0, 3, 2, 1},
+    &lt;&lt;<span class="fragmentname">Define remaining 20 4-way permutations</span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1202" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1202"><i></i></a><div id="fragbit-1202" class="collapse show"><div class="fragmentcode">       {0, 3, 2, 1},
                {0, 3, 1, 2}, {1, 0, 2, 3}, {1, 0, 3, 2}, {1, 2, 0, 3}, {1, 2, 3, 0},
                {1, 3, 2, 0}, {1, 3, 0, 2}, {2, 1, 0, 3}, {2, 1, 3, 0}, {2, 0, 1, 3},
                {2, 0, 3, 1}, {2, 3, 0, 1}, {2, 3, 1, 0}, {3, 1, 2, 0}, {3, 1, 0, 2},
@@ -4424,9 +4424,9 @@ for (int i = <a href="#ZSobolSampler::nBase4Digits" class="code">nBase4Digits</a
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-LATINMODERNNORMAL-1D456" x="0" y="0"></use>
 </g>
-</svg>th base-4 digit in <tt>mortonIndex</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1203" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1203"><i></i></a><div id="fragbit-1203" class="collapse"><div class="fragmentcode">       int digitShift = 2 * i - (pow2Samples ? 1 : 0);
+</svg>th base-4 digit in <tt>mortonIndex</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1203" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1203"><i></i></a><div id="fragbit-1203" class="collapse show"><div class="fragmentcode">       int digitShift = 2 * i - (pow2Samples ? 1 : 0);
        int digit = (<a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; digitShift) &amp; 3;
-       &lt;&lt;<span class="fragmentname"><a href="#fragment-Choosepermutationmonoptouseformonodigit-0">Choose permutation <tt>p</tt> to use for <tt>digit</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1204" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1204"><i></i></a><div id="fragbit-1204" class="collapse"><div class="fragmentcode">          uint64_t higherDigits = <a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; (digitShift + 2);
+       &lt;&lt;<span class="fragmentname"><a href="#fragment-Choosepermutationmonoptouseformonodigit-0">Choose permutation <tt>p</tt> to use for <tt>digit</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1204" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1204"><i></i></a><div id="fragbit-1204" class="collapse show"><div class="fragmentcode">          uint64_t higherDigits = <a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; (digitShift + 2);
           int p = (<a href="../Utilities/Mathematical_Infrastructure.html#MixBits" class="code">MixBits</a>(higherDigits ^ (0x55555555u * dimension)) &gt;&gt; 24) % 24;</div></div>
        digit = permutations[p][digit];
        sampleIndex |= uint64_t(digit) &lt;&lt; digitShift;</div></div>
@@ -4451,7 +4451,7 @@ place to be added to <tt>sampleIndex</tt>.
 </svg>th base-4 digit in <tt>mortonIndex</tt>&gt;&gt;=&nbsp;</div>
 <div class="fragmentcode">int digitShift = 2 * i - (pow2Samples ? 1 : 0);
 int digit = (<a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; digitShift) &amp; 3;
-&lt;&lt;<span class="fragmentname"><a href="#fragment-Choosepermutationmonoptouseformonodigit-0">Choose permutation <tt>p</tt> to use for <tt>digit</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1205" role="button" class="fa codecarat collapsed" aria-expanded="false" aria-controls="fragbit-1205"><i></i></a><div id="fragbit-1205" class="collapse"><div class="fragmentcode">   uint64_t higherDigits = <a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; (digitShift + 2);
+&lt;&lt;<span class="fragmentname"><a href="#fragment-Choosepermutationmonoptouseformonodigit-0">Choose permutation <tt>p</tt> to use for <tt>digit</tt></a></span>&gt;&gt;&nbsp;<a data-toggle="collapse" href="#fragbit-1205" role="button" class="fa codecarat" aria-expanded="true" aria-controls="fragbit-1205"><i></i></a><div id="fragbit-1205" class="collapse show"><div class="fragmentcode">   uint64_t higherDigits = <a href="#ZSobolSampler::mortonIndex" class="code">mortonIndex</a> &gt;&gt; (digitShift + 2);
    int p = (<a href="../Utilities/Mathematical_Infrastructure.html#MixBits" class="code">MixBits</a>(higherDigits ^ (0x55555555u * dimension)) &gt;&gt; 24) % 24;</div></div>
 digit = permutations[p][digit];
 sampleIndex |= uint64_t(digit) &lt;&lt; digitShift;</div><p>
