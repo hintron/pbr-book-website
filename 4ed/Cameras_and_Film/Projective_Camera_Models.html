@@ -689,10 +689,11 @@ region are projected onto the <svg xmlns:xlink="http://www.w3.org/1999/xlink" wi
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 134.896%;  position:relative;"><div id="xa_Orthographic5" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 134.896%;  position:relative;"><div id="xa_Orthographic5_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Orthographic5'), {
-  title: '(a)_Orthographic5', children: [
- { title: '(a) Orthographic', image: 'kroken-ortho.png' },  { title: '(b) Perspective', image: 'kroken-perspective.png' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Orthographic5'), { children: [{ title: '(a) Orthographic', image: 'kroken-ortho.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Orthographic5_1'), { children: [{ title: '(b) Perspective', image: 'kroken-perspective.png' }]});
 </script>
 <figcaption class="caption">Figure 5.4: <em>Kroken</em> Scene Rendered with Different Camera Models. <span class="legend"> 
 Images are rendered from the same viewpoint with (a)&nbsp;orthographic and (b)&nbsp;perspective cameras. 
@@ -2449,10 +2450,13 @@ grass in the center of the image.
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 134.613%;  position:relative;"><div id="xa_No_defocus6" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 134.613%;  position:relative;"><div id="xa_No_defocus6_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 134.613%;  position:relative;"><div id="xa_No_defocus6_2" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_No_defocus6'), {
-  title: '(a)_No_defocus6', children: [
- { title: '(a) No defocus', image: 'watercolor-dof-0.png' },  { title: '(b) Small lens aperture', image: 'watercolor-dof-1.png' },  { title: '(c) Large lens aperture', image: 'watercolor-dof-2.8.png' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_No_defocus6'), { children: [{ title: '(a) No defocus', image: 'watercolor-dof-0.png' }]});
+Jeri.renderViewer(document.getElementById('xa_No_defocus6_1'), { children: [{ title: '(b) Small lens aperture', image: 'watercolor-dof-1.png' }]});
+Jeri.renderViewer(document.getElementById('xa_No_defocus6_2'), { children: [{ title: '(c) Large lens aperture', image: 'watercolor-dof-2.8.png' }]});
 </script>
 <figcaption class="caption">Figure 5.10: <span class="legend"> (a)&nbsp;Scene rendered with no defocus blur,
 (b)&nbsp;extensive depth of field due to a relatively small lens aperture,
@@ -2476,6 +2480,7 @@ circle of confusion in the out-of-focus areas, resulting in a greater amount of 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 56.250%; position:relative;">
 <div id="landscape-dof.png7" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
+// MGH: Fixed
 Jeri.renderViewer(document.getElementById('landscape-dof.png7'), { image: 'landscape-dof.png' });
 </script>
 <figcaption class="caption">Figure 5.11: <span class="legend"> Depth of field gives a greater sense of
@@ -3083,6 +3088,7 @@ Figure&nbsp;<a href="#fig:ecosys-dof">5.11</a> with only four samples per pixel
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 56.250%; position:relative;">
 <div id="landscape-dof-4spp.png8" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
+// MGH: Fixed
 Jeri.renderViewer(document.getElementById('landscape-dof-4spp.png8'), { image: 'landscape-dof-4spp.png' });
 </script>
 <figcaption class="caption">Figure 5.15: <span class="legend"> Landscape scene with depth of field and only four samples per
