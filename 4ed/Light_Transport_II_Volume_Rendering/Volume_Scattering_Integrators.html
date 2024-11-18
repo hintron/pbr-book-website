@@ -1799,10 +1799,11 @@ that shows the benefits of MIS for chromatic media.
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 46.250%;  position:relative;"><div id="xa_Without_spectral_MIS59" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 46.250%;  position:relative;"><div id="xa_Without_spectral_MIS59_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Without_spectral_MIS59'), {
-  title: '(a)_Without_spectral_MIS59', children: [
- { title: '(a) Without spectral MIS', image: 'chromatic-media-nomis.exr' },  { title: '(b) With spectral MIS', image: 'chromatic-media-mis.exr' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Without_spectral_MIS59'), {children: [{ title: '(a) Without spectral MIS', image: 'chromatic-media-nomis.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_Without_spectral_MIS59_1'), {children: [{ title: '(b) With spectral MIS', image: 'chromatic-media-mis.exr' }]});
 </script>
 <figcaption class="caption">Figure 14.7: Chromatic Volumetric Media. <span class="legend">
 (a)&nbsp;When rendered without spectral MIS, variance is high.
