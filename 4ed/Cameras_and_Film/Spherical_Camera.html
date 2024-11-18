@@ -144,16 +144,13 @@ Figure&nbsp;<a href="#fig:envcamera-san-miguel">5.16</a> shows this camera in ac
 
 </p>
 <p> </p>
-<span class="anchor" id="fig:envcamera-san-miguel"></span><div class="card outerfigure"><div class="card-body figure"><p>
-
-
-</p>
-
+<span class="anchor" id="fig:envcamera-san-miguel"></span><div class="card outerfigure"><div class="card-body figure">
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 52.000%;  position:relative;"><div id="xa_Equirectangular_Mapping9" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 52.000%;  position:relative;"><div id="xa_Equirectangular_Mapping9-1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Equirectangular_Mapping9'), {
-  title: '(a)_Equirectangular_Mapping9', children: [
- { title: '(a) Equirectangular Mapping', image: 'sanmiguel-equirectangular.png' },  { title: '(b) Equal Area Mapping', image: 'sanmiguel-equalarea.png' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Equirectangular_Mapping9'), { children: [{ title: '(a) Equirectangular Mapping', image: 'sanmiguel-equirectangular.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Equirectangular_Mapping9-1'), { children: [{ title: '(b) Equal Area Mapping', image: 'sanmiguel-equalarea.png' }]});
 </script>
 <figcaption class="caption">Figure 5.16: <span class="legend"> The <em>San Miguel</em> scene rendered with the
 <a href="#SphericalCamera"><tt>SphericalCamera</tt></a>, which traces rays in all directions from the camera
