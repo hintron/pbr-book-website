@@ -1767,6 +1767,7 @@ based on are time-reversible.
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 133.262%; position:relative;">
 <div id="random-walk-insanity.exr1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
+// MGH: Fixed
 Jeri.renderViewer(document.getElementById('random-walk-insanity.exr1'), { image: 'random-walk-insanity.exr' });
 </script>
 <figcaption class="caption">Figure 1.19: A View of the <em>Watercolor</em> Scene, Rendered with the
@@ -2411,10 +2412,11 @@ improved integrators and gives a sense of how much improvement is possible.
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 135.532%;  position:relative;"><div id="xa_RandomWalkIntegrator2" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 135.532%;  position:relative;"><div id="xa_RandomWalkIntegrator2_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_RandomWalkIntegrator2'), {
-  title: '(a)_RandomWalkIntegrator2', children: [
- { title: '(a) RandomWalkIntegrator', image: 'watercolor-randomwalk.exr' },  { title: '(b) PathIntegrator', image: 'watercolor-path.exr' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_RandomWalkIntegrator2'), {children: [{ title: '(a) RandomWalkIntegrator', image: 'watercolor-randomwalk.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_RandomWalkIntegrator2_1'), {children: [{ title: '(b) PathIntegrator', image: 'watercolor-path.exr' }]});
 </script>
 <figcaption class="caption">Figure 1.20: <em>Watercolor</em> Scene Rendered Using 32 Samples per Pixel. <span class="legend"> 
 (a)&nbsp;Rendered using the <a href="#RandomWalkIntegrator"><tt>RandomWalkIntegrator</tt></a>. (b)&nbsp;Rendered using the
