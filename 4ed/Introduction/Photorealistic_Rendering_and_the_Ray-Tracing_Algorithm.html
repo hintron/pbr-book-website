@@ -1510,10 +1510,11 @@ were difficult to capture with other rendering techniques.
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 76.667%;  position:relative;"><div id="xa_Whitted_ray_tracing0" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 76.667%;  position:relative;"><div id="xa_Whitted_ray_tracing0_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Whitted_ray_tracing0'), {
-  title: '(a)_Whitted_ray_tracing0', children: [
- { title: '(a) Whitted ray tracing', image: 'spheres-whitted.png' },  { title: '(b) Stochastic progressive photon mapping', image: 'spheres-sppm.png' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Whitted_ray_tracing0'), {children: [{ title: '(a) Whitted ray tracing', image: 'spheres-whitted.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Whitted_ray_tracing0_1'), {children: [{ title: '(b) Stochastic progressive photon mapping', image: 'spheres-sppm.png' }]});
 </script>
 <figcaption class="caption">Figure 1.11: A Prototypical Early Ray Tracing Scene. <span class="legend">
 Note the use of mirrored and glass objects, which 
