@@ -272,10 +272,11 @@ only discuss the perfect specular case for now.
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 48.710%;  position:relative;"><div id="xa_Equal_probability28" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 48.710%;  position:relative;"><div id="xa_Equal_probability28_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Equal_probability28'), {
-  title: '(a)_Equal_probability28', children: [
- { title: '(a) Equal probability', image: 'transparent-machines-fresnel-sample-bad.exr' },  { title: '(b) Sampling using Fresnel', image: 'transparent-machines-fresnel-sample-good.exr' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Equal_probability28'), {children: [{ title: '(a) Equal probability', image: 'transparent-machines-fresnel-sample-bad.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_Equal_probability28_1'), {children: [{ title: '(b) Sampling using Fresnel', image: 'transparent-machines-fresnel-sample-good.exr' }]});
 </script>
 <figcaption class="caption">Figure 9.15: Glass Object Rendered Using the <a href="#DielectricBxDF"><tt>DielectricBxDF</tt></a>. <span class="legend">
 (a)&nbsp;Choosing between specular reflection and
