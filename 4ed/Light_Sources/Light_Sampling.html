@@ -643,10 +643,11 @@ is visibly reduced when sampling according to power, and mean squared error
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 45.417%;  position:relative;"><div id="xa_Uniform_sampling51" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 45.417%;  position:relative;"><div id="xa_Uniform_sampling51_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Uniform_sampling51'), {
-  title: '(a)_Uniform_sampling51', children: [
- { title: '(a) Uniform sampling', image: 'zero-day-uniform.exr' },  { title: '(b) Sampling by power', image: 'zero-day-power.exr' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Uniform_sampling51'), {children: [{ title: '(a) Uniform sampling', image: 'zero-day-uniform.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_Uniform_sampling51_1'), {children: [{ title: '(b) Sampling by power', image: 'zero-day-power.exr' }]});
 </script>
 <figcaption class="caption">Figure 12.24: Sampling Lights Uniformly versus by Emitted Power with the
 <em>Zero Day</em> Scene. <span class="legend">
@@ -2667,10 +2668,11 @@ for an illustration of how this detail makes a difference.
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 67.436%;  position:relative;"><div id="xa_Incorrect_Bounds52" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 67.436%;  position:relative;"><div id="xa_Incorrect_Bounds52_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Incorrect_Bounds52'), {
-  title: '(a)_Incorrect_Bounds52', children: [
- { title: '(a) Incorrect Bounds', image: 'dragon-blp-twosided-bad.exr' },  { title: '(b) Accurate bounds', image: 'dragon-blp-twosided-good.exr' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Incorrect_Bounds52'), {children: [{ title: '(a) Incorrect Bounds', image: 'dragon-blp-twosided-bad.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_Incorrect_Bounds52_1'), {children: [{ title: '(b) Accurate bounds', image: 'dragon-blp-twosided-good.exr' }]});
 </script>
 <figcaption class="caption">Figure 12.29: Simple Scene with Two Area Lights. <span class="legend">
 The quadrilateral on the right emits light from both sides, while the one on the
@@ -3331,10 +3333,11 @@ and&nbsp;<a href="#fig:power-vs-light-bvh-complex">12.31</a> show two examples.
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 67.436%;  position:relative;"><div id="xa_PowerLightSampler53" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 67.436%;  position:relative;"><div id="xa_PowerLightSampler53_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_PowerLightSampler53'), {
-  title: '(a)_PowerLightSampler53', children: [
- { title: '(a) PowerLightSampler', image: 'dragon-two-blps-power.exr' },  { title: '(b) BVHLightSampler', image: 'dragon-two-blps-bvh.exr' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_PowerLightSampler53'), {children: [{ title: '(a) PowerLightSampler', image: 'dragon-two-blps-power.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_PowerLightSampler53_1'), {children: [{ title: '(b) BVHLightSampler', image: 'dragon-two-blps-bvh.exr' }]});
 </script>
 <figcaption class="caption">Figure 12.30: A Simple Scene with Two Light Sources. <span class="legend">
 (a)&nbsp;Rendered with 1 sample per pixel using the <a href="#PowerLightSampler"><tt>PowerLightSampler</tt></a>.
@@ -3355,10 +3358,11 @@ improved by a factor of 2.72.</span>
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 45.417%;  position:relative;"><div id="xa_PowerLightSampler54" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 45.417%;  position:relative;"><div id="xa_PowerLightSampler54_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_PowerLightSampler54'), {
-  title: '(a)_PowerLightSampler54', children: [
- { title: '(a) PowerLightSampler', image: 'zero-day-power.exr' },  { title: '(b) BVHLightSampler', image: 'zero-day-bvh.exr' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_PowerLightSampler54'), {children: [{ title: '(a) PowerLightSampler', image: 'zero-day-power.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_PowerLightSampler54_1'), {children: [{ title: '(b) BVHLightSampler', image: 'zero-day-bvh.exr' }]});
 </script>
 <figcaption class="caption">Figure 12.31: <em>Zero Day</em> Scene, with 8,878 Area Lights. <span class="legend">
 (a)&nbsp;Rendered with the <a href="#PowerLightSampler"><tt>PowerLightSampler</tt></a>.
