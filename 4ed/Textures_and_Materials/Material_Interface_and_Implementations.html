@@ -1046,10 +1046,11 @@ the logic.
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 48.000%;  position:relative;"><div id="xa_1_sample_per_pixel37" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 48.000%;  position:relative;"><div id="xa_1_sample_per_pixel37_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_1_sample_per_pixel37'), {
-  title: '(a)_1_sample_per_pixel37', children: [
- { title: '(a) 1 sample per pixel', image: 'dragon-mix-1spp.png' },  { title: '(b) 128 samples per pixel', image: 'dragon-mix-128spp.png' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_1_sample_per_pixel37'), { children: [{ title: '(a) 1 sample per pixel', image: 'dragon-mix-1spp.png' }]});
+Jeri.renderViewer(document.getElementById('xa_1_sample_per_pixel37_1'), { children: [{ title: '(b) 128 samples per pixel', image: 'dragon-mix-128spp.png' }]});
 </script>
 <figcaption class="caption">Figure 10.20: Effect of Sampling Rate with the <a href="#MixMaterial"><tt>MixMaterial</tt></a>. <span class="legend"> 
 In this scene, the <a href="#MixMaterial"><tt>MixMaterial</tt></a> is used to blend between blue and red
@@ -2111,10 +2112,11 @@ in Figure&nbsp;<a href="#fig:sanmiguel-bump-vs-no">10.23</a>.
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 58.052%;  position:relative;"><div id="xa_Without_bump_mapping38" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 58.052%;  position:relative;"><div id="xa_Without_bump_mapping38_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Without_bump_mapping38'), {
-  title: '(a)_Without_bump_mapping38', children: [
- { title: '(a) Without bump mapping', image: 'sanmiguel-no-bump.png' },  { title: '(b) With bump mapping', image: 'sanmiguel-bump.png' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Without_bump_mapping38'), { children: [{ title: '(a) Without bump mapping', image: 'sanmiguel-no-bump.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Without_bump_mapping38_1'), { children: [{ title: '(b) With bump mapping', image: 'sanmiguel-bump.png' }]});
 </script>
 <figcaption class="caption">Figure 10.23: <span class="legend"> Detail of the <em>San Miguel</em> scene, rendered
 (a)&nbsp;without bump mapping and (b)&nbsp;with bump mapping.  Bump mapping
