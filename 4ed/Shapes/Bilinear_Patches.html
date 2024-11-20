@@ -5565,10 +5565,11 @@ doing so.
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 62.000%;  position:relative;"><div id="xa_Uniform_Sampling15" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 62.000%;  position:relative;"><div id="xa_Uniform_Sampling15_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Uniform_Sampling15'), {
-  title: '(a)_Uniform_Sampling15', children: [
- { title: '(a) Uniform Sampling', image: 'tex-emission-sampling-uniform.exr' },  { title: '(b) Importance Sampling', image: 'tex-emission-sampling-importance.exr' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Uniform_Sampling15'), { children: [{ title: '(a) Uniform Sampling', image: 'tex-emission-sampling-uniform.exr' }]});
+Jeri.renderViewer(document.getElementById('xa_Uniform_Sampling15_1'), { children: [{ title: '(b) Importance Sampling', image: 'tex-emission-sampling-importance.exr' }]});
 </script>
 <figcaption class="caption">Figure 6.26: Area Sampling Accounting for Image-Based Emission. <span class="legend">
 For a scene with an emissive bilinear patch where the amount of emission
