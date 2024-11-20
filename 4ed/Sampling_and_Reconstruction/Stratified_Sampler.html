@@ -247,10 +247,13 @@ unstratified independent samples when rendering such a scene.
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 104.000%;  position:relative;"><div id="xa_Reference20" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 104.000%;  position:relative;"><div id="xa_Reference20_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 104.000%;  position:relative;"><div id="xa_Reference20_2" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Reference20'), {
-  title: '(a)_Reference20', children: [
- { title: '(a) Reference', image: 'dof-sphere-reference.png' },  { title: '(b) Independent sampling', image: 'dof-sphere-independent.png' },  { title: '(c) Stratified sampling', image: 'dof-sphere-stratified.png' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Reference20'), { children: [{ title: '(a) Reference', image: 'dof-sphere-reference.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Reference20_1'), { children: [{ title: '(b) Independent sampling', image: 'dof-sphere-independent.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Reference20_2'), { children: [{ title: '(c) Stratified sampling', image: 'dof-sphere-stratified.png' }]});
 </script>
 <figcaption class="caption">Figure 8.23: Effect of Sampling Patterns
 in Rendering a Purple Sphere with Defocus Blur. <span class="legend">  
@@ -321,10 +324,15 @@ Figure&nbsp;<a href="#fig:stratified-bad">8.26</a> for a danger of jittering, ho
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 20.250%;  position:relative;"><div id="xa_Reference21" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 20.250%;  position:relative;"><div id="xa_Reference21_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 20.250%;  position:relative;"><div id="xa_Reference21_2" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 20.250%;  position:relative;"><div id="xa_Reference21_3" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Reference21'), {
-  title: '(a)_Reference21', children: [
- { title: '(a) Reference', image: 'checkerboard-ref.png' },  { title: '(b) 1 Uniform sample', image: 'checkerboard-1spp-nojitter.png' },  { title: '(c) 1 Jittered sample', image: 'checkerboard-1spp-jitter.png' },  { title: '(d) 4 Jittered samples', image: 'checkerboard-4spp-jitter.png' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Reference21'), { children: [{ title: '(a) Reference', image: 'checkerboard-ref.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Reference21_1'), { children: [{ title: '(b) 1 Uniform sample', image: 'checkerboard-1spp-nojitter.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Reference21_2'), { children: [{ title: '(c) 1 Jittered sample', image: 'checkerboard-1spp-jitter.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Reference21_3'), { children: [{ title: '(d) 4 Jittered samples', image: 'checkerboard-4spp-jitter.png' }]});
 </script>
 <figcaption class="caption">Figure 8.25: Comparison of Image Sampling
 Methods with a Checkerboard Texture. <span class="legend"> This is a difficult image to render
