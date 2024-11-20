@@ -149,10 +149,13 @@ reconstruct pixel values.
 </p>
 
 <div class="card-img-top" style="display:block; width: 100%; padding-top: 54.688%;  position:relative;"><div id="xa_Box_filter24" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 54.688%;  position:relative;"><div id="xa_Box_filter24_1" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
+<div class="card-img-top" style="display:block; width: 100%; padding-top: 54.688%;  position:relative;"><div id="xa_Box_filter24_2" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div></div>
 <script>
-Jeri.renderViewer(document.getElementById('xa_Box_filter24'), {
-  title: '(a)_Box_filter24', children: [
- { title: '(a) Box filter', image: 'crown-filter-box.png' },  { title: '(b) Gaussian', image: 'crown-filter-gaussian.png' },  { title: '(c) Mitchell-Netravali', image: 'crown-filter-mitchell.png' }]});
+// MGH: Fixed
+Jeri.renderViewer(document.getElementById('xa_Box_filter24'), { children: [{ title: '(a) Box filter', image: 'crown-filter-box.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Box_filter24_1'), { children: [{ title: '(b) Gaussian', image: 'crown-filter-gaussian.png' }]});
+Jeri.renderViewer(document.getElementById('xa_Box_filter24_2'), { children: [{ title: '(c) Mitchell-Netravali', image: 'crown-filter-mitchell.png' }]});
 </script>
 <figcaption class="caption">Figure 8.48: <span class="legend"> The pixel reconstruction filter used
 to convert the image samples into pixel values can have a noticeable effect
